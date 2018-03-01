@@ -93,7 +93,7 @@ void Console::Move(string dir)
 }
 void Console::Grab(string obj)
 {
-    cout << "Grab " << obj << endl << endl;
+    cout << "Grabbing " << obj << endl << endl;
 }
 void Console::Read(string obj)
 {
