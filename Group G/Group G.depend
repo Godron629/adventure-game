@@ -1,0 +1,42 @@
+# depslib dependency file v1.0
+1519879700 source:a:\documents\codeblocks\2720-g-project-develop\group g\main.cpp
+	<iostream>
+	"include/Console.h"
+
+1519879700 onsole.h"
+
+1519880188 a:\documents\codeblocks\2720-g-project-develop\group g\include\console.h
+	<string>
+	<list>
+	<vector>
+
+1519880188 
+
+1519880443 source:a:\documents\codeblocks\2720-g-project-develop\group g\src\console.cpp
+	"../include/Console.h"
+	<iostream>
+	<string>
+	<cctype>
+	<vector>
+	<algorithm>
+
+1519880443 >
+
+1519940599 source:/home/husj2720/Documents/Group G/main.cpp
+	<iostream>
+	"include/Console.h"
+	<thread>
+
+1519878910 /home/husj2720/Documents/Group G/include/Console.h
+	<string>
+	<list>
+	<vector>
+
+1519939520 source:/home/husj2720/Documents/Group G/src/Console.cpp
+	"../include/Console.h"
+	<iostream>
+	<string>
+	<cctype>
+	<vector>
+	<algorithm>
+
