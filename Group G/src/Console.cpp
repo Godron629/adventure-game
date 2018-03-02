@@ -4,6 +4,7 @@
 #include <cctype>
 #include <vector>
 #include <algorithm>
+#include "Option.h"
 using namespace std;
 Console::Console()
 {
@@ -30,30 +31,37 @@ void Console::ParseCommand()
     first = ConvertStringToLower(first);
     second = ConvertStringToLower(second);
 
-    if(find(Commands.begin(), Commands.end(), first) != Commands.end())
+    bool contains = false;
+
+
+
+    for(auto i: Actions)
     {
-        if(find(Directions.begin(), Directions.end(), second) != Directions.end() || find(Objects.begin(), Objects.end(),second) != Objects.end())
+        if(i->GetDescription() == first)
         {
-            if(first == "move")
-                Move(second);
-            else if(first == "grab")
-                Grab(second);
-            else if(first == "read")
-                Read(second);
-            else if(first == "look")
-                Look(second);
-            else if(first == "throw")
-                Throw(second);
+            Option* tempOpt = nullptr;
+            contains = true;
+            if(second != "")
+            {
+                contains = false;
+                for(auto j: Options)
+                {
+                    if(j->GetDescription() == second)
+                    {
+                        tempOpt = j;
+                        contains = true;
+                    }
+
+                }
+            }
+            if(contains)
+                _flag = i->PerformAction();
+            if(tempOpt != 0)
+                tempOpt->GetObject();
         }
-        else if(first == "help")
-            Help();
-        else if(first == "quit")
-            Quit();
-        else
-            cout << "Check your second argument..." << endl << endl;
     }
-    else
-        cout << "Type 'help' for help" << endl << endl;
+
+    (contains == false)?cout << "Type 'help' for help" << endl << endl:cout;
 
 }
 
@@ -87,37 +95,7 @@ string Console::GetFirst(string input)
     first = input.substr(0, input.find(space));
     return first;
 }
-void Console::Move(string dir)
-{
-    cout << "Moving "<< dir <<endl <<endl;
-}
-void Console::Grab(string obj)
-{
-    cout << "Grabbing " << obj << endl << endl;
-}
-void Console::Read(string obj)
-{
-    cout << "Reading " << obj << endl << endl;
-}
-void Console::Look(string dir)
-{
-    cout << "Looking " << dir << endl << endl;
-}
-void Console::Throw(string obj)
-{
-    cout << "Throwing out " << obj << endl << endl;
-}
 
-void Console::Help()
-{
-    for(auto i: Commands)
-        cout << i << " | ";
-    cout << endl << endl;
-}
-void Console::Quit()
-{
-    _flag = true;
-}
 void Console::Run()
 {
     while(!_flag)

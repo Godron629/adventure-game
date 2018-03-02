@@ -3,6 +3,23 @@
 #include <string>
 #include <list>
 #include <vector>
+#include "Action.h"
+#include "Move.h"
+#include "Grab.h"
+#include "Look.h"
+#include "Read.h"
+#include "Throw.h"
+#include "Help.h"
+#include "Quit.h"
+#include "Option.h"
+#include "Direction.h"
+#include "Item.h"
+#include "North.h"
+#include "South.h"
+#include "East.h"
+#include "West.h"
+#include "Key.h"
+
 class Console
 {
     public:
@@ -20,16 +37,8 @@ class Console
         void ParseCommand();
         void Run();
 
-        std::vector<std::string> Objects = {"thing1", "thing2"};
-        std::vector<std::string> Directions = {"north", "east", "south", "west"};
-        std::vector<std::string> Commands = {"move", "grab", "read", "look", "throw", "help", "quit"};
-        void Move(std::string dir);
-        void Grab(std::string obj);
-        void Read(std::string obj);
-        void Look(std::string dir);
-        void Throw(std::string obj);
-        void Help();
-        void Quit();
+        std::vector<Action*> Actions = {new Move(),new Grab(),new Read(),new Look(),new Throw(), new Help(), new Quit()};
+        std::vector<Option*> Options = {new North(),new South(), new East(), new West(), new Key()};
 
     protected:
 
