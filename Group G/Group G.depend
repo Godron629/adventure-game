@@ -58,3 +58,21 @@
 	<vector>
 	<algorithm>
 
+1520025153 source:a:\documents\consolebuild\2720-g-project\group g\main.cpp
+	<iostream>
+	"include/Console.h"
+	<thread>
+
+1520025153 a:\documents\consolebuild\2720-g-project\group g\include\console.h
+	<string>
+	<list>
+	<vector>
+
+1520025153 source:a:\documents\consolebuild\2720-g-project\group g\src\console.cpp
+	"../include/Console.h"
+	<iostream>
+	<string>
+	<cctype>
+	<vector>
+	<algorithm>
+
