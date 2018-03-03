@@ -1,0 +1,238 @@
+# depslib dependency file v1.0
+1519879700 source:a:\documents\codeblocks\2720-g-project-develop\group g\main.cpp
+	<iostream>
+	"include/Console.h"
+
+1519879700 onsole.h"
+
+1519880188 a:\documents\codeblocks\2720-g-project-develop\group g\include\console.h
+	<string>
+	<list>
+	<vector>
+
+1519880188 
+
+1519880443 source:a:\documents\codeblocks\2720-g-project-develop\group g\src\console.cpp
+	"../include/Console.h"
+	<iostream>
+	<string>
+	<cctype>
+	<vector>
+	<algorithm>
+
+1519880443 >
+
+1519940599 source:/home/husj2720/Documents/Group G/main.cpp
+	<iostream>
+	"include/Console.h"
+	<thread>
+
+1519878910 /home/husj2720/Documents/Group G/include/Console.h
+	<string>
+	<list>
+	<vector>
+
+1519939520 source:/home/husj2720/Documents/Group G/src/Console.cpp
+	"../include/Console.h"
+	<iostream>
+	<string>
+	<cctype>
+	<vector>
+	<algorithm>
+
+1519940599 source:/home/husj2720/Documents/2720-G-Project/Group G/main.cpp
+	<iostream>
+	"include/Console.h"
+	<thread>
+
+1519878910 /home/husj2720/Documents/2720-G-Project/Group G/include/Console.h
+	<string>
+	<list>
+	<vector>
+
+1519941055 source:/home/husj2720/Documents/2720-G-Project/Group G/src/Console.cpp
+	"../include/Console.h"
+	<iostream>
+	<string>
+	<cctype>
+	<vector>
+	<algorithm>
+
+1520025642 source:a:\documents\consolebuild\2720-g-project\group g\main.cpp
+	<iostream>
+	"include/Console.h"
+	<thread>
+
+1520054162 a:\documents\consolebuild\2720-g-project\group g\include\console.h
+	<string>
+	<list>
+	<vector>
+	"Action.h"
+	"Move.h"
+	"Grab.h"
+	"Look.h"
+	"Read.h"
+	"Help.h"
+	"Quit.h"
+	"Option.h"
+	"Direction.h"
+	"Item.h"
+	"North.h"
+	"South.h"
+	"East.h"
+	"Drop.h"
+	"West.h"
+	"Key.h"
+
+1520053680 source:a:\documents\consolebuild\2720-g-project\group g\src\console.cpp
+	"../include/Console.h"
+	<iostream>
+	<string>
+	<cctype>
+	<vector>
+	<algorithm>
+	"Option.h"
+
+1520027338 source:a:\documents\consolebuild\2720-g-project\group g\src\action.cpp
+	"Action.h"
+
+1520052120 a:\documents\consolebuild\2720-g-project\group g\include\action.h
+	<string>
+
+1520052445 source:a:\documents\consolebuild\2720-g-project\group g\src\move.cpp
+	"Move.h"
+	<string>
+	<iostream>
+
+1520052420 a:\documents\consolebuild\2720-g-project\group g\include\move.h
+	<Action.h>
+	<string>
+
+1520052210 source:a:\documents\consolebuild\2720-g-project\group g\src\grab.cpp
+	"Grab.h"
+	<string>
+	<iostream>
+
+1520052192 a:\documents\consolebuild\2720-g-project\group g\include\grab.h
+	<Action.h>
+	<string>
+
+1520052402 source:a:\documents\consolebuild\2720-g-project\group g\src\look.cpp
+	"Look.h"
+	<string>
+	<iostream>
+
+1520052371 a:\documents\consolebuild\2720-g-project\group g\include\look.h
+	<Action.h>
+	<string>
+
+1520052542 source:a:\documents\consolebuild\2720-g-project\group g\src\read.cpp
+	"Read.h"
+	<string>
+	<iostream>
+
+1520052508 a:\documents\consolebuild\2720-g-project\group g\include\read.h
+	<Action.h>
+
+1520030551 source:a:\documents\consolebuild\2720-g-project\group g\src\throw.cpp
+	"Throw.h"
+	<string>
+	<iostream>
+
+1520030542 a:\documents\consolebuild\2720-g-project\group g\include\throw.h
+	<Action.h>
+	<string>
+
+1520052350 source:a:\documents\consolebuild\2720-g-project\group g\src\help.cpp
+	"Help.h"
+	<string>
+	<iostream>
+
+1520052316 a:\documents\consolebuild\2720-g-project\group g\include\help.h
+	<Action.h>
+	<string>
+
+1520052490 source:a:\documents\consolebuild\2720-g-project\group g\src\quit.cpp
+	"Quit.h"
+	<string>
+	<iostream>
+	"Console.h"
+
+1520052464 a:\documents\consolebuild\2720-g-project\group g\include\quit.h
+	<Action.h>
+	<string>
+
+1520032223 source:a:\documents\consolebuild\2720-g-project\group g\src\direction.cpp
+	"Direction.h"
+
+1520033632 a:\documents\consolebuild\2720-g-project\group g\include\direction.h
+	<Option.h>
+	<string>
+
+1520033395 a:\documents\consolebuild\2720-g-project\group g\include\option.h
+	<string>
+
+1520032359 source:a:\documents\consolebuild\2720-g-project\group g\src\item.cpp
+	"Item.h"
+
+1520033639 a:\documents\consolebuild\2720-g-project\group g\include\item.h
+	<Option.h>
+	<string>
+
+1520032036 source:a:\documents\consolebuild\2720-g-project\group g\src\option.cpp
+	"Option.h"
+
+1520033440 a:\documents\consolebuild\2720-g-project\group g\include\north.h
+	<Direction.h>
+	<string>
+
+1520033460 a:\documents\consolebuild\2720-g-project\group g\include\south.h
+	<Direction.h>
+	<string>
+
+1520033453 a:\documents\consolebuild\2720-g-project\group g\include\east.h
+	<Direction.h>
+	<string>
+
+1520033448 a:\documents\consolebuild\2720-g-project\group g\include\west.h
+	<Direction.h>
+	<string>
+
+1520033468 a:\documents\consolebuild\2720-g-project\group g\include\key.h
+	<Item.h>
+	<string>
+
+1520033530 source:a:\documents\consolebuild\2720-g-project\group g\src\east.cpp
+	"East.h"
+	<string>
+	<iostream>
+
+1520033544 source:a:\documents\consolebuild\2720-g-project\group g\src\key.cpp
+	"Key.h"
+	<string>
+	<iostream>
+
+1520033518 source:a:\documents\consolebuild\2720-g-project\group g\src\north.cpp
+	"North.h"
+	<string>
+	<iostream>
+
+1520033511 source:a:\documents\consolebuild\2720-g-project\group g\src\south.cpp
+	"South.h"
+	<string>
+	<iostream>
+
+1520033507 source:a:\documents\consolebuild\2720-g-project\group g\src\west.cpp
+	"West.h"
+	<string>
+	<iostream>
+
+1520052138 a:\documents\consolebuild\2720-g-project\group g\include\drop.h
+	<Action.h>
+	<string>
+
+1520052160 source:a:\documents\consolebuild\2720-g-project\group g\src\drop.cpp
+	"Drop.h"
+	<string>
+	<iostream>
+

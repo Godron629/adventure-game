@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Group G" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/Group G" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-std=c++11" />
+					<Add option="-g" />
+					<Add directory="include" />
+				</Compiler>
+				<Linker>
+					<Add option="-pthread" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/Group G" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add directory="include" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Unit filename="include/Action.h" />
+		<Unit filename="include/Console.h" />
+		<Unit filename="include/Direction.h" />
+		<Unit filename="include/Drop.h" />
+		<Unit filename="include/East.h" />
+		<Unit filename="include/Grab.h" />
+		<Unit filename="include/Help.h" />
+		<Unit filename="include/Item.h" />
+		<Unit filename="include/Key.h" />
+		<Unit filename="include/Look.h" />
+		<Unit filename="include/Move.h" />
+		<Unit filename="include/North.h" />
+		<Unit filename="include/Option.h" />
+		<Unit filename="include/Quit.h" />
+		<Unit filename="include/Read.h" />
+		<Unit filename="include/South.h" />
+		<Unit filename="include/West.h" />
+		<Unit filename="main.cpp" />
+		<Unit filename="src/Action.cpp" />
+		<Unit filename="src/Console.cpp" />
+		<Unit filename="src/Direction.cpp" />
+		<Unit filename="src/Drop.cpp" />
+		<Unit filename="src/East.cpp" />
+		<Unit filename="src/Grab.cpp" />
+		<Unit filename="src/Help.cpp" />
+		<Unit filename="src/Item.cpp" />
+		<Unit filename="src/Key.cpp" />
+		<Unit filename="src/Look.cpp" />
+		<Unit filename="src/Move.cpp" />
+		<Unit filename="src/North.cpp" />
+		<Unit filename="src/Option.cpp" />
+		<Unit filename="src/Quit.cpp" />
+		<Unit filename="src/Read.cpp" />
+		<Unit filename="src/South.cpp" />
+		<Unit filename="src/West.cpp" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
