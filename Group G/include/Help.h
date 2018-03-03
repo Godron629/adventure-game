@@ -15,6 +15,7 @@ class Help : public Action
 
     private:
         std::string GetDescription();
+        ActionType GetType();
         bool PerformAction();
 };
 

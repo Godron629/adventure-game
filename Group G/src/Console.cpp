@@ -11,7 +11,6 @@ Console::Console()
     _flag = false;
     _input = "";
     _command = "";
-
     //ctor
 }
 void Console::Prompt()
@@ -33,38 +32,56 @@ void Console::ParseCommand()
 
     bool contains = false;
 
-
+    Action* currentAction = nullptr;
+    Option* currentOption = nullptr;
 
     for(auto i: Actions)
-    {
         if(i->GetDescription() == first)
-        {
-            Option* tempOpt = nullptr;
-            contains = true;
-            if(second != "")
-            {
-                contains = false;
-                for(auto j: Options)
-                {
-                    if(j->GetDescription() == second)
-                    {
-                        tempOpt = j;
-                        contains = true;
-                    }
+           currentAction = i;
 
+    if(second != "")
+        for(auto i: Options)
+            if(i->GetDescription() == second)
+                currentOption = i;
+
+    if(currentAction == 0 || (currentOption == 0 && currentAction->GetType() != Sys))
+        ErrorMessage();
+    else
+    {
+        switch (currentAction->GetType())
+        {
+            case Dir:
+                if(dynamic_cast<Item*>(currentOption) == nullptr)
+                {
+                    currentAction->PerformAction();
+                    currentOption->GetObject();
                 }
-            }
-            if(contains)
-                _flag = i->PerformAction();
-            if(tempOpt != 0)
-                tempOpt->GetObject();
+                else
+                    ErrorMessage();
+                break;
+            case Inv:
+                if(dynamic_cast<Direction*>(currentOption) == nullptr)
+                {
+                    currentAction->PerformAction();
+                    currentOption->GetObject();
+                }
+                else
+                    ErrorMessage();
+                break;
+            case Sys:
+                _flag = currentAction->PerformAction();
+                break;
+            default:
+                ErrorMessage();
         }
+
     }
 
-    (contains == false)?cout << "Type 'help' for help" << endl << endl:cout;
-
 }
-
+void Console::ErrorMessage()
+{
+    cout<<"Type 'help' for help"<<endl <<endl;
+}
 string Console::ConvertStringToLower(string original)
 {
     for(int i = 0; i < original.length(); i++)

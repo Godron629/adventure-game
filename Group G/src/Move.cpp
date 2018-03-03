@@ -6,6 +6,7 @@ Move::Move()
 {
     description = "move";
     action = "Moving ";
+    type = Dir;
     //ctor
 }
 
@@ -16,6 +17,10 @@ Move::~Move()
 string Move::GetDescription()
 {
     return description;
+}
+ActionType Move::GetType()
+{
+    return type;
 }
 bool Move::PerformAction()
 {

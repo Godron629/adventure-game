@@ -9,6 +9,7 @@ Quit::Quit()
     //ctor
     description = "quit";
     action = "Quitting...";
+    type = Sys;
 }
 
 Quit::~Quit()
@@ -18,6 +19,10 @@ Quit::~Quit()
 string Quit::GetDescription()
 {
     return description;
+}
+ActionType Quit::GetType()
+{
+    return type;
 }
 bool Quit::PerformAction()
 {

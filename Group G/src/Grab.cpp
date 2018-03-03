@@ -8,6 +8,7 @@ Grab::Grab()
     //ctor
     description = "grab";
     action = "Grabbing ";
+    type = Inv;
 }
 
 Grab::~Grab()
@@ -17,6 +18,10 @@ Grab::~Grab()
 string Grab::GetDescription()
 {
     return description;
+}
+ActionType Grab::GetType()
+{
+    return type;
 }
 bool Grab::PerformAction()
 {

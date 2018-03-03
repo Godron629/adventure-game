@@ -6,7 +6,8 @@ Help::Help()
 {
     //ctor
     description = "help";
-    action = "Actions: Help | Quit | Move | Grab | Read | Throw | Look";
+    action = "Actions: Help | Quit | Move | Grab | Read | Drop | Look";
+    type = Sys;
 }
 
 Help::~Help()
@@ -16,6 +17,10 @@ Help::~Help()
 string Help::GetDescription()
 {
     return description;
+}
+ActionType Help::GetType()
+{
+    return type;
 }
 bool Help::PerformAction()
 {

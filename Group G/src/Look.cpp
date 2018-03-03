@@ -7,6 +7,7 @@ Look::Look()
     //ctor
     description = "look";
     action = "Looking ";
+    type = Dir;
 }
 
 Look::~Look()
@@ -16,6 +17,10 @@ Look::~Look()
 string Look::GetDescription()
 {
     return description;
+}
+ActionType Look::GetType()
+{
+    return type;
 }
 bool Look::PerformAction()
 {

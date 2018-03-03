@@ -14,6 +14,7 @@ class Move : public Action
 
     private:
         std::string GetDescription();
+        ActionType GetType();
         bool PerformAction();
 };
 

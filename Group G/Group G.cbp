@@ -41,6 +41,7 @@
 		<Unit filename="include/Action.h" />
 		<Unit filename="include/Console.h" />
 		<Unit filename="include/Direction.h" />
+		<Unit filename="include/Drop.h" />
 		<Unit filename="include/East.h" />
 		<Unit filename="include/Grab.h" />
 		<Unit filename="include/Help.h" />
@@ -53,12 +54,12 @@
 		<Unit filename="include/Quit.h" />
 		<Unit filename="include/Read.h" />
 		<Unit filename="include/South.h" />
-		<Unit filename="include/Throw.h" />
 		<Unit filename="include/West.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Action.cpp" />
 		<Unit filename="src/Console.cpp" />
 		<Unit filename="src/Direction.cpp" />
+		<Unit filename="src/Drop.cpp" />
 		<Unit filename="src/East.cpp" />
 		<Unit filename="src/Grab.cpp" />
 		<Unit filename="src/Help.cpp" />
@@ -71,7 +72,6 @@
 		<Unit filename="src/Quit.cpp" />
 		<Unit filename="src/Read.cpp" />
 		<Unit filename="src/South.cpp" />
-		<Unit filename="src/Throw.cpp" />
 		<Unit filename="src/West.cpp" />
 		<Extensions>
 			<code_completion />
