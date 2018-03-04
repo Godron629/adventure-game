@@ -20,6 +20,14 @@
 #include "West.h"
 #include "Key.h"
 #include "List.h"
+#include "Helmet.h"
+#include "Stick.h"
+#include "Gear.h"
+#include "RubberTube.h"
+#include "PileOfBolts.h"
+#include "FishFood.h"
+#include "RatPoison.h"
+#include "Diary.h"
 #include "Inventory.h"
 
 class Console
@@ -42,7 +50,7 @@ class Console
         void ErrorMessage();
         std::vector<Action*> Actions = {new Move(),new Drop(),new Grab(), new Read(),new Look(), new Help(), new Quit()};
 
-        std::vector<Option*> Options = {new North(),new South(), new East(), new West(), new Key()};
+        std::vector<Option*> Options = {new North(),new South(), new East(), new West(), new Key(), new Helmet(), new Stick(),new RubberTube(),new Gear(), new PileOfBolts(), new FishFood(), new RatPoison(), new Diary()};
 
     protected:
 

@@ -68,16 +68,22 @@ void Console::ParseCommand()
             case Inv:
                 if(dynamic_cast<Direction*>(currentOption) == nullptr)
                 {
-                    try
+                    if(currentAction->GetDescription() == "read")
+                        currentAction->PerformAction((Book*)currentOption);
+                    else
                     {
-                        currentAction->PerformAction((Item*)currentOption,_inventory);
-                        currentOption->GetObject();
-                        cout<<endl<<endl;
+                        try
+                        {
+                            currentAction->PerformAction((Item*)currentOption,_inventory);
+                            currentOption->GetObject();
+                            cout<<endl<<endl;
+                        }
+                        catch(invalid_argument e)
+                        {
+                            ErrorMessage();
+                        }
                     }
-                    catch(invalid_argument e)
-                    {
-                        ErrorMessage();
-                    }
+
                 }
                 else
                     ErrorMessage();

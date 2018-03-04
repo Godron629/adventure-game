@@ -236,12 +236,12 @@
 	<string>
 	<iostream>
 
-1520187356 source:a:\documents\inventorybuild\2720-g-project\group g\main.cpp
+1520189241 source:a:\documents\inventorybuild\2720-g-project\group g\main.cpp
 	<iostream>
 	"include/Console.h"
 	<thread>
 
-1520188160 a:\documents\inventorybuild\2720-g-project\group g\include\console.h
+1520193071 a:\documents\inventorybuild\2720-g-project\group g\include\console.h
 	<string>
 	<list>
 	<vector>
@@ -262,12 +262,21 @@
 	"West.h"
 	"Key.h"
 	"List.h"
+	"Helmet.h"
+	"Stick.h"
+	"Gear.h"
+	"RubberTube.h"
+	"PileOfBolts.h"
+	"FishFood.h"
+	"RatPoison.h"
+	"Diary.h"
 	"Inventory.h"
 
-1520188160 a:\documents\inventorybuild\2720-g-project\group g\include\action.h
+1520193782 a:\documents\inventorybuild\2720-g-project\group g\include\action.h
 	<string>
 	"Inventory.h"
 	"Item.h"
+	"Book.h"
 
 1520119641 a:\documents\inventorybuild\2720-g-project\group g\include\move.h
 	<Action.h>
@@ -283,7 +292,8 @@
 	<Action.h>
 	<string>
 
-1520119641 a:\documents\inventorybuild\2720-g-project\group g\include\read.h
+1520193703 a:\documents\inventorybuild\2720-g-project\group g\include\read.h
+	"Book.h"
 	<Action.h>
 
 1520119641 a:\documents\inventorybuild\2720-g-project\group g\include\help.h
@@ -329,10 +339,10 @@
 	<Item.h>
 	<string>
 
-1520188160 source:a:\documents\inventorybuild\2720-g-project\group g\src\action.cpp
+1520193752 source:a:\documents\inventorybuild\2720-g-project\group g\src\action.cpp
 	"Action.h"
 
-1520188903 source:a:\documents\inventorybuild\2720-g-project\group g\src\console.cpp
+1520194045 source:a:\documents\inventorybuild\2720-g-project\group g\src\console.cpp
 	"../include/Console.h"
 	<iostream>
 	<string>
@@ -369,7 +379,7 @@
 1520119641 source:a:\documents\inventorybuild\2720-g-project\group g\src\item.cpp
 	"Item.h"
 
-1520149808 source:a:\documents\inventorybuild\2720-g-project\group g\src\key.cpp
+1520191769 source:a:\documents\inventorybuild\2720-g-project\group g\src\key.cpp
 	"Key.h"
 	<string>
 	<iostream>
@@ -398,7 +408,7 @@
 	<iostream>
 	"Console.h"
 
-1520119641 source:a:\documents\inventorybuild\2720-g-project\group g\src\read.cpp
+1520194304 source:a:\documents\inventorybuild\2720-g-project\group g\src\read.cpp
 	"Read.h"
 	<string>
 	<iostream>
@@ -413,7 +423,7 @@
 	<string>
 	<iostream>
 
-1520188954 source:a:\documents\inventorybuild\2720-g-project\group g\src\inventory.cpp
+1520189047 source:a:\documents\inventorybuild\2720-g-project\group g\src\inventory.cpp
 	"Inventory.h"
 	<iostream>
 	<string>
@@ -436,4 +446,84 @@
 	<Action.h>
 	<string>
 	"Inventory.h"
+
+1520191762 a:\documents\inventorybuild\2720-g-project\group g\include\helmet.h
+	<Item.h>
+	<string>
+
+1520191741 source:a:\documents\inventorybuild\2720-g-project\group g\src\helmet.cpp
+	"Helmet.h"
+	<string>
+	<iostream>
+
+1520191925 a:\documents\inventorybuild\2720-g-project\group g\include\stick.h
+	<Item.h>
+	<string>
+
+1520191907 source:a:\documents\inventorybuild\2720-g-project\group g\src\stick.cpp
+	"Stick.h"
+	<string>
+	<iostream>
+
+1520192091 a:\documents\inventorybuild\2720-g-project\group g\include\rubbertube.h
+	<Item.h>
+	<string>
+
+1520192141 source:a:\documents\inventorybuild\2720-g-project\group g\src\rubbertube.cpp
+	"RubberTube.h"
+	<string>
+	<iostream>
+
+1520192278 a:\documents\inventorybuild\2720-g-project\group g\include\gear.h
+	<Item.h>
+	<string>
+
+1520192382 a:\documents\inventorybuild\2720-g-project\group g\include\pileofbolts.h
+	<Item.h>
+	<string>
+
+1520192325 source:a:\documents\inventorybuild\2720-g-project\group g\src\gear.cpp
+	"Gear.h"
+	<string>
+	<iostream>
+
+1520192504 a:\documents\inventorybuild\2720-g-project\group g\include\fishfood.h
+	<Item.h>
+	<string>
+
+1520192599 a:\documents\inventorybuild\2720-g-project\group g\include\ratpoison.h
+	<Item.h>
+	<string>
+
+1520193209 a:\documents\inventorybuild\2720-g-project\group g\include\diary.h
+	<Book.h>
+	<string>
+
+1520193189 a:\documents\inventorybuild\2720-g-project\group g\include\book.h
+	<Item.h>
+	<string>
+	<vector>
+
+1520192418 source:a:\documents\inventorybuild\2720-g-project\group g\src\pileofbolts.cpp
+	"PileOfBolts.h"
+	<string>
+	<iostream>
+
+1520192537 source:a:\documents\inventorybuild\2720-g-project\group g\src\fishfood.cpp
+	"FishFood.h"
+	<string>
+	<iostream>
+
+1520192638 source:a:\documents\inventorybuild\2720-g-project\group g\src\ratpoison.cpp
+	"RatPoison.h"
+	<string>
+	<iostream>
+
+1520192714 source:a:\documents\inventorybuild\2720-g-project\group g\src\book.cpp
+	"Book.h"
+
+1520194081 source:a:\documents\inventorybuild\2720-g-project\group g\src\diary.cpp
+	"Diary.h"
+	<string>
+	<iostream>
 
