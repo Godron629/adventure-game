@@ -11,3 +11,7 @@ Action::~Action()
     //dtor
 }
 
+void Action::PerformAction(Item* newItem,Inventory* currentInventory)
+{
+    //return currentInventory;
+}

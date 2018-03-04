@@ -28,3 +28,8 @@ bool Drop::PerformAction()
     cout<<action;
     return false;
 }
+void Drop::PerformAction(Item* newItem, Inventory* currentInventory)
+{
+    currentInventory->Drop(newItem);
+    cout<<"Dropping: ";
+}

@@ -3,15 +3,14 @@
 
 #include <Option.h>
 #include <string>
-
 class Item : public Option
 {
     public:
         Item();
         virtual ~Item();
         std::string description;
-        virtual std::string GetDescription()=0;
         std::string object;
+        virtual std::string GetDescription()=0;
         virtual void GetObject()=0;
     protected:
 

@@ -45,8 +45,10 @@
 		<Unit filename="include/East.h" />
 		<Unit filename="include/Grab.h" />
 		<Unit filename="include/Help.h" />
+		<Unit filename="include/Inventory.h" />
 		<Unit filename="include/Item.h" />
 		<Unit filename="include/Key.h" />
+		<Unit filename="include/List.h" />
 		<Unit filename="include/Look.h" />
 		<Unit filename="include/Move.h" />
 		<Unit filename="include/North.h" />
@@ -63,8 +65,10 @@
 		<Unit filename="src/East.cpp" />
 		<Unit filename="src/Grab.cpp" />
 		<Unit filename="src/Help.cpp" />
+		<Unit filename="src/Inventory.cpp" />
 		<Unit filename="src/Item.cpp" />
 		<Unit filename="src/Key.cpp" />
+		<Unit filename="src/List.cpp" />
 		<Unit filename="src/Look.cpp" />
 		<Unit filename="src/Move.cpp" />
 		<Unit filename="src/North.cpp" />

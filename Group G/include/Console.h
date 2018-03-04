@@ -19,25 +19,28 @@
 #include "Drop.h"
 #include "West.h"
 #include "Key.h"
+#include "List.h"
+#include "Inventory.h"
 
 class Console
 {
     public:
-        Console();
+        Console(Inventory*);
         virtual ~Console();
         std::string _input;
         std::string _command;
-
+        Inventory* _inventory;
         std::string GetFirst(std::string input);
         std::string GetSecond(std::string input);
         std::string ConvertStringToLower(std::string original);
 
         bool _flag;
+        void ConsoleStart();
         void Prompt();
         void ParseCommand();
         void Run();
         void ErrorMessage();
-        std::vector<Action*> Actions = {new Move(),new Grab(),new Drop(), new Read(),new Look(), new Help(), new Quit()};
+        std::vector<Action*> Actions = {new Move(),new Drop(),new Grab(), new Read(),new Look(), new Help(), new Quit()};
 
         std::vector<Option*> Options = {new North(),new South(), new East(), new West(), new Key()};
 

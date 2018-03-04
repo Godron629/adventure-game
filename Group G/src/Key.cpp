@@ -20,5 +20,5 @@ string Key::GetDescription()
 }
 void Key::GetObject()
 {
-    cout<<object<<endl<<endl;
+    cout<<object;
 }
