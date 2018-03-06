@@ -17,7 +17,7 @@ Console::Console(Inventory* inv)
 }
 void Console::ConsoleStart()
 {
-    cout << "\t\t\t\tWelcome to dis litttt ass game. Don't die and stuff."<<endl<<endl;
+    cout << "\t\tWelcome to dis litttt ass game. Don't die and stuff."<<endl<<endl;
 }
 void Console::Prompt()
 {
@@ -35,8 +35,6 @@ void Console::ParseCommand()
 
     first = ConvertStringToLower(first);
     second = ConvertStringToLower(second);
-
-    bool contains = false;
 
     Action* currentAction = nullptr;
     Option* currentOption = nullptr;
@@ -80,7 +78,7 @@ void Console::ParseCommand()
                         }
                         catch(invalid_argument e)
                         {
-                            ErrorMessage();
+                            cout<<e.what()<<endl<<endl;
                         }
                     }
 
@@ -105,7 +103,7 @@ void Console::ErrorMessage()
 }
 string Console::ConvertStringToLower(string original)
 {
-    for(int i = 0; i < original.length(); i++)
+    for(unsigned int i = 0; i < original.length(); i++)
     {
         char temp = original[i];
         temp = tolower(temp);

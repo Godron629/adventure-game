@@ -16,9 +16,6 @@
 					<Add option="-g" />
 					<Add directory="include" />
 				</Compiler>
-				<Linker>
-					<Add option="-pthread" />
-				</Linker>
 			</Target>
 			<Target title="Release">
 				<Option output="bin/Release/Group G" prefix_auto="1" extension_auto="1" />
@@ -39,62 +36,18 @@
 			<Add option="-fexceptions" />
 		</Compiler>
 		<Unit filename="include/Action.h" />
-		<Unit filename="include/Book.h" />
 		<Unit filename="include/Console.h" />
-		<Unit filename="include/Diary.h" />
 		<Unit filename="include/Direction.h" />
-		<Unit filename="include/Drop.h" />
-		<Unit filename="include/East.h" />
-		<Unit filename="include/FishFood.h" />
-		<Unit filename="include/Gear.h" />
-		<Unit filename="include/Grab.h" />
-		<Unit filename="include/Helmet.h" />
-		<Unit filename="include/Help.h" />
 		<Unit filename="include/Inventory.h" />
 		<Unit filename="include/Item.h" />
-		<Unit filename="include/Key.h" />
-		<Unit filename="include/List.h" />
-		<Unit filename="include/Look.h" />
-		<Unit filename="include/Move.h" />
-		<Unit filename="include/North.h" />
 		<Unit filename="include/Option.h" />
-		<Unit filename="include/PileOfBolts.h" />
-		<Unit filename="include/Quit.h" />
-		<Unit filename="include/RatPoison.h" />
-		<Unit filename="include/Read.h" />
-		<Unit filename="include/RubberTube.h" />
-		<Unit filename="include/South.h" />
-		<Unit filename="include/Stick.h" />
-		<Unit filename="include/West.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Action.cpp" />
-		<Unit filename="src/Book.cpp" />
 		<Unit filename="src/Console.cpp" />
-		<Unit filename="src/Diary.cpp" />
 		<Unit filename="src/Direction.cpp" />
-		<Unit filename="src/Drop.cpp" />
-		<Unit filename="src/East.cpp" />
-		<Unit filename="src/FishFood.cpp" />
-		<Unit filename="src/Gear.cpp" />
-		<Unit filename="src/Grab.cpp" />
-		<Unit filename="src/Helmet.cpp" />
-		<Unit filename="src/Help.cpp" />
 		<Unit filename="src/Inventory.cpp" />
 		<Unit filename="src/Item.cpp" />
-		<Unit filename="src/Key.cpp" />
-		<Unit filename="src/List.cpp" />
-		<Unit filename="src/Look.cpp" />
-		<Unit filename="src/Move.cpp" />
-		<Unit filename="src/North.cpp" />
 		<Unit filename="src/Option.cpp" />
-		<Unit filename="src/PileOfBolts.cpp" />
-		<Unit filename="src/Quit.cpp" />
-		<Unit filename="src/RatPoison.cpp" />
-		<Unit filename="src/Read.cpp" />
-		<Unit filename="src/RubberTube.cpp" />
-		<Unit filename="src/South.cpp" />
-		<Unit filename="src/Stick.cpp" />
-		<Unit filename="src/West.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />

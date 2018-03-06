@@ -7,10 +7,8 @@
 //////////////////////////////////////////////////
 #include <iostream>
 #include "include/Console.h"
-#include <thread>
 
 using namespace std;
-void GameThreadFunc(Console shell);
 
 int main()
 {
@@ -18,14 +16,7 @@ int main()
 
     Console shell = Console(inventory);
 
-    thread gameThread = thread(GameThreadFunc,shell);
-
-    gameThread.join();
+    shell.Run();
 
     return 0;
-}
-
-void GameThreadFunc(Console shell)
-{
-    shell.Run();
 }

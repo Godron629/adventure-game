@@ -1,6 +1,7 @@
 #ifndef OPTION_H
 #define OPTION_H
 #include <string>
+#include <vector>
 
 class Option
 {
@@ -16,4 +17,11 @@ class Option
     private:
 };
 
+
+
+
+
+
 #endif // OPTION_H
+
+

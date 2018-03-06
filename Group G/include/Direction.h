@@ -1,9 +1,10 @@
 #ifndef DIRECTION_H
 #define DIRECTION_H
 
-#include <Option.h>
 #include <string>
+#include <vector>
 
+#include "Option.h"
 class Direction : public Option
 {
     public:
@@ -19,4 +20,55 @@ class Direction : public Option
 
 };
 
+class East : public Direction
+{
+    public:
+        East();
+        virtual ~East();
+
+    protected:
+
+    private:
+        virtual std::string GetDescription();
+        virtual void GetObject();
+};
+
+class North : public Direction
+{
+    public:
+        North();
+        virtual ~North();
+
+    protected:
+
+    private:
+        virtual std::string GetDescription();
+        virtual void GetObject();
+};
+
+class South : public Direction
+{
+    public:
+        South();
+        virtual ~South();
+
+    protected:
+
+    private:
+        virtual std::string GetDescription();
+        virtual void GetObject();
+};
+
+class West : public Direction
+{
+    public:
+        West();
+        virtual ~West();
+
+    protected:
+
+    private:
+        virtual std::string GetDescription();
+        virtual void GetObject();
+};
 #endif // DIRECTION_H
