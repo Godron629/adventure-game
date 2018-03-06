@@ -1,6 +1,9 @@
 #ifndef ACTION_H
 #define ACTION_H
 #include <string>
+#include "Inventory.h"
+#include "Item.h"
+#include "Book.h"
 enum ActionType {Dir, Inv, Sys};
 class Action
 {
@@ -14,6 +17,8 @@ class Action
         virtual std::string GetDescription()=0;
         virtual ActionType GetType()=0;
         virtual bool PerformAction()=0;
+        virtual void PerformAction(Item*, Inventory*);
+        virtual void PerformAction(Book*);
     protected:
 
     private:

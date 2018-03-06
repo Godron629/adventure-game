@@ -16,6 +16,7 @@ class Drop : public Action
         ActionType GetType();
         std::string GetDescription();
         bool PerformAction();
+        void PerformAction(Item*,Inventory*);
 };
 
 #endif // DROP_H

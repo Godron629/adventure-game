@@ -6,7 +6,7 @@ Help::Help()
 {
     //ctor
     description = "help";
-    action = "Actions: Help | Quit | Move | Grab | Read | Drop | Look";
+    action = "Actions: Help | Quit | List | Move | Grab | Read | Drop | Look";
     type = Sys;
 }
 

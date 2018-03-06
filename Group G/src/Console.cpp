@@ -6,12 +6,18 @@
 #include <algorithm>
 #include "Option.h"
 using namespace std;
-Console::Console()
+Console::Console(Inventory* inv)
 {
     _flag = false;
     _input = "";
     _command = "";
+    _inventory = inv;
+    Actions.insert(Actions.end(),new List(_inventory));
     //ctor
+}
+void Console::ConsoleStart()
+{
+    cout << "\t\t\t\tWelcome to dis litttt ass game. Don't die and stuff."<<endl<<endl;
 }
 void Console::Prompt()
 {
@@ -62,13 +68,28 @@ void Console::ParseCommand()
             case Inv:
                 if(dynamic_cast<Direction*>(currentOption) == nullptr)
                 {
-                    currentAction->PerformAction();
-                    currentOption->GetObject();
+                    if(currentAction->GetDescription() == "read")
+                        currentAction->PerformAction((Book*)currentOption);
+                    else
+                    {
+                        try
+                        {
+                            currentAction->PerformAction((Item*)currentOption,_inventory);
+                            currentOption->GetObject();
+                            cout<<endl<<endl;
+                        }
+                        catch(invalid_argument e)
+                        {
+                            ErrorMessage();
+                        }
+                    }
+
                 }
                 else
                     ErrorMessage();
                 break;
             case Sys:
+                Actions.insert(Actions.end(),new List(_inventory));
                 _flag = currentAction->PerformAction();
                 break;
             default:
@@ -110,11 +131,13 @@ string Console::GetFirst(string input)
     string first = "";
 
     first = input.substr(0, input.find(space));
+
     return first;
 }
 
 void Console::Run()
 {
+    ConsoleStart();
     while(!_flag)
     {
         Prompt();

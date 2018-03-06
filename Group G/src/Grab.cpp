@@ -1,7 +1,8 @@
 #include "Grab.h"
 #include <string>
 #include <iostream>
-
+#include "Item.h"
+#include "Inventory.h"
 using namespace std;
 Grab::Grab()
 {
@@ -26,5 +27,11 @@ ActionType Grab::GetType()
 bool Grab::PerformAction()
 {
     cout<<action;
+
     return false;
+}
+void Grab::PerformAction(Item* newItem, Inventory* currentInventory)
+{
+    currentInventory->Add(newItem);
+    cout<<"Grabbing: ";
 }

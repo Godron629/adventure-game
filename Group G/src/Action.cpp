@@ -11,3 +11,5 @@ Action::~Action()
     //dtor
 }
 
+void Action::PerformAction(Item* newItem,Inventory* currentInventory){}
+void Action::PerformAction(Book* book){}
