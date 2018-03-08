@@ -809,9 +809,10 @@
 	<string>
 	<iostream>
 
-1520481375 source:c:\users\gideon\desktop\2720-g-project\group g\main.cpp
+1520491331 source:c:\users\gideon\desktop\2720-g-project\group g\main.cpp
 	<iostream>
 	"include/Console.h"
+	"Map.h"
 
 1520481375 c:\users\gideon\desktop\2720-g-project\group g\include\console.h
 	<string>
@@ -887,11 +888,45 @@
 1520481375 source:c:\users\gideon\desktop\2720-g-project\group g\src\option.cpp
 	"Option.h"
 
-1520482188 source:c:\users\gideon\desktop\2720-g-project\group g\src\room.cpp
+1520490508 source:c:\users\gideon\desktop\2720-g-project\group g\src\room.cpp
 	"Room.h"
 
-1520482316 c:\users\gideon\desktop\2720-g-project\group g\include\room.h
+1520486169 c:\users\gideon\desktop\2720-g-project\group g\include\room.h
 	<string>
 	<map>
 	<vector>
+	<exception>
+
+1520490631 source:c:\users\gideon\desktop\2720-g-project\group g\src\map.cpp
+	"Map.h"
+
+1520491320 c:\users\gideon\desktop\2720-g-project\group g\include\map.h
+	"Room.h"
+	"rapidxml_utils.hpp"
+	<string>
+	<cstring>
+	<vector>
+	<iostream>
+	<exception>
+
+1520484809 c:\users\gideon\desktop\2720-g-project\group g\rapidxml\rapidxml_utils.hpp
+	"rapidxml.hpp"
+	<vector>
+	<string>
+	<fstream>
+	<stdexcept>
+
+1242204378 c:\users\gideon\desktop\2720-g-project\group g\rapidxml\rapidxml.hpp
+	<cstdlib>
+	<cassert>
+	<new>
+	<exception>
+
+1520485782 source:c:\users\gideon\desktop\2720-g-project\group g\src\xmldatacollecter.cpp
+	"XMLDataCollecter.h"
+
+1520486137 c:\users\gideon\desktop\2720-g-project\group g\include\xmldatacollecter.h
+	<string>
+	<map>
+	<map>
 

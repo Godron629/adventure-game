@@ -1,11 +1,13 @@
 #include "Room.h"
 
+using std::string;
+
 Room::Room(int id,
-           std::string name,
-           std::string description,
-           std::map<std::string, int> neighbours,
-           std::vector<std::string> npcs,
-           std::vector<std::string> items) {
+           string name,
+           string description,
+           tNeighbours neighbours,
+           tList npcs,
+           tList items) {
     m_id = id;
     m_name = name;
     m_description = description;
@@ -26,24 +28,23 @@ int Room::getId() {
 /**
 @brief Return Room Name, such as Crumbling Signpost or Bathroom.
 */
-std::string Room::getName() {
+string Room::getName() {
     return m_name;
 }
 
 /**
-Return Room Description, such as 'It's a dark Room'
+@brief Return Room Description, such as 'It's a dark Room'
 */
-std::string Room::getDescription() {
+string Room::getDescription() {
     return m_description;
 }
 
 /**
-Return the Id of the Room in some cardinal direction. If there is no room
-in that direction, return -1.
+@brief Return the Id of the Room at direction - If there is no room, return -1.
 @param[in] direction Uppercase cardinal direction (N, E, S, W)
 @throws invalid_argument
 */
-int Room::getNeighbourId(std::string direction) {
+int Room::getNeighbourId(string direction) {
     if (direction == "N" || direction == "E" ||
         direction == "S" || direction == "W") {
         return m_neighbours[direction];
@@ -52,16 +53,16 @@ int Room::getNeighbourId(std::string direction) {
 }
 
 /**
-Return list of npcs within the room
+@brief Return list of npcs within the room
 */
-std::vector<std::string> Room::getNpcs() {
+tList Room::getNpcs() {
     return m_npcs;
 }
 
 /**
-Return list of items in the room
+@brief Return list of items in the room
 */
-std::vector<std::string> Room::getItems() {
+tList Room::getItems() {
     return m_items;
 }
 

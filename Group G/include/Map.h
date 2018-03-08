@@ -2,25 +2,32 @@
 #define MAP_H
 
 #include "Room.h"
+#include "rapidxml_utils.hpp"
 
 #include <string>
+#include <cstring>
 #include <vector>
+#include <iostream>
+#include <exception>
 
 class Map
 {
+    friend class Room;
     public:
         Map();
         virtual ~Map();
-        void generateMapList(std::string filepath);
-        bool changeCurrentRoom(std::string direction);
+
+        void changeCurrentRoom(std::string direction);
         Room* getCurrentRoom();
 
     protected:
 
     private:
-        std::vector<Room*> listOfRooms;
+        std::vector<Room*> m_listOfRooms;
         Room* m_currentRoom;
-        Room* searchMapForRoom(int id);
+
+        Room* searchMapForRoom(int roomId);
+        void generateMapFromXml(std::string filepath);
 };
 
 #endif // MAP_H
