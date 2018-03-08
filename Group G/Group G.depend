@@ -809,3 +809,89 @@
 	<string>
 	<iostream>
 
+1520481375 source:c:\users\gideon\desktop\2720-g-project\group g\main.cpp
+	<iostream>
+	"include/Console.h"
+
+1520481375 c:\users\gideon\desktop\2720-g-project\group g\include\console.h
+	<string>
+	<list>
+	<vector>
+	"Action.h"
+	"Option.h"
+	"Direction.h"
+	"Item.h"
+	"Inventory.h"
+
+1520481375 c:\users\gideon\desktop\2720-g-project\group g\include\action.h
+	<string>
+	"Inventory.h"
+	"Item.h"
+
+1520481375 c:\users\gideon\desktop\2720-g-project\group g\include\inventory.h
+	"Item.h"
+	<string>
+	<vector>
+
+1520481375 c:\users\gideon\desktop\2720-g-project\group g\include\item.h
+	<Option.h>
+	<string>
+	<vector>
+
+1520481375 c:\users\gideon\desktop\2720-g-project\group g\include\option.h
+	<string>
+	<vector>
+
+1520481375 c:\users\gideon\desktop\2720-g-project\group g\include\direction.h
+	<string>
+	<vector>
+	"Option.h"
+
+1520481375 source:c:\users\gideon\desktop\2720-g-project\group g\src\action.cpp
+	"Action.h"
+	<iostream>
+	<string>
+	"Inventory.h"
+	"Item.h"
+	"Console.h"
+
+1520481375 source:c:\users\gideon\desktop\2720-g-project\group g\src\console.cpp
+	"../include/Console.h"
+	<iostream>
+	<string>
+	<cctype>
+	<vector>
+	<algorithm>
+	"Option.h"
+
+1520481375 source:c:\users\gideon\desktop\2720-g-project\group g\src\direction.cpp
+	"Direction.h"
+	"Option.h"
+	<string>
+	<iostream>
+
+1520481375 source:c:\users\gideon\desktop\2720-g-project\group g\src\inventory.cpp
+	"Inventory.h"
+	<iostream>
+	<string>
+	<algorithm>
+	"Option.h"
+
+1520481375 source:c:\users\gideon\desktop\2720-g-project\group g\src\item.cpp
+	"Item.h"
+	"Option.h"
+	<string>
+	<iostream>
+	<vector>
+
+1520481375 source:c:\users\gideon\desktop\2720-g-project\group g\src\option.cpp
+	"Option.h"
+
+1520482188 source:c:\users\gideon\desktop\2720-g-project\group g\src\room.cpp
+	"Room.h"
+
+1520482316 c:\users\gideon\desktop\2720-g-project\group g\include\room.h
+	<string>
+	<map>
+	<vector>
+
