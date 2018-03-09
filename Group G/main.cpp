@@ -7,11 +7,15 @@
 //////////////////////////////////////////////////
 #include <iostream>
 #include "include/Console.h"
+#include "Map.h"
 
 using namespace std;
 
 int main()
 {
+    Map gameMap;
+    gameMap.generateMapFromXml("rooms.xml");
+
     Inventory* inventory = new Inventory();
 
     Console shell = Console(inventory);
