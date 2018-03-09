@@ -10,10 +10,9 @@
 	<S>-1</S>
 	<W>-1</W>
 
-	<Items>thing1</Items>
-	<Items>thing2</Items>
-	<Items>thing3</Items>
-	
+	<Items>key</Items>
+	<Items>helmet</Items>
+
 	<Npcs>Bobby</Npcs>
 	<Npcs>Greg</Npcs>
 
@@ -27,6 +26,8 @@
 	<E>-1</E>
 	<S>0</S>
 	<W>-1</W>
+
+	<Items>stick</Items>
 
     </Room>
 </Rooms>

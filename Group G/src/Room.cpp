@@ -2,12 +2,12 @@
 
 using std::string;
 
-Room::Room(int id,
+Room::Room(string id,
            string name,
            string description,
            tNeighbours neighbours,
-           tList npcs,
-           tList items) {
+           tNpcList npcs,
+           tItemList items) {
     m_id = id;
     m_name = name;
     m_description = description;
@@ -16,12 +16,16 @@ Room::Room(int id,
     m_items = items;
 }
 
-Room::~Room(){}
+Room::~Room(){
+    for (auto i: m_items) {
+        delete i;
+    }
+}
 
 /**
 @brief Returns Room Id. Each Room has a unique Id described in XML map file.
 */
-int Room::getId() {
+string Room::getId() {
     return m_id;
 }
 
@@ -44,7 +48,7 @@ string Room::getDescription() {
 @param[in] direction Uppercase cardinal direction (N, E, S, W)
 @throws invalid_argument
 */
-int Room::getNeighbourId(string direction) {
+string Room::getNeighbourId(string direction) {
     if (direction == "N" || direction == "E" ||
         direction == "S" || direction == "W") {
         return m_neighbours[direction];
@@ -55,14 +59,14 @@ int Room::getNeighbourId(string direction) {
 /**
 @brief Return list of npcs within the room
 */
-tList Room::getNpcs() {
+tNpcList Room::getNpcs() {
     return m_npcs;
 }
 
 /**
 @brief Return list of items in the room
 */
-tList Room::getItems() {
+tItemList Room::getItems() {
     return m_items;
 }
 

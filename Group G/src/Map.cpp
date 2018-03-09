@@ -3,10 +3,15 @@
 using std::cout;
 using std::string;
 using std::vector;
+using std::map;
 
 Map::Map() {}
 
-Map::~Map() {}
+Map::~Map() {
+    for (auto i: m_listOfRooms) {
+        delete i;
+    }
+}
 
 /**
 @brief Returns a pointer to the current room of the player
@@ -20,8 +25,8 @@ Room* Map::getCurrentRoom() {
 @param[in] direction Cardinal direction (N, E, S, W)
 */
 void Map::changeCurrentRoom(string direction) {
-    int neighbourId = m_currentRoom->getNeighbourId(direction);
-    if (neighbourId == -1) {
+    string neighbourId = m_currentRoom->getNeighbourId(direction);
+    if (neighbourId == "-1") {
         cout << "You can't go that way.\n\n";
         return;
     }
@@ -35,7 +40,7 @@ void Map::changeCurrentRoom(string direction) {
 @param[in] roomId Id of the room you want to search for.
 @note should never return nullptr as each room needs an Id to be added to listOfRooms
 */
-Room* Map::searchMapForRoom(int roomId) {
+Room* Map::searchMapForRoom(string roomId) {
     for (Room* i: m_listOfRooms) {
         if (i->getId() == roomId) {
             return i;
@@ -58,9 +63,8 @@ void Map::generateMapFromXml(string filepath) {
         throw std::invalid_argument("Invalid filepath");
     }
 
-    vector<Room*> rooms;
-    vector<string> items;
-    vector<string> npcs;
+    tItemList items;
+    tNpcList npcs;
     tNeighbours neighbours;
 
 	rapidxml::xml_node<> * rootNode;
@@ -77,28 +81,50 @@ void Map::generateMapFromXml(string filepath) {
      room_node = room_node->next_sibling()) {
 
         // Clear information gathered from previous Room
-        int id = -1;
-        string element = "";
-        string name = "";
-        string description = "";
+        string id = "", elementName = "", elementValue = "", name = "", description = "";
         npcs.clear();
         items.clear();
         neighbours.clear();
 
         // Iterate over elements of a single XML Room element
-        for (rapidxml::xml_node<> * name_node = room_node->first_node("Id");
+        for (rapidxml::xml_node<>* name_node = room_node->first_node("Id");
          name_node;
          name_node = name_node->next_sibling()) {
+
+            // Convert node text from char* to string
+            elementName = name_node->name();
+            elementValue = name_node->value();
+
             // Collect information and make Room Object
-            element = name_node->name();
-            if (element == "Id") id = atoi(name_node->value());
-            if (element == "Name") name = name_node->value();
-            if (element == "Description") description = name_node->value();
-            if (element == "Items") items.push_back(name_node->value());
-            if (element == "Npcs") npcs.push_back(name_node->value());
-            if (element == "N" || element == "E" || element == "S" || element == "W") neighbours[element] = atoi(name_node->value());
+            if (elementName == "Id") id = elementValue;
+            if (elementName == "Name") name = elementValue;
+            if (elementName == "Description") description = elementValue;
+            if (elementName == "Items") collectItemsForRoom(elementValue, &items);
+            if (elementName == "Npcs") npcs.push_back(elementValue); // TODO: Change this when NPCs implemented
+            if (elementName == "N" || elementName == "E" ||
+                elementName == "S" || elementName == "W") neighbours[elementName] = elementValue;
         }
         m_listOfRooms.push_back(new Room(id, name, description, neighbours, npcs, items));
 	}
-    m_currentRoom = rooms[0];
+    m_currentRoom = m_listOfRooms[0];
 }
+
+/**
+@brief Make an Item and add it to a list of Items based on parameter itemName
+@param[in] itemName Lowercase name of the item (item must be implemented)
+@param[out] items List of Item pointers
+@note This isn't the greatest solution as it requires an intimate knowledge of
+ the item class. Also I don't think using pointers is necessary
+*/
+void Map::collectItemsForRoom(string itemName, tItemList *items) {
+    if (itemName == "diary") items->push_back(new Diary());
+    if (itemName == "fish food") items->push_back(new FishFood());
+    if (itemName == "gear") items->push_back(new Gear());
+    if (itemName == "helmet") items->push_back(new Helmet());
+    if (itemName == "key") items->push_back(new Key());
+    if (itemName == "pile of bolts") items->push_back(new PileOfBolts());
+    if (itemName == "rat poison") items->push_back(new RatPoison());
+    if (itemName == "rubber tube") items->push_back(new RubberTube());
+    if (itemName == "stick") items->push_back(new Stick());
+}
+

@@ -5,39 +5,40 @@
 #include <map>
 #include <vector>
 #include <exception>
+#include "Item.h"
 
-typedef std::map<std::string, int> tNeighbours;
-typedef std::vector<std::string> tList;
+typedef std::map<std::string, std::string> tNeighbours;
+typedef std::vector<Item*> tItemList;
+typedef std::vector<std::string> tNpcList;
 
 class Room {
     friend class Map;
     public:
         Room(
-            int id,
+            std::string id,
             std::string name,
             std::string description,
             tNeighbours neighbours,
-            tList npcs,
-            tList items
+            tNpcList npcs,
+            tItemList items
         );
         virtual ~Room();
-        int getId();
+        std::string getId();
         std::string getName();
         std::string getDescription();
-        tList getNpcs();
-        tList getItems();
+        tNpcList getNpcs();
+        tItemList getItems();
 
     protected:
-        int getNeighbourId(std::string direction);
+        std::string getNeighbourId(std::string direction);
 
     private:
-        int m_id;
+        std::string m_id;
         std::string m_name;
         std::string m_description;
         tNeighbours m_neighbours;
-        tList m_npcs;
-        tList m_items;
-
+        tNpcList m_npcs;
+        tItemList m_items;
 };
 
 #endif // ROOM_H

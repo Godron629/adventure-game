@@ -9,6 +9,7 @@
 #include <vector>
 #include <iostream>
 #include <exception>
+#include "Item.h"
 
 class Map
 {
@@ -17,17 +18,17 @@ class Map
         Map();
         virtual ~Map();
 
-        void changeCurrentRoom(std::string direction);
         Room* getCurrentRoom();
+        void changeCurrentRoom(std::string direction);
+        void generateMapFromXml(std::string filepath);
 
     protected:
 
     private:
         std::vector<Room*> m_listOfRooms;
         Room* m_currentRoom;
-
-        Room* searchMapForRoom(int roomId);
-        void generateMapFromXml(std::string filepath);
+        Room* searchMapForRoom(std::string roomId);
+        void collectItemsForRoom(std::string itemName, tItemList *items);
 };
 
 #endif // MAP_H
