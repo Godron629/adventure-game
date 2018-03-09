@@ -22,7 +22,7 @@
 	<Name>Driveway</Name>
 	<Description>It's driveway, in a time without cars</Description>
 
-	<N>2</N>
+	<N>-1</N>
 	<E>-1</E>
 	<S>0</S>
 	<W>-1</W>

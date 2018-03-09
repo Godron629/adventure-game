@@ -1,5 +1,7 @@
 #include "Room.h"
 
+#include <exception>
+
 using std::string;
 
 Room::Room(string id,

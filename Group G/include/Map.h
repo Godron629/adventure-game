@@ -2,14 +2,10 @@
 #define MAP_H
 
 #include "Room.h"
-#include "rapidxml_utils.hpp"
 
 #include <string>
-#include <cstring>
 #include <vector>
-#include <iostream>
-#include <exception>
-#include "Item.h"
+
 
 class Map
 {

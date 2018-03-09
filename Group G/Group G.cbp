@@ -45,6 +45,7 @@
 		<Unit filename="include/Option.h" />
 		<Unit filename="include/Room.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="rooms.xml" />
 		<Unit filename="src/Action.cpp" />
 		<Unit filename="src/Console.cpp" />
 		<Unit filename="src/Direction.cpp" />

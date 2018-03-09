@@ -4,7 +4,6 @@
 #include <string>
 #include <map>
 #include <vector>
-#include <exception>
 #include "Item.h"
 
 typedef std::map<std::string, std::string> tNeighbours;

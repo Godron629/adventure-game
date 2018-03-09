@@ -1,5 +1,11 @@
 #include "Map.h"
 
+#include <iostream>
+#include <exception>
+#include <cstring>
+#include "Item.h"
+#include "rapidxml_utils.hpp"
+
 using std::cout;
 using std::string;
 using std::vector;
