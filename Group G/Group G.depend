@@ -931,3 +931,119 @@
 	<map>
 	<map>
 
+1520641189 source:a:\documents\2720-g-project\group g\main.cpp
+	<iostream>
+	"include/Console.h"
+	"Map.h"
+
+1520639893 a:\documents\2720-g-project\group g\include\console.h
+	<string>
+	<list>
+	<vector>
+	"Action.h"
+	"Option.h"
+	"Direction.h"
+	"Item.h"
+	"Inventory.h"
+
+1520635953 a:\documents\2720-g-project\group g\include\action.h
+	<string>
+	"Inventory.h"
+	"Item.h"
+
+1520635382 a:\documents\2720-g-project\group g\include\inventory.h
+	"Item.h"
+	<string>
+	<vector>
+
+1520636058 a:\documents\2720-g-project\group g\include\item.h
+	<Option.h>
+	<string>
+	<vector>
+
+1520635382 a:\documents\2720-g-project\group g\include\option.h
+	<string>
+	<vector>
+
+1520635382 a:\documents\2720-g-project\group g\include\direction.h
+	<string>
+	<vector>
+	"Option.h"
+
+1520635382 a:\documents\2720-g-project\group g\include\map.h
+	"Room.h"
+	<string>
+	<vector>
+
+1520635382 a:\documents\2720-g-project\group g\include\room.h
+	<string>
+	<map>
+	<vector>
+	"Item.h"
+
+1520635382 source:a:\documents\2720-g-project\group g\src\direction.cpp
+	"Direction.h"
+	"Option.h"
+	<string>
+	<iostream>
+
+1520635382 source:a:\documents\2720-g-project\group g\src\inventory.cpp
+	"Inventory.h"
+	<iostream>
+	<string>
+	<algorithm>
+	"Option.h"
+
+1520636077 source:a:\documents\2720-g-project\group g\src\item.cpp
+	"Item.h"
+	"Option.h"
+	<string>
+	<iostream>
+	<vector>
+
+1520636145 source:a:\documents\2720-g-project\group g\src\map.cpp
+	"Map.h"
+	<iostream>
+	<exception>
+	<cstring>
+	"Item.h"
+	"rapidxml_utils.hpp"
+
+1520635382 a:\documents\2720-g-project\group g\rapidxml\rapidxml_utils.hpp
+	"rapidxml.hpp"
+	<vector>
+	<string>
+	<fstream>
+	<stdexcept>
+
+1520635382 a:\documents\2720-g-project\group g\rapidxml\rapidxml.hpp
+	<cstdlib>
+	<cassert>
+	<new>
+	<exception>
+
+1520635382 source:a:\documents\2720-g-project\group g\src\option.cpp
+	"Option.h"
+
+1520635382 source:a:\documents\2720-g-project\group g\src\room.cpp
+	"Room.h"
+	<exception>
+
+1520637332 source:a:\documents\2720-g-project\group g\src\action.cpp
+	"Action.h"
+	<iostream>
+	<string>
+	"Inventory.h"
+	"Item.h"
+	"Console.h"
+
+1520641176 source:a:\documents\2720-g-project\group g\src\console.cpp
+	"../include/Console.h"
+	<iostream>
+	<string>
+	<cctype>
+	<vector>
+	<fstream>
+	<algorithm>
+	"Option.h"
+

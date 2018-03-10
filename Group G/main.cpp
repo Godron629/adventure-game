@@ -20,6 +20,8 @@ int main()
 
     Console shell = Console(inventory);
 
+    shell.PrintArt("start.txt");
+
     shell.Run();
 
     return 0;

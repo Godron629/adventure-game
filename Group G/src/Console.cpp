@@ -3,6 +3,7 @@
 #include <string>
 #include <cctype>
 #include <vector>
+#include <fstream>
 #include <algorithm>
 #include "Option.h"
 using namespace std;
@@ -15,9 +16,28 @@ Console::Console(Inventory* inv)
     Actions.insert(Actions.end(),new List(_inventory));
     //ctor
 }
-void Console::ConsoleStart()
+void Console::PrintArt(string filepath)
 {
-    cout << "\t\tWelcome to dis litttt ass game. Don't die and stuff."<<endl<<endl;
+    string art;
+    ifstream infile;
+
+    try
+    {
+        infile.open(filepath);
+        if(!infile.is_open())
+            throw invalid_argument("Invalid file path...");
+        while(!infile.eof())
+        {
+            getline(infile, art);
+            cout<<art<<endl;
+        }
+
+        infile.close();
+    }
+    catch(invalid_argument &e)
+    {
+        cerr<<e.what()<<endl;
+    }
 }
 void Console::Prompt()
 {
@@ -66,22 +86,16 @@ void Console::ParseCommand()
             case Inv:
                 if(dynamic_cast<Direction*>(currentOption) == nullptr)
                 {
-                    if(currentAction->GetDescription() == "read")
-                        currentAction->PerformAction((Book*)currentOption);
-                    else
+                    try
                     {
-                        try
-                        {
-                            currentAction->PerformAction((Item*)currentOption,_inventory);
-                            currentOption->GetObject();
-                            cout<<endl<<endl;
-                        }
-                        catch(invalid_argument e)
-                        {
-                            cout<<e.what()<<endl<<endl;
-                        }
+                        currentAction->PerformAction((Item*)currentOption,_inventory);
+                        currentOption->GetObject();
+                        cout<<endl<<endl;
                     }
-
+                    catch(invalid_argument e)
+                    {
+                        cout<<e.what()<<endl<<endl;
+                    }
                 }
                 else
                     ErrorMessage();
@@ -135,7 +149,6 @@ string Console::GetFirst(string input)
 
 void Console::Run()
 {
-    ConsoleStart();
     while(!_flag)
     {
         Prompt();

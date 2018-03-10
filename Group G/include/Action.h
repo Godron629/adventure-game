@@ -19,7 +19,6 @@ class Action
         virtual ActionType GetType()=0;
         virtual bool PerformAction()=0;
         virtual void PerformAction(Item*, Inventory*);
-        virtual void PerformAction(Book*);
     protected:
 
     private:
@@ -139,7 +138,6 @@ class Read : public Action
         std::string GetDescription();
         ActionType GetType();
         bool PerformAction();
-        void PerformAction(Book* book);
 };
 
 #endif // ACTION_H

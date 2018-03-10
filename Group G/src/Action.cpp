@@ -18,7 +18,6 @@ Action::~Action()
 }
 
 void Action::PerformAction(Item* newItem,Inventory* currentInventory){}
-void Action::PerformAction(Book* book){}
 
 Drop::Drop()
 {
@@ -241,23 +240,4 @@ bool Read::PerformAction()
     cout<<action;
     return false;
 }
-void Read::PerformAction(Book* book)
-{
-    vector<string> tempEntries = book->GetEntries();
-
-    cout<<"\tCONTENTS:\n"<<endl;
-
-    if(tempEntries.begin() == tempEntries.end())
-        cout<<"*empty*";
-
-
-    for(auto i: tempEntries)
-    {
-        string tempEnty = i;
-        cout<<"\t"<<tempEnty<<endl;
-    }
-
-    cout <<endl;
-}
-
 

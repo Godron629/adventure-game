@@ -19,37 +19,6 @@ class Item : public Option
 
 };
 
-class Book : public Item
-{
-    public:
-        Book();
-        virtual ~Book();
-        std::string description;
-        std::string object;
-        std::vector<std::string> entries;
-        virtual std::string GetDescription()=0;
-        virtual void GetObject()=0;
-        virtual std::vector<std::string> GetEntries()=0;
-
-    protected:
-
-    private:
-};
-
-class Diary : public Book
-{
-    public:
-        Diary();
-        virtual ~Diary();
-        void AddEntry(std::string);
-    protected:
-
-    private:
-        virtual std::string GetDescription();
-        virtual void GetObject();
-        virtual std::vector<std::string> GetEntries();
-};
-
 class FishFood : public Item
 {
     public:

@@ -22,14 +22,14 @@ class Console
         std::string ConvertStringToLower(std::string original);
 
         bool _flag;
-        void ConsoleStart();
+        void PrintArt(std::string);
         void Prompt();
         void ParseCommand();
         void Run();
         void ErrorMessage();
         std::vector<Action*> Actions = {new Move(),new Drop(),new Grab(), new Read(),new Look(), new Help(), new Quit()};
 
-        std::vector<Option*> Options = {new North(),new South(), new East(), new West(), new Key(), new Helmet(), new Stick(),new RubberTube(),new Gear(), new PileOfBolts(), new FishFood(), new RatPoison(), new Diary()};
+        std::vector<Option*> Options = {new North(),new South(), new East(), new West(), new Key(), new Helmet(), new Stick(),new RubberTube(),new Gear(), new PileOfBolts(), new FishFood(), new RatPoison()};
 
     protected:
 

@@ -123,7 +123,6 @@ void Map::generateMapFromXml(string filepath) {
  the item class. Also I don't think using pointers is necessary
 */
 void Map::collectItemsForRoom(string itemName, tItemList *items) {
-    if (itemName == "diary") items->push_back(new Diary());
     if (itemName == "fish food") items->push_back(new FishFood());
     if (itemName == "gear") items->push_back(new Gear());
     if (itemName == "helmet") items->push_back(new Helmet());
