@@ -12,11 +12,12 @@
 class Console
 {
     public:
-        Console(Inventory*);
+        Console(Inventory*, Map*);
         virtual ~Console();
         std::string _input;
         std::string _command;
         Inventory* _inventory;
+        Map* _gameMap;
         std::string GetFirst(std::string input);
         std::string GetSecond(std::string input);
         std::string ConvertStringToLower(std::string original);

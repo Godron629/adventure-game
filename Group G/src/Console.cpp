@@ -7,12 +7,13 @@
 #include <algorithm>
 #include "Option.h"
 using namespace std;
-Console::Console(Inventory* inv)
+Console::Console(Inventory* inv, Map* gameMap)
 {
     _flag = false;
     _input = "";
     _command = "";
     _inventory = inv;
+    _gameMap = gameMap;
     Actions.insert(Actions.end(),new List(_inventory));
     //ctor
 }
@@ -77,8 +78,7 @@ void Console::ParseCommand()
             case Dir:
                 if(dynamic_cast<Item*>(currentOption) == nullptr)
                 {
-                    currentAction->PerformAction();
-                    currentOption->GetObject();
+                    currentAction->PerformAction((Direction*)currentOption, _gameMap);
                 }
                 else
                     ErrorMessage();

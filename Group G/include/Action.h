@@ -3,6 +3,8 @@
 #include <string>
 
 #include "Inventory.h"
+#include "Direction.h"
+#include "Map.h"
 #include "Item.h"
 enum ActionType {Dir, Inv, Sys};
 
@@ -19,6 +21,8 @@ class Action
         virtual ActionType GetType()=0;
         virtual bool PerformAction()=0;
         virtual void PerformAction(Item*, Inventory*);
+        virtual void PerformAction(Direction*, Map*);
+
     protected:
 
     private:
@@ -110,6 +114,7 @@ class Move : public Action
         std::string GetDescription();
         ActionType GetType();
         bool PerformAction();
+        void PerformAction(Direction*, Map*);
 };
 
 class Quit : public Action

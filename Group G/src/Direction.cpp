@@ -19,6 +19,7 @@ East::East()
     //ctor
     description = "east";
     object = "East";
+    cardinal = "E";
 }
 
 East::~East()
@@ -33,12 +34,17 @@ void East::GetObject()
 {
     cout<<object<<endl<<endl;
 }
+string East::GetCardinal()
+{
+    return cardinal;
+}
 
 North::North()
 {
     //ctor
     description = "north";
     object = "North";
+    cardinal = "N";
 }
 
 North::~North()
@@ -53,12 +59,16 @@ void North::GetObject()
 {
     cout<<object<<endl<<endl;
 }
-
+string North::GetCardinal()
+{
+    return cardinal;
+}
 South::South()
 {
     //ctor
     description = "south";
     object = "South";
+    cardinal = "S";
 }
 
 South::~South()
@@ -73,12 +83,16 @@ void South::GetObject()
 {
     cout<<object<<endl<<endl;
 }
-
+string South::GetCardinal()
+{
+    return cardinal;
+}
 West::West()
 {
     //ctor
     description = "west";
     object = "West";
+    cardinal = "W";
 }
 
 West::~West()
@@ -92,4 +106,8 @@ string West::GetDescription()
 void West::GetObject()
 {
     cout<<object<<endl<<endl;
+}
+string West::GetCardinal()
+{
+    return cardinal;
 }

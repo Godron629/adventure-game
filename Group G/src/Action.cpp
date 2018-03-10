@@ -18,7 +18,7 @@ Action::~Action()
 }
 
 void Action::PerformAction(Item* newItem,Inventory* currentInventory){}
-
+void Action::PerformAction(Direction* dir, Map* gameMap){}
 Drop::Drop()
 {
     //ctor
@@ -183,12 +183,16 @@ ActionType Move::GetType()
 {
     return type;
 }
+void Move::PerformAction(Direction* dir, Map* gameMap)
+{
+    gameMap->changeCurrentRoom(dir->GetCardinal());
+}
 bool Move::PerformAction()
 {
     cout<<action;
+
     return false;
 }
-
 Quit::Quit()
 {
     //ctor
