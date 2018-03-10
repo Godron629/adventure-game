@@ -21,6 +21,7 @@ class Action
         virtual ActionType GetType()=0;
         virtual bool PerformAction()=0;
         virtual void PerformAction(Item* newItem, Inventory* currentInventory, Room* currentRoom);
+        virtual void PerformAction(Room* currentRoom);
         virtual void PerformAction(Direction*, Map*);
 
     protected:
@@ -85,6 +86,7 @@ class Look : public Action
         std::string GetDescription();
         ActionType GetType();
         bool PerformAction();
+        void PerformAction(Room*);
 };
 
 class List : public Action

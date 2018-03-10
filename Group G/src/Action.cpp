@@ -18,6 +18,7 @@ Action::~Action()
 }
 
 void Action::PerformAction(Item* newItem,Inventory* currentInventory, Room* currentRoom){}
+void Action::PerformAction(Room* currentRoom){}
 void Action::PerformAction(Direction* dir, Map* gameMap){}
 Drop::Drop()
 {
@@ -92,9 +93,6 @@ void Grab::PerformAction(Item* newItem, Inventory* currentInventory, Room* curre
     }
     if(!exists)
         cout<<"Sorry that item does not exist in this room !"<<endl<<endl;
-
-
-
 }
 
 Help::Help()
@@ -156,7 +154,7 @@ Look::Look()
     //ctor
     description = "look";
     action = "Looking ";
-    type = Dir;
+    type = Sys;
 }
 
 Look::~Look()
@@ -175,6 +173,26 @@ bool Look::PerformAction()
 {
     cout<<action;
     return false;
+}
+void Look::PerformAction(Room* currentRoom)
+{
+    cout<<"Room Contains: ";
+
+    int numOfItems = currentRoom->getItems().size();
+    if(numOfItems == 0)
+        cout<<"*empty*";
+
+    for(int i = 0; i < numOfItems; i++)
+    {
+        Item* tempItem = currentRoom->getItems()[i];
+        tempItem->GetObject();
+
+        if(i != numOfItems-1)
+            cout<<" | ";
+    }
+
+    cout<<endl<<endl;
+
 }
 
 Move::Move()

@@ -30,14 +30,17 @@ void Inventory::Drop(Item* droppedItem)
 }
 void Inventory::List()
 {
-    if(inventory.begin() == inventory.end())
+    int numOfItems = inventory.size();
+    if(numOfItems == 0)
         cout<<"*empty*";
 
-    for(auto i: inventory)
+    for(int i = 0; i < numOfItems; i++)
     {
-        Item* tempItem = i;
+        Item* tempItem = inventory[i];
         tempItem->GetObject();
-        cout<<" | ";
+
+        if(i != numOfItems-1)
+            cout<<" | ";
     }
 
     cout<<endl<<endl;

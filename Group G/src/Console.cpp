@@ -97,8 +97,13 @@ void Console::ParseCommand()
                     ErrorMessage();
                 break;
             case Sys:
-                Actions.insert(Actions.end(),new List(_inventory));
-                _flag = currentAction->PerformAction();
+                if(dynamic_cast<Look*>(currentAction) != nullptr)
+                    currentAction->PerformAction(_gameMap->getCurrentRoom());
+                else
+                {
+                    Actions.insert(Actions.end(),new List(_inventory));
+                    _flag = currentAction->PerformAction();
+                }
                 break;
             default:
                 ErrorMessage();
