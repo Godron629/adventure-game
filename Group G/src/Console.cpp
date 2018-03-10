@@ -77,9 +77,7 @@ void Console::ParseCommand()
         {
             case Dir:
                 if(dynamic_cast<Item*>(currentOption) == nullptr)
-                {
                     currentAction->PerformAction((Direction*)currentOption, _gameMap);
-                }
                 else
                     ErrorMessage();
                 break;
@@ -88,9 +86,7 @@ void Console::ParseCommand()
                 {
                     try
                     {
-                        currentAction->PerformAction((Item*)currentOption,_inventory);
-                        currentOption->GetObject();
-                        cout<<endl<<endl;
+                        currentAction->PerformAction((Item*)currentOption,_inventory, _gameMap->getCurrentRoom());
                     }
                     catch(invalid_argument e)
                     {

@@ -20,7 +20,7 @@ class Action
         virtual std::string GetDescription()=0;
         virtual ActionType GetType()=0;
         virtual bool PerformAction()=0;
-        virtual void PerformAction(Item*, Inventory*);
+        virtual void PerformAction(Item* newItem, Inventory* currentInventory, Room* currentRoom);
         virtual void PerformAction(Direction*, Map*);
 
     protected:
@@ -41,7 +41,7 @@ class Drop : public Action
         ActionType GetType();
         std::string GetDescription();
         bool PerformAction();
-        void PerformAction(Item*,Inventory*);
+        void PerformAction(Item*,Inventory*,Room*);
 };
 
 class Grab : public Action
@@ -55,7 +55,7 @@ class Grab : public Action
         std::string GetDescription();
         ActionType GetType();
         bool PerformAction();
-        void PerformAction(Item*,Inventory*);
+        void PerformAction(Item*,Inventory*,Room*);
 };
 
 class Help : public Action

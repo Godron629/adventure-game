@@ -17,7 +17,7 @@ Action::~Action()
     //dtor
 }
 
-void Action::PerformAction(Item* newItem,Inventory* currentInventory){}
+void Action::PerformAction(Item* newItem,Inventory* currentInventory, Room* currentRoom){}
 void Action::PerformAction(Direction* dir, Map* gameMap){}
 Drop::Drop()
 {
@@ -44,10 +44,11 @@ bool Drop::PerformAction()
     cout<<action;
     return false;
 }
-void Drop::PerformAction(Item* newItem, Inventory* currentInventory)
+void Drop::PerformAction(Item* newItem, Inventory* currentInventory, Room* currentRoom)
 {
     currentInventory->Drop(newItem);
-    cout<<"Dropping: ";
+    //drop item into room. AddItem() in room.
+    cout<<"Dropping: "<<newItem->GetDescription()<<endl<<endl;
 }
 
 using namespace std;
@@ -77,10 +78,23 @@ bool Grab::PerformAction()
 
     return false;
 }
-void Grab::PerformAction(Item* newItem, Inventory* currentInventory)
+void Grab::PerformAction(Item* newItem, Inventory* currentInventory, Room* currentRoom)
 {
-    currentInventory->Add(newItem);
-    cout<<"Grabbing: ";
+    bool exists = false;
+    for(auto i: currentRoom->getItems())
+    {
+        if(i->GetDescription() == newItem->GetDescription())
+        {
+            currentInventory->Add(newItem);
+            cout<<"Grabbing: "<<newItem->GetDescription()<<endl<<endl;
+            exists = true;
+        }
+    }
+    if(!exists)
+        cout<<"Sorry that item does not exist in this room !"<<endl<<endl;
+
+
+
 }
 
 Help::Help()
