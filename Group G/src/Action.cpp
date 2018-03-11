@@ -49,7 +49,7 @@ void Drop::PerformAction(Item* newItem, Inventory* currentInventory, Room* curre
 {
     currentInventory->Drop(newItem);
     //drop item into room. AddItem() in room.
-    cout<<"Dropping: "<<newItem->GetDescription()<<endl<<endl;
+    cout<<"Dropping: "<<newItem->GetObject()<<endl<<endl;
 }
 
 using namespace std;
@@ -81,18 +81,17 @@ bool Grab::PerformAction()
 }
 void Grab::PerformAction(Item* newItem, Inventory* currentInventory, Room* currentRoom)
 {
-    bool exists = false;
     for(auto i: currentRoom->getItems())
     {
         if(i->GetDescription() == newItem->GetDescription())
         {
             currentInventory->Add(newItem);
-            cout<<"Grabbing: "<<newItem->GetDescription()<<endl<<endl;
-            exists = true;
+            cout<<"Grabbing: "<<newItem->GetObject()<<endl<<endl;
+            return;
         }
     }
-    if(!exists)
-        cout<<"Sorry that item does not exist in this room !"<<endl<<endl;
+    cout<<"Sorry that item does not exist in this room !"<<endl<<endl;
+    return;
 }
 
 Help::Help()
@@ -176,23 +175,22 @@ bool Look::PerformAction()
 }
 void Look::PerformAction(Room* currentRoom)
 {
-    cout<<"Room Contains: ";
+    string toPrint = "Room Contains: ";
 
     int numOfItems = currentRoom->getItems().size();
+
     if(numOfItems == 0)
-        cout<<"*empty*";
+        toPrint.append("*empty*");
+
 
     for(int i = 0; i < numOfItems; i++)
     {
-        Item* tempItem = currentRoom->getItems()[i];
-        tempItem->GetObject();
+        toPrint.append(currentRoom->getItems()[i]->GetObject());
 
-        if(i != numOfItems-1)
-            cout<<" | ";
+        if (i != numOfItems-1)
+            toPrint.append(" | ");
     }
-
-    cout<<endl<<endl;
-
+    cout << toPrint << endl << endl;
 }
 
 Move::Move()

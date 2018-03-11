@@ -31,17 +31,18 @@ void Inventory::Drop(Item* droppedItem)
 void Inventory::List()
 {
     int numOfItems = inventory.size();
+
+    string toPrint = "";
+
     if(numOfItems == 0)
-        cout<<"*empty*";
+        toPrint.append("*empty*");
 
     for(int i = 0; i < numOfItems; i++)
     {
-        Item* tempItem = inventory[i];
-        tempItem->GetObject();
+        toPrint.append(inventory[i]->GetObject());
 
-        if(i != numOfItems-1)
-            cout<<" | ";
+        if (i != numOfItems-1)
+            toPrint.append(" | ");
     }
-
-    cout<<endl<<endl;
+    cout << toPrint << endl << endl;
 }

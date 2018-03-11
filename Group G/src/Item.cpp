@@ -32,9 +32,9 @@ string FishFood::GetDescription()
 {
     return description;
 }
-void FishFood::GetObject()
+string FishFood::GetObject()
 {
-    cout<<object;
+    return object;
 }
 
 Gear::Gear()
@@ -52,9 +52,9 @@ string Gear::GetDescription()
 {
     return description;
 }
-void Gear::GetObject()
+string Gear::GetObject()
 {
-    cout<<object;
+    return object;
 }
 
 Helmet::Helmet()
@@ -72,9 +72,9 @@ string Helmet::GetDescription()
 {
     return description;
 }
-void Helmet::GetObject()
+string Helmet::GetObject()
 {
-    cout<<object;
+    return object;
 }
 
 Key::Key()
@@ -93,9 +93,9 @@ string Key::GetDescription()
 {
     return description;
 }
-void Key::GetObject()
+string Key::GetObject()
 {
-    cout<<object;
+    return object;
 }
 
 PileOfBolts::PileOfBolts()
@@ -113,9 +113,9 @@ string PileOfBolts::GetDescription()
 {
     return description;
 }
-void PileOfBolts::GetObject()
+string PileOfBolts::GetObject()
 {
-    cout<<object;
+    return object;
 }
 
 RatPoison::RatPoison()
@@ -133,9 +133,9 @@ string RatPoison::GetDescription()
 {
     return description;
 }
-void RatPoison::GetObject()
+string RatPoison::GetObject()
 {
-    cout<<object;
+    return object;
 }
 
 RubberTube::RubberTube()
@@ -153,9 +153,9 @@ string RubberTube::GetDescription()
 {
     return description;
 }
-void RubberTube::GetObject()
+string RubberTube::GetObject()
 {
-    cout<<object;
+    return object;
 }
 
 Stick::Stick()
@@ -173,9 +173,9 @@ string Stick::GetDescription()
 {
     return description;
 }
-void Stick::GetObject()
+string Stick::GetObject()
 {
-    cout<<object;
+    return object;
 }
 
 

@@ -12,7 +12,7 @@ class Item : public Option
         std::string description;
         std::string object;
         virtual std::string GetDescription()=0;
-        virtual void GetObject()=0;
+        virtual std::string GetObject()=0;
     protected:
 
     private:
@@ -29,7 +29,7 @@ class FishFood : public Item
 
     private:
         virtual std::string GetDescription();
-        virtual void GetObject();
+        virtual std::string GetObject();
 };
 
 class Gear : public Item
@@ -42,7 +42,7 @@ class Gear : public Item
 
     private:
         virtual std::string GetDescription();
-        virtual void GetObject();
+        virtual std::string GetObject();
 };
 
 class Helmet : public Item
@@ -55,7 +55,7 @@ class Helmet : public Item
 
     private:
         virtual std::string GetDescription();
-        virtual void GetObject();
+        virtual std::string GetObject();
 };
 
 class Key : public Item
@@ -68,7 +68,7 @@ class Key : public Item
     private:
 
         virtual std::string GetDescription();
-        virtual void GetObject();
+        virtual std::string GetObject();
 };
 
 class PileOfBolts : public Item
@@ -81,7 +81,7 @@ class PileOfBolts : public Item
 
     private:
         virtual std::string GetDescription();
-        virtual void GetObject();
+        virtual std::string GetObject();
 };
 
 
@@ -95,7 +95,7 @@ class RatPoison : public Item
 
     private:
         virtual std::string GetDescription();
-        virtual void GetObject();
+        virtual std::string GetObject();
 };
 
 
@@ -109,7 +109,7 @@ class RubberTube : public Item
 
     private:
         virtual std::string GetDescription();
-        virtual void GetObject();
+        virtual std::string GetObject();
 };
 
 
@@ -123,7 +123,7 @@ class Stick : public Item
 
     private:
         virtual std::string GetDescription();
-        virtual void GetObject();
+        virtual std::string GetObject();
 };
 #endif // ITEM_H
 

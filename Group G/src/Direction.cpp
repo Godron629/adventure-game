@@ -30,9 +30,9 @@ string East::GetDescription()
 {
     return description;
 }
-void East::GetObject()
+string East::GetObject()
 {
-    cout<<object<<endl<<endl;
+    return object;
 }
 string East::GetCardinal()
 {
@@ -55,9 +55,9 @@ string North::GetDescription()
 {
     return description;
 }
-void North::GetObject()
+string North::GetObject()
 {
-    cout<<object<<endl<<endl;
+    return object;
 }
 string North::GetCardinal()
 {
@@ -79,9 +79,9 @@ string South::GetDescription()
 {
     return description;
 }
-void South::GetObject()
+string South::GetObject()
 {
-    cout<<object<<endl<<endl;
+    return object;
 }
 string South::GetCardinal()
 {
@@ -103,9 +103,9 @@ string West::GetDescription()
 {
     return description;
 }
-void West::GetObject()
+string West::GetObject()
 {
-    cout<<object<<endl<<endl;
+    return object;
 }
 string West::GetCardinal()
 {
