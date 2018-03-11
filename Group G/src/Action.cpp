@@ -17,9 +17,9 @@ Action::~Action()
     //dtor
 }
 
-void Action::PerformAction(Item* newItem,Inventory* currentInventory){}
-void Action::PerformAction(Book* book){}
-
+void Action::PerformAction(Item* newItem,Inventory* currentInventory, Room* currentRoom){}
+void Action::PerformAction(Room* currentRoom){}
+void Action::PerformAction(Direction* dir, Map* gameMap){}
 Drop::Drop()
 {
     //ctor
@@ -45,10 +45,11 @@ bool Drop::PerformAction()
     cout<<action;
     return false;
 }
-void Drop::PerformAction(Item* newItem, Inventory* currentInventory)
+void Drop::PerformAction(Item* newItem, Inventory* currentInventory, Room* currentRoom)
 {
     currentInventory->Drop(newItem);
-    cout<<"Dropping: ";
+    //drop item into room. AddItem() in room.
+    cout<<"Dropping: "<<newItem->GetObject()<<endl<<endl;
 }
 
 using namespace std;
@@ -78,10 +79,19 @@ bool Grab::PerformAction()
 
     return false;
 }
-void Grab::PerformAction(Item* newItem, Inventory* currentInventory)
+void Grab::PerformAction(Item* newItem, Inventory* currentInventory, Room* currentRoom)
 {
-    currentInventory->Add(newItem);
-    cout<<"Grabbing: ";
+    for(auto i: currentRoom->getItems())
+    {
+        if(i->GetDescription() == newItem->GetDescription())
+        {
+            currentInventory->Add(newItem);
+            cout<<"Grabbing: "<<newItem->GetObject()<<endl<<endl;
+            return;
+        }
+    }
+    cout<<"Sorry that item does not exist in this room !"<<endl<<endl;
+    return;
 }
 
 Help::Help()
@@ -143,7 +153,7 @@ Look::Look()
     //ctor
     description = "look";
     action = "Looking ";
-    type = Dir;
+    type = Sys;
 }
 
 Look::~Look()
@@ -162,6 +172,25 @@ bool Look::PerformAction()
 {
     cout<<action;
     return false;
+}
+void Look::PerformAction(Room* currentRoom)
+{
+    string toPrint = "Room Contains: ";
+
+    int numOfItems = currentRoom->getItems().size();
+
+    if(numOfItems == 0)
+        toPrint.append("*empty*");
+
+
+    for(int i = 0; i < numOfItems; i++)
+    {
+        toPrint.append(currentRoom->getItems()[i]->GetObject());
+
+        if (i != numOfItems-1)
+            toPrint.append(" | ");
+    }
+    cout << toPrint << endl << endl;
 }
 
 Move::Move()
@@ -184,12 +213,16 @@ ActionType Move::GetType()
 {
     return type;
 }
+void Move::PerformAction(Direction* dir, Map* gameMap)
+{
+    gameMap->changeCurrentRoom(dir->GetCardinal());
+}
 bool Move::PerformAction()
 {
     cout<<action;
+
     return false;
 }
-
 Quit::Quit()
 {
     //ctor
@@ -241,23 +274,4 @@ bool Read::PerformAction()
     cout<<action;
     return false;
 }
-void Read::PerformAction(Book* book)
-{
-    vector<string> tempEntries = book->GetEntries();
-
-    cout<<"\tCONTENTS:\n"<<endl;
-
-    if(tempEntries.begin() == tempEntries.end())
-        cout<<"*empty*";
-
-
-    for(auto i: tempEntries)
-    {
-        string tempEnty = i;
-        cout<<"\t"<<tempEnty<<endl;
-    }
-
-    cout <<endl;
-}
-
 

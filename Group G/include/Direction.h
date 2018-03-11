@@ -13,7 +13,9 @@ class Direction : public Option
         std::string description;
         virtual std::string GetDescription()=0;
         std::string object;
-        virtual void GetObject()=0;
+        virtual std::string GetObject()=0;
+        std::string cardinal;
+        virtual std::string GetCardinal()=0;
     protected:
 
     private:
@@ -30,7 +32,8 @@ class East : public Direction
 
     private:
         virtual std::string GetDescription();
-        virtual void GetObject();
+        virtual std::string GetObject();
+        virtual std::string GetCardinal();
 };
 
 class North : public Direction
@@ -43,7 +46,8 @@ class North : public Direction
 
     private:
         virtual std::string GetDescription();
-        virtual void GetObject();
+        virtual std::string GetObject();
+        virtual std::string GetCardinal();
 };
 
 class South : public Direction
@@ -56,7 +60,8 @@ class South : public Direction
 
     private:
         virtual std::string GetDescription();
-        virtual void GetObject();
+        virtual std::string GetObject();
+        virtual std::string GetCardinal();
 };
 
 class West : public Direction
@@ -69,6 +74,7 @@ class West : public Direction
 
     private:
         virtual std::string GetDescription();
-        virtual void GetObject();
+        virtual std::string GetObject();
+        virtual std::string GetCardinal();
 };
 #endif // DIRECTION_H

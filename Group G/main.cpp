@@ -13,12 +13,14 @@ using namespace std;
 
 int main()
 {
-    Map gameMap;
-    gameMap.generateMapFromXml("rooms.xml");
+    Map* gameMap = new Map();
+    gameMap->generateMapFromXml("rooms.xml");
 
     Inventory* inventory = new Inventory();
 
-    Console shell = Console(inventory);
+    Console shell = Console(inventory, gameMap);
+
+    shell.PrintArt("start.txt");
 
     shell.Run();
 
