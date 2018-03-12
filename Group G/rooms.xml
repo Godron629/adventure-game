@@ -160,7 +160,18 @@ What kind of 3-bit operation is this place? You wonder. </Description>
 <Room>
 <Id>50</Id>
 <Name>Mad Laboratory</Name>
-<Description></Description>
+<Description>There are a myriad of whizzing, whirring machines and
+dirty alchemical equipment. 
+
+The floor is scattered with papers and feathers, and the walls plastered with drawings 
+of what looks like Florence, Italy.
+ 
+There is a man in a white robe hunched over a workbench. He's got wild, white hair, 
+and is wearing one of those telescopic monocles. 
+ 
+There is a duck sitting in a chair reading a newspaper. 
+ 
+Neither of them raise alarm at your presence.</Description>
 <N>-1</N>
 <E>-1</E>
 <S>-1</S>

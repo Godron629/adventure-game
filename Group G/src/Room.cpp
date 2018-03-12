@@ -47,15 +47,16 @@ string Room::getDescription() {
 
 /**
 @brief Return the Id of the Room at direction - If there is no room, return -1.
-@param[in] direction Uppercase cardinal direction (N, E, S, W)
+@param[in] direction Uppercase cardinal direction (N, E, S, W, U, D)
 @throws invalid_argument
 */
 string Room::getNeighbourId(string direction) {
     if (direction == "N" || direction == "E" ||
-        direction == "S" || direction == "W") {
+        direction == "S" || direction == "W" ||
+        direction == "U" || direction == "D") {
         return m_neighbours[direction];
     }
-    throw std::invalid_argument("Enter N, E, S, W");
+    throw std::invalid_argument("Enter N, E, S, W, U, D");
 }
 
 /**
