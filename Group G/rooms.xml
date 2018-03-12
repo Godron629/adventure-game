@@ -1,33 +1,186 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Rooms>
-    <Room>
-	<Id>0</Id>
-	<Name>Crumbling SignPost</Name>
-	<Description>It's a crumbling signpost, relax</Description>
 
-	<N>1</N>
-	<E>-1</E>
-	<S>-1</S>
-	<W>-1</W>
+<Room>
+<Id>0</Id>
+<Name>Starting Path</Name>
+<Description>It's dark. 
 
-	<Items>key</Items>
-	<Items>helmet</Items>
+You're standing on a grey gravel path. 
 
-	<Npcs>Bobby</Npcs>
-	<Npcs>Greg</Npcs>
+There's a signpost in front of you, it reads:
+'N: Manor of Spook | E: Hither | S: Thither'</Description>
 
-    </Room>
-    <Room>
-	<Id>1</Id>
-	<Name>Driveway</Name>
-	<Description>It's driveway, in a time without cars</Description>
+<N>1</N>
+<E>-1</E>
+<S>-1</S>
+<W>-1</W>
 
-	<N>-1</N>
-	<E>-1</E>
-	<S>0</S>
-	<W>-1</W>
+<U>-1</U>
+<D>-1</D>
+</Room>
 
-	<Items>stick</Items>
+<Room>
+<Id>1</Id>
+<Name>Manor Gate</Name>
+<Description>There's a small boy and a black iron gate to the north. 
 
-    </Room>
+To your left and right there is a dense forest, into which you can't see very far.
+
+There seems to be a name engraved into the gate but it's difficult to read.</Description>
+<N>2</N>
+<E>-1</E>
+<S>0</S>
+<W>-1</W>
+<U>-1</U>
+<D>-1</D>
+</Room>
+
+<Room>
+<Id>2</Id>
+<Name>Manor Path</Name>
+<Description>You're inside the manor gate. 
+
+You're not sure if you should be here. 
+
+A tree branch whips you as you walk near it, oof!
+
+You feel as though somebody is watching you...</Description>
+<N>3</N>
+<E>-1</E>
+<S>1</S>
+<W>-1</W>
+<U>-1</U>
+<D>-1</D>
+<Items>stick</Items>
+</Room>
+
+<Room>
+<Id>3</Id>
+<Name>Manor Path v2</Name>
+<Description>There are a few standing candlelamps along the path, but you can 
+hardly see. 
+
+Would it have killed this guy to get some solar path lamps from 'ye olde thyme
+hardware store'?
+
+And another thing, why is it so dark? It's 2:23 PM according to your iSunDial.
+
+You hear something move to the east.</Description>
+<N>4</N>
+<E>5</E>
+<S>2</S>
+<W>-1</W>
+<U>-1</U>
+<D>-1</D>
+</Room>
+
+<Room>
+<Id>4</Id>
+<Name>Manor Entrance</Name>
+<Description>There are steps leading to the manor - it's big, two stories, 'bout yay high.
+
+The manor has two oaken doors and candlelamps on each side. 
+
+One of the doors isn't quite closed.
+
+There's a notice nailed to the door, it reads: 
+'This is a notice nailed to a door'
+
+A little existential, I suppose.
+
+There's a window to the west.</Description>
+<N>7</N>
+<E>-1</E>
+<S>3</S>
+<W>6</W>
+<U>-1</U>
+<D>-1</D>
+</Room>
+
+<Room>
+<Id>5</Id>
+<Name>Maiden Scout</Name>
+<Description>You are standing in a small offshoot of the path.
+
+The noise you heard was a mouse.
+
+There's a an abandoned Radio Flyer Red Wagon full of decrepit Maiden Scout 
+cookie boxes. 
+
+It looks like whoever owned this wagon left in a hurry. They left some of 
+their belongings on the ground.</Description>
+<Items>helmet</Items>
+<N>-1</N>
+<E>-1</E>
+<S>-1</S>
+<W>3</W>
+<U>-1</U>
+<D>-1</D>
+</Room>
+
+<Room>
+<Id>6</Id>
+<Name>Outside Window</Name>
+<Description>There's a large window on the side of the house. 
+
+It's covered with a curtain, but you can see something moving inside.</Description>
+<N>-1</N>
+<E>4</E>
+<S>-1</S>
+<W>-1</W>
+<U>-1</U>
+<D>-1</D>
+</Room>
+
+<Room>
+<Id>7</Id>
+<Name>Entryway</Name>
+<Description>The entryway is large - there's is a door the the west, an ascending grand 
+staircase, and a door to the east.
+
+Along the walls there are: 
+- Eight bookshelves 
+- Four drawers
+- Two chairs  
+- One desk
+
+What kind of 3-bit operation is this place? You wonder. </Description>
+<N>-1</N>
+<E>9</E>
+<S>4</S>
+<W>8</W>
+<U>50</U>
+<D>-1</D>
+
+<Items>quill</Items>
+<Items>papyrus</Items>
+</Room>
+
+<Room>
+<Id>50</Id>
+<Name>Mad Laboratory</Name>
+<Description></Description>
+<N>-1</N>
+<E>-1</E>
+<S>-1</S>
+<W>-1</W>
+<U>-1</U>
+<D>7</D>
+<Npcs>Father Duck</Npcs>
+<Npcs>Mad Scientist</Npcs>
+</Room>
+
+<Room>
+<Id></Id>
+<Name></Name>
+<Description></Description>
+<N>0</N>
+<E>0</E>
+<S>0</S>
+<W>0</W>
+<U>0</U>
+<D>0</D>
+</Room>
+
 </Rooms>

@@ -8,73 +8,50 @@
 class Direction : public Option
 {
     public:
-        Direction();
-        virtual ~Direction();
-        std::string description;
-        virtual std::string GetDescription()=0;
-        std::string object;
-        virtual std::string GetObject()=0;
-        std::string cardinal;
-        virtual std::string GetCardinal()=0;
+        Direction() {};
+        virtual ~Direction() {};
+        std::string GetDescription();
+        std::string GetObject();
+        std::string GetCardinal();
     protected:
-
-    private:
-
+        std::string cardinal;
+        std::string object;
+        std::string description;
 };
 
 class East : public Direction
 {
     public:
         East();
-        virtual ~East();
-
-    protected:
-
-    private:
-        virtual std::string GetDescription();
-        virtual std::string GetObject();
-        virtual std::string GetCardinal();
 };
 
 class North : public Direction
 {
     public:
         North();
-        virtual ~North();
-
-    protected:
-
-    private:
-        virtual std::string GetDescription();
-        virtual std::string GetObject();
-        virtual std::string GetCardinal();
 };
 
 class South : public Direction
 {
     public:
         South();
-        virtual ~South();
-
-    protected:
-
-    private:
-        virtual std::string GetDescription();
-        virtual std::string GetObject();
-        virtual std::string GetCardinal();
 };
 
 class West : public Direction
 {
     public:
         West();
-        virtual ~West();
+};
 
-    protected:
+class Up : public Direction
+{
+    public:
+        Up();
+};
 
-    private:
-        virtual std::string GetDescription();
-        virtual std::string GetObject();
-        virtual std::string GetCardinal();
+class Down : public Direction
+{
+    public:
+        Down();
 };
 #endif // DIRECTION_H

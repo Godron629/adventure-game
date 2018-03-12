@@ -1,27 +1,19 @@
 #ifndef OPTION_H
 #define OPTION_H
 #include <string>
-#include <vector>
 
 class Option
 {
     public:
-        Option();
-        virtual ~Option();
-        std::string description;
+        Option() {};
+        virtual ~Option() {};
         virtual std::string GetDescription()=0;
-        std::string object;
         virtual std::string GetObject()=0;
     protected:
+        std::string description;
+        std::string object;
 
     private:
 };
 
-
-
-
-
-
 #endif // OPTION_H
-
-

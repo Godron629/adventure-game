@@ -131,5 +131,7 @@ void Map::collectItemsForRoom(string itemName, tItemList *items) {
     if (itemName == "rat poison") items->push_back(new RatPoison());
     if (itemName == "rubber tube") items->push_back(new RubberTube());
     if (itemName == "stick") items->push_back(new Stick());
+    if (itemName == "quill") items->push_back(new Quill());
+    if (itemName == "papyrus") items->push_back(new Papyrus());
 }
 

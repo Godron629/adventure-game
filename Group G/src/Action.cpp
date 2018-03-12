@@ -1,50 +1,37 @@
 #include "Action.h"
-#include <iostream>
-#include <string>
+
 #include "Inventory.h"
 #include "Item.h"
-#include "Console.h"
+#include <string>
+#include <iostream>
 
 using namespace std;
-Action::Action()
-{
-    //ctor
 
+string Action::GetDescription() {
+    return description;
 }
 
-Action::~Action()
-{
-    //dtor
+ActionType Action::GetType() {
+    return type;
 }
 
 void Action::PerformAction(Item* newItem,Inventory* currentInventory, Room* currentRoom){}
 void Action::PerformAction(Room* currentRoom){}
 void Action::PerformAction(Direction* dir, Map* gameMap){}
+
 Drop::Drop()
 {
-    //ctor
     description = "drop";
     action = "Dropping ";
     type = Inv;
 }
 
-Drop::~Drop()
-{
-    //dtor
-}
-string Drop::GetDescription()
-{
-    return description;
-}
-ActionType Drop::GetType()
-{
-    return type;
-}
 bool Drop::PerformAction()
 {
     cout<<action;
     return false;
 }
+
 void Drop::PerformAction(Item* newItem, Inventory* currentInventory, Room* currentRoom)
 {
     currentInventory->Drop(newItem);
@@ -52,33 +39,19 @@ void Drop::PerformAction(Item* newItem, Inventory* currentInventory, Room* curre
     cout<<"Dropping: "<<newItem->GetObject()<<endl<<endl;
 }
 
-using namespace std;
 Grab::Grab()
 {
-    //ctor
     description = "grab";
     action = "Grabbing ";
     type = Inv;
 }
 
-Grab::~Grab()
-{
-    //dtor
-}
-string Grab::GetDescription()
-{
-    return description;
-}
-ActionType Grab::GetType()
-{
-    return type;
-}
 bool Grab::PerformAction()
 {
     cout<<action;
-
     return false;
 }
+
 void Grab::PerformAction(Item* newItem, Inventory* currentInventory, Room* currentRoom)
 {
     for(auto i: currentRoom->getItems())
@@ -90,30 +63,17 @@ void Grab::PerformAction(Item* newItem, Inventory* currentInventory, Room* curre
             return;
         }
     }
-    cout<<"Sorry that item does not exist in this room !"<<endl<<endl;
+    cout<<"You can't pick up an item that does not exist.\n\n";
     return;
 }
 
 Help::Help()
 {
-    //ctor
     description = "help";
-    action = "Actions: Help | Quit | List | Move | Grab | Read | Drop | Look";
+    action = "Actions: Help | Quit | List | Move | Grab | Drop | Look";
     type = Sys;
 }
 
-Help::~Help()
-{
-    //dtor
-}
-string Help::GetDescription()
-{
-    return description;
-}
-ActionType Help::GetType()
-{
-    return type;
-}
 bool Help::PerformAction()
 {
     cout<<action<<endl<<endl;
@@ -122,25 +82,12 @@ bool Help::PerformAction()
 
 List::List(Inventory* inv)
 {
-    //ctor
     inventory = inv;
     description = "list";
     action = "Inventory: ";
     type = Sys;
 }
 
-List::~List()
-{
-    //dtor
-}
-string List::GetDescription()
-{
-    return description;
-}
-ActionType List::GetType()
-{
-    return type;
-}
 bool List::PerformAction()
 {
     cout<<action;
@@ -150,38 +97,27 @@ bool List::PerformAction()
 
 Look::Look()
 {
-    //ctor
     description = "look";
     action = "Looking ";
     type = Sys;
 }
 
-Look::~Look()
-{
-    //dtor
-}
-string Look::GetDescription()
-{
-    return description;
-}
-ActionType Look::GetType()
-{
-    return type;
-}
 bool Look::PerformAction()
 {
     cout<<action;
     return false;
 }
+
 void Look::PerformAction(Room* currentRoom)
 {
-    string toPrint = "Room Contains: ";
+    string toPrint = currentRoom->getDescription();
+    toPrint.append("\n\nArea Contains: ");
 
     int numOfItems = currentRoom->getItems().size();
 
-    if(numOfItems == 0)
-        toPrint.append("*empty*");
-
+    if(!numOfItems) {
+        toPrint.append("Nothing");
+    }
 
     for(int i = 0; i < numOfItems; i++)
     {
@@ -190,7 +126,9 @@ void Look::PerformAction(Room* currentRoom)
         if (i != numOfItems-1)
             toPrint.append(" | ");
     }
+
     cout << toPrint << endl << endl;
+    return;
 }
 
 Move::Move()
@@ -198,80 +136,28 @@ Move::Move()
     description = "move";
     action = "Moving ";
     type = Dir;
-    //ctor
 }
 
-Move::~Move()
-{
-    //dtor
-}
-string Move::GetDescription()
-{
-    return description;
-}
-ActionType Move::GetType()
-{
-    return type;
-}
 void Move::PerformAction(Direction* dir, Map* gameMap)
 {
     gameMap->changeCurrentRoom(dir->GetCardinal());
 }
+
 bool Move::PerformAction()
 {
     cout<<action;
-
     return false;
 }
+
 Quit::Quit()
 {
-    //ctor
     description = "quit";
     action = "Quitting...";
     type = Sys;
 }
 
-Quit::~Quit()
-{
-    //dtor
-}
-string Quit::GetDescription()
-{
-    return description;
-}
-ActionType Quit::GetType()
-{
-    return type;
-}
 bool Quit::PerformAction()
 {
     cout<<action<<endl;
     return true;
 }
-
-Read::Read()
-{
-    //ctor
-    description = "read";
-    action = "Reading ";
-    type = Inv;
-}
-
-Read::~Read()
-{
-    //dtor
-}
-string Read::GetDescription()
-{
-    return description;
-}
-ActionType Read::GetType()
-{
-    return type;
-}
-bool Read::PerformAction()
-{
-    cout<<action;
-    return false;
-}
-

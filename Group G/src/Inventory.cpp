@@ -7,13 +7,11 @@
 using namespace std;
 Inventory::Inventory()
 {
-    //ctor
     inventory = {};
 }
 
 Inventory::~Inventory()
 {
-    //dtor
     for(auto i: inventory)
         delete i;
 }

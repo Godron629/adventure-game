@@ -809,12 +809,12 @@
 	<string>
 	<iostream>
 
-1520565952 source:c:\users\gideon\desktop\2720-g-project\group g\main.cpp
+1520808081 source:c:\users\gideon\desktop\2720-g-project\group g\main.cpp
 	<iostream>
 	"include/Console.h"
 	"Map.h"
 
-1520481375 c:\users\gideon\desktop\2720-g-project\group g\include\console.h
+1520821056 c:\users\gideon\desktop\2720-g-project\group g\include\console.h
 	<string>
 	<list>
 	<vector>
@@ -824,80 +824,77 @@
 	"Item.h"
 	"Inventory.h"
 
-1520481375 c:\users\gideon\desktop\2720-g-project\group g\include\action.h
+1520821181 c:\users\gideon\desktop\2720-g-project\group g\include\action.h
 	<string>
 	"Inventory.h"
+	"Direction.h"
+	"Map.h"
 	"Item.h"
 
-1520481375 c:\users\gideon\desktop\2720-g-project\group g\include\inventory.h
+1520808076 c:\users\gideon\desktop\2720-g-project\group g\include\inventory.h
 	"Item.h"
 	<string>
 	<vector>
 
-1520481375 c:\users\gideon\desktop\2720-g-project\group g\include\item.h
+1520820471 c:\users\gideon\desktop\2720-g-project\group g\include\item.h
 	<Option.h>
 	<string>
 	<vector>
 
-1520481375 c:\users\gideon\desktop\2720-g-project\group g\include\option.h
+1520821759 c:\users\gideon\desktop\2720-g-project\group g\include\option.h
 	<string>
-	<vector>
 
-1520481375 c:\users\gideon\desktop\2720-g-project\group g\include\direction.h
+1520820032 c:\users\gideon\desktop\2720-g-project\group g\include\direction.h
 	<string>
 	<vector>
 	"Option.h"
 
-1520481375 source:c:\users\gideon\desktop\2720-g-project\group g\src\action.cpp
+1520821587 source:c:\users\gideon\desktop\2720-g-project\group g\src\action.cpp
 	"Action.h"
-	<iostream>
-	<string>
 	"Inventory.h"
 	"Item.h"
-	"Console.h"
+	<string>
+	<iostream>
 
-1520481375 source:c:\users\gideon\desktop\2720-g-project\group g\src\console.cpp
+1520821288 source:c:\users\gideon\desktop\2720-g-project\group g\src\console.cpp
 	"../include/Console.h"
 	<iostream>
 	<string>
 	<cctype>
 	<vector>
+	<fstream>
 	<algorithm>
 	"Option.h"
 
-1520481375 source:c:\users\gideon\desktop\2720-g-project\group g\src\direction.cpp
+1520820494 source:c:\users\gideon\desktop\2720-g-project\group g\src\direction.cpp
 	"Direction.h"
-	"Option.h"
 	<string>
-	<iostream>
 
-1520481375 source:c:\users\gideon\desktop\2720-g-project\group g\src\inventory.cpp
+1520820505 source:c:\users\gideon\desktop\2720-g-project\group g\src\inventory.cpp
 	"Inventory.h"
 	<iostream>
 	<string>
 	<algorithm>
 	"Option.h"
 
-1520564960 source:c:\users\gideon\desktop\2720-g-project\group g\src\item.cpp
+1520820399 source:c:\users\gideon\desktop\2720-g-project\group g\src\item.cpp
 	"Item.h"
-	"Option.h"
 	<string>
-	<iostream>
-	<vector>
 
-1520481375 source:c:\users\gideon\desktop\2720-g-project\group g\src\option.cpp
+1520821747 source:c:\users\gideon\desktop\2720-g-project\group g\src\option.cpp
 	"Option.h"
 
-1520566495 source:c:\users\gideon\desktop\2720-g-project\group g\src\room.cpp
+1520808081 source:c:\users\gideon\desktop\2720-g-project\group g\src\room.cpp
 	"Room.h"
+	<exception>
 
-1520569176 c:\users\gideon\desktop\2720-g-project\group g\include\room.h
+1520808081 c:\users\gideon\desktop\2720-g-project\group g\include\room.h
 	<string>
 	<map>
 	<vector>
 	"Item.h"
 
-1520569136 source:c:\users\gideon\desktop\2720-g-project\group g\src\map.cpp
+1520816961 source:c:\users\gideon\desktop\2720-g-project\group g\src\map.cpp
 	"Map.h"
 	<iostream>
 	<exception>
@@ -905,19 +902,19 @@
 	"Item.h"
 	"rapidxml_utils.hpp"
 
-1520569139 c:\users\gideon\desktop\2720-g-project\group g\include\map.h
+1520808081 c:\users\gideon\desktop\2720-g-project\group g\include\map.h
 	"Room.h"
 	<string>
 	<vector>
 
-1520484809 c:\users\gideon\desktop\2720-g-project\group g\rapidxml\rapidxml_utils.hpp
+1520808081 c:\users\gideon\desktop\2720-g-project\group g\rapidxml\rapidxml_utils.hpp
 	"rapidxml.hpp"
 	<vector>
 	<string>
 	<fstream>
 	<stdexcept>
 
-1242204378 c:\users\gideon\desktop\2720-g-project\group g\rapidxml\rapidxml.hpp
+1520808081 c:\users\gideon\desktop\2720-g-project\group g\rapidxml\rapidxml.hpp
 	<cstdlib>
 	<cassert>
 	<new>
