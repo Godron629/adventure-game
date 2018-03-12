@@ -1097,7 +1097,7 @@
 	<vector>
 	"Item.h"
 
-1520895556 source:a:\documents\additions\2720-g-project\group g\src\action.cpp
+1520895711 source:a:\documents\additions\2720-g-project\group g\src\action.cpp
 	"Action.h"
 	"Inventory.h"
 	"Item.h"
@@ -1156,4 +1156,16 @@
 1520889713 source:a:\documents\additions\2720-g-project\group g\src\room.cpp
 	"Room.h"
 	<exception>
+
+1520899399 source:a:\documents\additions\2720-g-project\group g\src\npc.cpp
+	"Npc.h"
+	<string>
+	<vector>
+	<iostream>
+	"Inventory.h"
+
+1520899293 a:\documents\additions\2720-g-project\group g\include\npc.h
+	<string>
+	<vector>
+	"Inventory.h"
 
