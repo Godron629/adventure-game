@@ -6,7 +6,9 @@
 #include <fstream>
 #include <algorithm>
 #include "Option.h"
+
 using namespace std;
+
 Console::Console(Inventory* inv, Map* gameMap)
 {
     _flag = false;
@@ -15,8 +17,8 @@ Console::Console(Inventory* inv, Map* gameMap)
     _inventory = inv;
     _gameMap = gameMap;
     Actions.insert(Actions.end(),new List(_inventory));
-    //ctor
 }
+
 void Console::PrintArt(string filepath)
 {
     string art;
@@ -159,5 +161,11 @@ void Console::Run()
 }
 Console::~Console()
 {
-    //dtor
+    for (auto i: Options) {
+        delete i;
+    }
+
+    for (auto i: Actions) {
+        delete i;
+    }
 }
