@@ -101,6 +101,10 @@ void Console::ParseCommand()
             case Sys:
                 if(dynamic_cast<Look*>(currentAction) != nullptr)
                     currentAction->PerformAction(_gameMap->getCurrentRoom());
+                else if(dynamic_cast<Type*>(currentAction) != nullptr)
+                    currentAction->PerformAction(_inventory, _gameMap, second);
+                else if(dynamic_cast<Crank*>(currentAction) != nullptr)
+                    currentAction->PerformAction(_inventory, _gameMap);
                 else
                 {
                     Actions.insert(Actions.end(),new List(_inventory));

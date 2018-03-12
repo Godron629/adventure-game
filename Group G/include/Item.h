@@ -28,7 +28,11 @@ class Gear : public Item
     public:
         Gear();
 };
-
+class Weight : public Item
+{
+    public:
+        Weight();
+};
 class Helmet : public Item
 {
     public:

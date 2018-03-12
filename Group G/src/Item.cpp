@@ -24,6 +24,12 @@ Gear::Gear()
     object = "Gear";
 }
 
+Weight::Weight()
+{
+    description = "heavy weight";
+    object = "Heavy Weight";
+}
+
 Helmet::Helmet()
 {
     description = "helmet";

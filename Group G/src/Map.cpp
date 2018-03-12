@@ -25,12 +25,16 @@ Map::~Map() {
 Room* Map::getCurrentRoom() {
     return m_currentRoom;
 }
-
+void Map::sendToRoom(string roomId)
+{
+    m_currentRoom = Map::searchMapForRoom(roomId);
+}
 /**
 @brief If there is a room in direction relative to currentRoom, make that the current room.
 @param[in] direction Cardinal direction (N, E, S, W)
 */
 void Map::changeCurrentRoom(string direction) {
+
     string neighbourId = m_currentRoom->getNeighbourId(direction);
     if (neighbourId == "-1") {
         cout << "You can't go that way.\n\n";

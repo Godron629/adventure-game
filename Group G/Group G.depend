@@ -1046,3 +1046,114 @@
 	<algorithm>
 	"Option.h"
 
+1520889713 source:a:\documents\additions\2720-g-project\group g\main.cpp
+	<iostream>
+	"include/Console.h"
+	"Map.h"
+
+1520894393 a:\documents\additions\2720-g-project\group g\include\console.h
+	<string>
+	<list>
+	<vector>
+	"Action.h"
+	"Option.h"
+	"Direction.h"
+	"Item.h"
+	"Inventory.h"
+
+1520893300 a:\documents\additions\2720-g-project\group g\include\action.h
+	<string>
+	"Inventory.h"
+	"Direction.h"
+	"Map.h"
+	"Item.h"
+
+1520893583 a:\documents\additions\2720-g-project\group g\include\inventory.h
+	"Item.h"
+	<string>
+	<vector>
+
+1520894290 a:\documents\additions\2720-g-project\group g\include\item.h
+	<Option.h>
+	<string>
+	<vector>
+
+1520889713 a:\documents\additions\2720-g-project\group g\include\option.h
+	<string>
+
+1520889713 a:\documents\additions\2720-g-project\group g\include\direction.h
+	<string>
+	<vector>
+	"Option.h"
+
+1520895173 a:\documents\additions\2720-g-project\group g\include\map.h
+	"Room.h"
+	<string>
+	<vector>
+
+1520889713 a:\documents\additions\2720-g-project\group g\include\room.h
+	<string>
+	<map>
+	<vector>
+	"Item.h"
+
+1520895556 source:a:\documents\additions\2720-g-project\group g\src\action.cpp
+	"Action.h"
+	"Inventory.h"
+	"Item.h"
+	<string>
+	<iostream>
+
+1520894502 source:a:\documents\additions\2720-g-project\group g\src\console.cpp
+	"../include/Console.h"
+	<iostream>
+	<string>
+	<cctype>
+	<vector>
+	<fstream>
+	<algorithm>
+	"Option.h"
+
+1520889713 source:a:\documents\additions\2720-g-project\group g\src\direction.cpp
+	"Direction.h"
+	<string>
+
+1520889713 source:a:\documents\additions\2720-g-project\group g\src\inventory.cpp
+	"Inventory.h"
+	<iostream>
+	<string>
+	<algorithm>
+	"Option.h"
+
+1520894325 source:a:\documents\additions\2720-g-project\group g\src\item.cpp
+	"Item.h"
+	<string>
+
+1520895105 source:a:\documents\additions\2720-g-project\group g\src\map.cpp
+	"Map.h"
+	<iostream>
+	<exception>
+	<cstring>
+	"Item.h"
+	"rapidxml_utils.hpp"
+
+1520889713 a:\documents\additions\2720-g-project\group g\rapidxml\rapidxml_utils.hpp
+	"rapidxml.hpp"
+	<vector>
+	<string>
+	<fstream>
+	<stdexcept>
+
+1520889713 a:\documents\additions\2720-g-project\group g\rapidxml\rapidxml.hpp
+	<cstdlib>
+	<cassert>
+	<new>
+	<exception>
+
+1520889713 source:a:\documents\additions\2720-g-project\group g\src\option.cpp
+	"Option.h"
+
+1520889713 source:a:\documents\additions\2720-g-project\group g\src\room.cpp
+	"Room.h"
+	<exception>
+
