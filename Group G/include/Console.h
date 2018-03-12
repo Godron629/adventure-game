@@ -30,7 +30,7 @@ class Console
         void ErrorMessage();
         std::vector<Action*> Actions = {new Move(),new Drop(),new Grab(), new Look(), new Help(), new Quit()};
 
-        std::vector<Option*> Options = {new North(),new South(), new East(), new West(),
+        std::vector<Option*> Options = {new North(),new South(), new East(), new West(), new Up(), new Down(),
             new Key(), new Helmet(), new Stick(),new RubberTube(),new Gear(), new PileOfBolts(),
             new FishFood(), new RatPoison(), new Quill(), new Papyrus()};
 

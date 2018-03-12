@@ -108,7 +108,8 @@ void Map::generateMapFromXml(string filepath) {
             if (elementName == "Items") collectItemsForRoom(elementValue, &items);
             if (elementName == "Npcs") npcs.push_back(elementValue); // TODO: Change this when NPCs implemented
             if (elementName == "N" || elementName == "E" ||
-                elementName == "S" || elementName == "W") neighbours[elementName] = elementValue;
+                elementName == "S" || elementName == "W" ||
+                elementName == "U" || elementName == "D") neighbours[elementName] = elementValue;
         }
         m_listOfRooms.push_back(new Room(id, name, description, neighbours, npcs, items));
 	}

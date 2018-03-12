@@ -49,3 +49,10 @@ Up::Up()
     cardinal = "U";
 }
 
+Down::Down()
+{
+    description = "down";
+    object = "Down";
+    cardinal = "D";
+}
+
