@@ -18,9 +18,9 @@ There's a signpost in front of you, it reads:
 
 <U>-1</U>
 <D>-1</D>
-
+<Npcs>father</Npcs>
+<Npcs>scientist</Npcs>
 </Room>
-
 <Room>
 <Id>1</Id>
 <Name>Manor Gate</Name>

@@ -58,15 +58,22 @@ bool Talk::PerformAction()
 
 void Talk::PerformAction(Inventory* currentInventory, Map* currentMap, Npc* requestedNpc)
 {
+    string message = "";
+
     for(auto i: currentMap->getCurrentRoom()->getNpcs())
     {
         if(i->getName() == requestedNpc->getName())
         {
-            i->checkForGameCompletion(currentInventory);
-            return;
+            if(i->checkForGameCompletion(currentInventory))
+                message.append(i->getThingToSay(1));
+            else
+                message.append(i->getThingToSay(0));
         }
     }
-    cout<<"There's no character by that name in this room..."<<endl<<endl;
+    if(message == "")
+        message.append("There's no character by that name in this room...");
+
+    cout<<message<<endl<<endl;
 }
 Type::Type()
 {

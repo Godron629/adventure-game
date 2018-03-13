@@ -19,16 +19,18 @@ string Npc::getThingToSay(int index)
 
 bool Npc::checkForGameCompletion(Inventory* currentInventory)
 {
+    bool hasGear = false;
+    bool hasBolts = false;
+    bool hasTube = false;
+
     for(auto i: currentInventory->inventory)
     {
-        if(i->GetDescription() == "pile of bolts")
-        {
-            cout<<getThingToSay(1)<<endl<<endl;
-            return true;
-        }
+        if(i->GetDescription() == "gear") hasGear = true;
+        if(i->GetDescription() == "pile of bolts") hasBolts = true;
+        if(i->GetDescription() == "rubber tube") hasTube = true;
     }
-    cout<<getThingToSay(0)<<endl<<endl;
-    return false;
+
+    return (hasGear && hasBolts && hasTube);
 }
 
 Scientist::Scientist()

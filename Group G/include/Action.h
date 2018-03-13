@@ -7,7 +7,7 @@
 #include "Map.h"
 #include "Item.h"
 
-enum ActionType {Dir, Inv, Sys, Talk};
+enum ActionType {Dir, Inv, Sys, Tlk};
 
 class Action
 {
