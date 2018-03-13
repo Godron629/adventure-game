@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Rooms>
 
+<!-- Here be first floor rooms --> 
 <Room>
 <Id>0</Id>
 <Name>Starting Path</Name>
-<Description>It's dark.
+<Description>It's dark. 
 
-You're standing on a grey gravel path.
+You're standing on a grey gravel path. 
 
-There's a signpost in front of you, it reads:
+There's a signpost to the north. It reads:
 'N: Manor of Spook | E: Hither | S: Thither'</Description>
 
 <N>1</N>
@@ -18,15 +19,14 @@ There's a signpost in front of you, it reads:
 
 <U>-1</U>
 <D>-1</D>
-<Npcs>father</Npcs>
-<Npcs>scientist</Npcs>
 </Room>
+
 <Room>
 <Id>1</Id>
 <Name>Manor Gate</Name>
-<Description>There's a small boy and a black iron gate to the north.
+<Description>There's a small boy and a black iron gate to the north. 
 
-To your left and right there is a dense forest, into which you can't see very far.
+To east and west there is a dense forest, into which you can't see very far.
 
 There seems to be a name engraved into the gate but it's difficult to read.</Description>
 <N>2</N>
@@ -40,17 +40,19 @@ There seems to be a name engraved into the gate but it's difficult to read.</Des
 <Room>
 <Id>2</Id>
 <Name>Manor Path</Name>
-<Description>You're inside the manor gate.
+<Description>You're inside the manor gate. 
 
-You're not sure if you should be here.
+You feel like somebody is watching you - you're not sure if you should be here.
 
 A tree branch whips you as you walk near it, oof!
 
-You feel as though somebody is watching you...</Description>
-<N>3</N>
+There's a bunch of leaves and sticks to the north. 
+
+You hear a noise to the west.</Description>
+<N>26</N>
 <E>-1</E>
 <S>1</S>
-<W>-1</W>
+<W>25</W>
 <U>-1</U>
 <D>-1</D>
 <Items>stick</Items>
@@ -58,20 +60,24 @@ You feel as though somebody is watching you...</Description>
 
 <Room>
 <Id>3</Id>
-<Name>Manor Path v2</Name>
-<Description>There are a few standing candlelamps along the path, but you can
-hardly see.
+<Name>Manor Path 2.0</Name>
+<Description>You're on the path again. 
+
+There are a few standing candlelamps along the path, but you can 
+hardly see. 
 
 Would it have killed this guy to get some solar path lamps from 'ye olde thyme
 hardware store'?
 
 And another thing, why is it so dark? It's 2:23 PM according to your iSunDial.
 
-You hear something move to the east.</Description>
+There's a bunch of leaves and sticks to the south. 
+
+You hear something move to the west.</Description>
 <N>4</N>
-<E>5</E>
-<S>2</S>
-<W>-1</W>
+<E>-1</E>
+<S>26</S>
+<W>25</W>
 <U>-1</U>
 <D>-1</D>
 </Room>
@@ -81,49 +87,28 @@ You hear something move to the east.</Description>
 <Name>Manor Entrance</Name>
 <Description>There are steps leading to the manor - it's big, two stories, 'bout yay high.
 
-The manor has two oaken doors and candlelamps on each side.
+The manor has two oaken doors and candlelamps on each side. 
 
 One of the doors isn't quite closed.
 
-There's a notice nailed to the door, it reads:
+There's a notice nailed to the door, it reads: 
 'This is a notice nailed to a door'
 
 A little existential, I suppose.
 
 There's a window to the west.</Description>
-<N>7</N>
+<N>6</N>
 <E>-1</E>
 <S>3</S>
-<W>6</W>
+<W>5</W>
 <U>-1</U>
 <D>-1</D>
 </Room>
 
 <Room>
 <Id>5</Id>
-<Name>Maiden Scout</Name>
-<Description>You are standing in a small offshoot of the path.
-
-The noise you heard was a mouse.
-
-There's a an abandoned Radio Flyer Red Wagon full of decrepit Maiden Scout
-cookie boxes.
-
-It looks like whoever owned this wagon left in a hurry. They left some of
-their belongings on the ground.</Description>
-<Items>helmet</Items>
-<N>-1</N>
-<E>-1</E>
-<S>-1</S>
-<W>3</W>
-<U>-1</U>
-<D>-1</D>
-</Room>
-
-<Room>
-<Id>6</Id>
 <Name>Outside Window</Name>
-<Description>There's a large window on the side of the house.
+<Description>There's a large window on the side of the house. 
 
 It's covered with a curtain, but you can see something moving inside.</Description>
 <N>-1</N>
@@ -135,22 +120,22 @@ It's covered with a curtain, but you can see something moving inside.</Descripti
 </Room>
 
 <Room>
-<Id>7</Id>
+<Id>6</Id>
 <Name>Entryway</Name>
-<Description>The entryway is large - there's is a door the the west, an ascending grand
+<Description>The entryway is large - there's is a door the the west, an ascending grand 
 staircase, and a door to the east.
 
-Along the walls there are:
-- Eight bookshelves
+Along the walls there are: 
+- Eight bookshelves 
 - Four drawers
-- Two chairs
+- Two chairs  
 - One desk
 
 What kind of 3-bit operation is this place? You wonder. </Description>
 <N>-1</N>
-<E>9</E>
+<E>-1</E> <!-- East needs room -->
 <S>4</S>
-<W>8</W>
+<W>7</W>
 <U>50</U>
 <D>-1</D>
 
@@ -159,19 +144,63 @@ What kind of 3-bit operation is this place? You wonder. </Description>
 </Room>
 
 <Room>
+<Id>7</Id>
+<Name>Dining Room</Name>
+<Description>There is a round wooden table in the middle of the room. There is a burning candle,
+a glass, an old book, and an old bottle of wine atop the table. 
+
+There's a fireplace along the eastern wall. It's warm. 
+
+Along the walls there is a grandfather clock, various tables...
+
+There's a painting of a priveledged white male on beside the fireplace...his eyes
+follow you as you move around. Hmm...
+
+There's a room to the north, east, and west.</Description>
+<N>-1</N> <!-- north needs a room --> 
+<E>6</E> 
+<S>-1</S>
+<W>8</W>
+<U>-1</U>
+<D>-1</D>
+</Room>
+
+<Room>
+<Id>8</Id>
+<Name>Servants Bedroom</Name>
+<Description>A bedroom, next to a kitchen? Alright.
+
+There's a burning candle atop a small wooden table. It looks old and crudely crafted. 
+
+The bed looks appropriately bed-like.
+
+You feel a cold draft.
+
+There is a ladder leading down into a dark hole. 
+There is a door to the east.</Description>
+<N>-1</N>
+<E>7</E>
+<S>-1</S>
+<W>-1</W>
+<U>-1</U>
+<D>75</D>
+</Room>
+
+<!-- Here be second floor rooms -->
+<Room>
 <Id>50</Id>
 <Name>Mad Laboratory</Name>
 <Description>There are a myriad of whizzing, whirring machines and
-dirty alchemical equipment.
+dirty alchemical equipment. 
 
-The floor is scattered with papers and feathers, and the walls plastered with drawings
+The floor is scattered with papers and feathers, and the walls plastered with drawings 
 of what looks like Florence, Italy.
-
-There is a man in a white robe hunched over a workbench. He's got wild, white hair,
-and is wearing one of those telescopic monocles.
-
-There is a duck sitting in a chair reading a newspaper.
-
+ 
+There is a man in a white robe hunched over a workbench. He's got wild, white hair, 
+and is wearing one of those telescopic monocles. 
+ 
+There is a duck sitting in a chair reading a newspaper. 
+ 
 Neither of them raise alarm at your presence.</Description>
 <N>-1</N>
 <E>-1</E>
@@ -182,7 +211,145 @@ Neither of them raise alarm at your presence.</Description>
 <Npcs>Father Duck</Npcs>
 <Npcs>Mad Scientist</Npcs>
 </Room>
+ <!-- Here be underneath rooms --> 
+<Room>
+<Id>75</Id>
+<Name>Cellar</Name>
+<Description>You're standing on dirt - it crunches beneath your feet. 
 
+It looks like you're in some sort of cellar. There are spiders scuddling along the 
+floor and barrels stacked in the corner. The air smells a little bit like your grandma. 
+
+Why anyone would want access to a cellar from their bedroom is beyond you. 
+
+There's a stone arch with an ethereal glow to the west and a ladder leading up.</Description>
+<N>-1</N>
+<E>-1</E>
+<S>-1</S>
+<W>76</W>
+<U>8</U>
+<D>-1</D>
+</Room>
+
+<!-- here be portals, we still underneath tho --> 
+<Room>
+<Id>76</Id>
+<Name>Subterranean Portal #1</Name>
+<Description>As you walk through the portal you enter what looks like the dank may-may-verse.
+
+There's a sign on the wall, it reads: 
+Welcome to imgur. Climb up at any time to Restart ^_^
+
+You smell cheetos, and angst - gross. 
+
+There is a portal in each direction...they all look the same.</Description>
+<N>8</N>
+<E>76</E>
+<S>78</S>
+<W>77</W>
+<U>75</U>
+<D>77</D>
+</Room>
+
+<Room>
+<Id>77</Id>
+<Name>Subterranean Portal #2</Name>
+<Description>Not Copyrighted Morty - Aww jeez I don't know Rick, this seems kinda dangerous. 
+Not Copyrighted Rick - Wubba Lubba dub-dub!!
+
+You start craving szechuan sauce - it's time to leave!
+
+There is a portal in each direction...they all look the same.</Description>
+<N>77</N>
+<E>76</E>
+<S>76</S>
+<W>76</W>
+<U>75</U>
+<D>78</D>
+</Room>
+
+<Room>
+<Id>78</Id>
+<Name>Subterranean Portal #3</Name>
+<Description>Alright honestly this portal stuff is starting to get old. 
+
+You try to remember how you got here...west, west...no, north. East???
+
+You start going a little insane. 
+
+There is a door in each direction...they all look the same.</Description>
+<N>50</N>
+<E>78</E>
+<S>77</S>
+<W>76</W>
+<U>75</U>
+<D>79</D>
+</Room>
+
+<Room>
+<Id>79</Id>
+<Name>Subterranean Portal #4</Name>
+<Description>You're back in the cellar again...well at least some dank version of it. 
+
+There's a sign on the wall, it reads: 
+Well done - You found the secret room where the bolts are!
+
+There's something on the ground, it looks like...bolts. How did they get here?
+
+There is a portal in each direction...they all look the same.</Description>
+<N>77</N>
+<E>76</E>
+<S>8</S>
+<W>76</W>
+<U>75</U>
+<D>79</D>
+<Items>pile of bolts</Items>
+</Room>
+
+<!-- Here be misc Rooms -->
+<Room>
+<Id>25</Id>
+<Name>Maiden Scout</Name>
+<Description>You are standing in a small offshoot of the path.
+
+The noise you heard was a mouse.
+
+There's a an abandoned Radio Flyer Red Wagon full of decrepit Maiden Scout 
+cookie boxes. 
+
+It looks like whoever owned this wagon left in a hurry. They left some of 
+their belongings on the ground.
+
+You can see the path to the east and to the north.</Description>
+<Items>helmet</Items>
+<N>3</N>
+<E>2</E>
+<S>-1</S>
+<W>-1</W>
+<U>-1</U>
+<D>-1</D>
+</Room>
+
+<Room>
+<Id>26</Id>
+<Name>Pit of Dull and Annoying Spikes</Name>
+<Description>Damnation - you fell into a trap!
+
+You can just imagine the looks on your friend Bob's face when he finds out 
+you were had by the oldest trick in the book. 
+
+For shame.
+
+There doesn't look like there is any way out. Please $ quit and try again.</Description>
+<N>26</N>
+<E>26</E>
+<S>26</S>
+<W>26</W>
+<U>26</U>
+<D>26</D>
+</Room>
+
+<!-- Here be a template 
 <Room>
 <Id></Id>
 <Name></Name>
@@ -194,5 +361,6 @@ Neither of them raise alarm at your presence.</Description>
 <U>0</U>
 <D>0</D>
 </Room>
+-->
 
 </Rooms>
