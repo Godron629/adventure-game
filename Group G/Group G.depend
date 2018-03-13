@@ -1046,12 +1046,13 @@
 	<algorithm>
 	"Option.h"
 
-1520889713 source:a:\documents\additions\2720-g-project\group g\main.cpp
+1520908245 source:a:\documents\additions\2720-g-project\group g\main.cpp
 	<iostream>
 	"include/Console.h"
 	"Map.h"
+	"Npc.h"
 
-1520894393 a:\documents\additions\2720-g-project\group g\include\console.h
+1520907831 a:\documents\additions\2720-g-project\group g\include\console.h
 	<string>
 	<list>
 	<vector>
@@ -1061,7 +1062,7 @@
 	"Item.h"
 	"Inventory.h"
 
-1520893300 a:\documents\additions\2720-g-project\group g\include\action.h
+1520907839 a:\documents\additions\2720-g-project\group g\include\action.h
 	<string>
 	"Inventory.h"
 	"Direction.h"
@@ -1086,25 +1087,26 @@
 	<vector>
 	"Option.h"
 
-1520895173 a:\documents\additions\2720-g-project\group g\include\map.h
+1520901893 a:\documents\additions\2720-g-project\group g\include\map.h
 	"Room.h"
 	<string>
 	<vector>
 
-1520889713 a:\documents\additions\2720-g-project\group g\include\room.h
+1520901383 a:\documents\additions\2720-g-project\group g\include\room.h
 	<string>
 	<map>
 	<vector>
 	"Item.h"
+	"Npc.h"
 
-1520895556 source:a:\documents\additions\2720-g-project\group g\src\action.cpp
+1520907847 source:a:\documents\additions\2720-g-project\group g\src\action.cpp
 	"Action.h"
 	"Inventory.h"
 	"Item.h"
 	<string>
 	<iostream>
 
-1520894502 source:a:\documents\additions\2720-g-project\group g\src\console.cpp
+1520903070 source:a:\documents\additions\2720-g-project\group g\src\console.cpp
 	"../include/Console.h"
 	<iostream>
 	<string>
@@ -1129,7 +1131,7 @@
 	"Item.h"
 	<string>
 
-1520895105 source:a:\documents\additions\2720-g-project\group g\src\map.cpp
+1520901851 source:a:\documents\additions\2720-g-project\group g\src\map.cpp
 	"Map.h"
 	<iostream>
 	<exception>
@@ -1156,4 +1158,16 @@
 1520889713 source:a:\documents\additions\2720-g-project\group g\src\room.cpp
 	"Room.h"
 	<exception>
+
+1520908323 source:a:\documents\additions\2720-g-project\group g\src\npc.cpp
+	"Npc.h"
+	<string>
+	<vector>
+	<iostream>
+	"Inventory.h"
+
+1520899293 a:\documents\additions\2720-g-project\group g\include\npc.h
+	<string>
+	<vector>
+	"Inventory.h"
 

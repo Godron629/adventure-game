@@ -21,6 +21,7 @@ void Action::PerformAction(Room* currentRoom){}
 void Action::PerformAction(Inventory* currentInventory, Map* currentMap, string code){}
 void Action::PerformAction(Inventory*, Map*){}
 void Action::PerformAction(Direction* dir, Map* gameMap){}
+void Action::PerformAction(Inventory* currentInventory, Map* currentMap, Npc* requestedNpc){}
 
 Drop::Drop()
 {
@@ -42,6 +43,38 @@ void Drop::PerformAction(Item* newItem, Inventory* currentInventory, Room* curre
     cout<<"Dropping: "<<newItem->GetObject()<<endl<<endl;
 }
 
+Talk::Talk()
+{
+    description = "talk";
+    action = "Talking ";
+    type = Tlk;
+}
+
+bool Talk::PerformAction()
+{
+    cout << action;
+    return false;
+}
+
+void Talk::PerformAction(Inventory* currentInventory, Map* currentMap, Npc* requestedNpc)
+{
+    string message = "";
+
+    for(auto i: currentMap->getCurrentRoom()->getNpcs())
+    {
+        if(i->getName() == requestedNpc->getName())
+        {
+            if(i->checkForGameCompletion(currentInventory))
+                message.append(i->getThingToSay(1));
+            else
+                message.append(i->getThingToSay(0));
+        }
+    }
+    if(message == "")
+        message.append("There's no character by that name in this room...");
+
+    cout<<message<<endl<<endl;
+}
 Type::Type()
 {
     description = "type";
@@ -162,7 +195,7 @@ void Grab::PerformAction(Item* newItem, Inventory* currentInventory, Room* curre
 Help::Help()
 {
     description = "help";
-    action = "Actions: Help | Quit | List | Move | Grab | Drop | Look | Type | Crank";
+    action = "Actions: Help | Quit | List | Move | Grab | Drop | Look | Type | Crank | Talk";
     type = Sys;
 }
 

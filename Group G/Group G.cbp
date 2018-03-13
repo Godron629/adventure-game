@@ -42,6 +42,7 @@
 		<Unit filename="include/Inventory.h" />
 		<Unit filename="include/Item.h" />
 		<Unit filename="include/Map.h" />
+		<Unit filename="include/Npc.h" />
 		<Unit filename="include/Option.h" />
 		<Unit filename="include/Room.h" />
 		<Unit filename="main.cpp" />
@@ -52,6 +53,7 @@
 		<Unit filename="src/Inventory.cpp" />
 		<Unit filename="src/Item.cpp" />
 		<Unit filename="src/Map.cpp" />
+		<Unit filename="src/Npc.cpp" />
 		<Unit filename="src/Option.cpp" />
 		<Unit filename="src/Room.cpp" />
 		<Extensions>

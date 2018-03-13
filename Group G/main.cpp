@@ -8,6 +8,7 @@
 #include <iostream>
 #include "include/Console.h"
 #include "Map.h"
+#include "Npc.h"
 
 using namespace std;
 

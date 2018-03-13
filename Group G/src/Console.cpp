@@ -61,17 +61,24 @@ void Console::ParseCommand()
 
     Action* currentAction = nullptr;
     Option* currentOption = nullptr;
+    Npc* currentNpc = nullptr;
 
     for(auto i: Actions)
         if(i->GetDescription() == first)
            currentAction = i;
 
     if(second != "")
+    {
         for(auto i: Options)
             if(i->GetDescription() == second)
                 currentOption = i;
+        for(auto i: Npcs)
+            if(i->getName() == second)
+                currentNpc = i;
+    }
 
-    if(currentAction == 0 || (currentOption == 0 && currentAction->GetType() != Sys))
+
+    if(currentAction == 0 || (currentOption == 0 && currentAction->GetType() != Sys && currentAction->GetType() != Tlk))
         ErrorMessage();
     else
     {
@@ -80,6 +87,12 @@ void Console::ParseCommand()
             case Dir:
                 if(dynamic_cast<Item*>(currentOption) == nullptr)
                     currentAction->PerformAction((Direction*)currentOption, _gameMap);
+                else
+                    ErrorMessage();
+                break;
+            case Tlk:
+                if(currentNpc != nullptr)
+                    currentAction->PerformAction(_inventory, _gameMap, currentNpc);
                 else
                     ErrorMessage();
                 break;
