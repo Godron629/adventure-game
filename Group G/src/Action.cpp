@@ -2,6 +2,7 @@
 
 #include "Inventory.h"
 #include "Item.h"
+
 #include <string>
 #include <iostream>
 
@@ -17,6 +18,8 @@ ActionType Action::GetType() {
 
 void Action::PerformAction(Item* newItem,Inventory* currentInventory, Room* currentRoom){}
 void Action::PerformAction(Room* currentRoom){}
+void Action::PerformAction(Inventory* currentInventory, Map* currentMap, string code){}
+void Action::PerformAction(Inventory*, Map*){}
 void Action::PerformAction(Direction* dir, Map* gameMap){}
 
 Drop::Drop()
@@ -37,6 +40,95 @@ void Drop::PerformAction(Item* newItem, Inventory* currentInventory, Room* curre
     currentInventory->Drop(newItem);
     //drop item into room. AddItem() in room.
     cout<<"Dropping: "<<newItem->GetObject()<<endl<<endl;
+}
+
+Type::Type()
+{
+    description = "type";
+    action = "Typing ";
+    type = Sys;
+}
+
+bool Type::PerformAction()
+{
+    cout << action;
+    return false;
+}
+
+void Type::PerformAction(Inventory* currentInventory, Map* currentMap, string code)
+{
+    string message = "";
+
+    //USE ID OR NAME FOR WHICHEVER ROOM THE SAFE IS ACTUALLY IN.. THIS WAS FOR TESTING
+    if(currentMap->getCurrentRoom()->getId() == "2" || currentMap->getCurrentRoom()->getName() == "room1")
+    {
+        //WHATEVER CODE YOU WANT
+        if(code == "8421")
+        {
+            message.append("Correct password - Welcome, Mr. Mad Scientist\nThere's a rubber tube inside... how curious, you take it.");
+            currentInventory->Add(new RubberTube());
+        }
+        else
+        {
+            message.append("Incorrect password - Activating alarm system");
+            currentMap->sendToRoom("0"); //ROOM ID -3 WILL BE "PIT OF AGONY"
+        }
+    }
+    else
+    {
+        message.append("There's nothing to type on...");
+    }
+    cout<<message<<endl<<endl;
+}
+
+Crank::Crank()
+{
+    description = "crank";
+    action = "Cranking ";
+    type = Sys;
+}
+
+bool Crank::PerformAction()
+{
+    cout<<action;
+    return false;
+}
+
+void Crank::PerformAction(Inventory* currentInventory, Map* currentMap)
+{
+    bool hasWeight = false;
+    bool hasHelmet = false;
+
+    string message = "";
+    if(currentMap->getCurrentRoom()->getId() == "2" || currentMap->getCurrentRoom()->getName() == "room1")
+    {
+        for(auto i: currentInventory->inventory)
+            if(i->GetDescription() == "heavy weight")
+                hasWeight = true;
+        for(auto i: currentInventory->inventory)
+            if(i->GetDescription() == "helmet")
+                hasHelmet = true;
+
+        if(hasWeight)
+        {
+            message.append("The pressure plate gives a little and you turn the crank.\nA gear falls from the ceiling, watch out!");
+            if(hasHelmet)
+            {
+                message.append("\nOof! That hurt. Who throws a gear? Honestly. You pick it up in spite of your injury.");
+                currentInventory->Add(new Gear());
+            }
+            else
+            {
+                message.append("\nOof! You are hit in the head with something heavy!\nYou fall into the conspicuously placed 'Pit of Doom'...");
+                currentMap->sendToRoom("0");//NAME = PIT OF DOOM || ID = -3
+            }
+        }
+        else
+            message.append("The pressure plate under your feet binds slightly, but the crank won't move !\nYou wonder if you could somehow make yourself heavier...");
+    }
+    else
+        message.append("There is nothing to crank here... ");
+    cout<<message<<endl<<endl;
 }
 
 Grab::Grab()
@@ -70,7 +162,7 @@ void Grab::PerformAction(Item* newItem, Inventory* currentInventory, Room* curre
 Help::Help()
 {
     description = "help";
-    action = "Actions: Help | Quit | List | Move | Grab | Drop | Look";
+    action = "Actions: Help | Quit | List | Move | Grab | Drop | Look | Type | Crank";
     type = Sys;
 }
 

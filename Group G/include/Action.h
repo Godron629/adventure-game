@@ -21,6 +21,8 @@ class Action
         virtual bool PerformAction()=0;
         virtual void PerformAction(Item* newItem, Inventory* currentInventory, Room* currentRoom);
         virtual void PerformAction(Room* currentRoom);
+        virtual void PerformAction(Inventory*, Map*, std::string);
+        virtual void PerformAction(Inventory*, Map*);
         virtual void PerformAction(Direction*, Map*);
 
     protected:
@@ -37,6 +39,26 @@ class Drop : public Action
     private:
         bool PerformAction();
         void PerformAction(Item*,Inventory*,Room*);
+};
+
+class Type : public Action
+{
+    public:
+        Type();
+
+    private:
+        bool PerformAction();
+        void PerformAction(Inventory*, Map*, std::string);
+};
+
+class Crank : public Action
+{
+    public:
+        Crank();
+    private:
+        bool PerformAction();
+        void PerformAction(Inventory*, Map*);
+
 };
 
 class Grab : public Action

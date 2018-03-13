@@ -15,6 +15,7 @@ class Map
         virtual ~Map();
 
         Room* getCurrentRoom();
+        void sendToRoom(std::string roomId);
         void changeCurrentRoom(std::string direction);
         void generateMapFromXml(std::string filepath);
 
