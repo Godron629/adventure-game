@@ -26,6 +26,7 @@ class Map
         Room* m_currentRoom;
         Room* searchMapForRoom(std::string roomId);
         void collectItemsForRoom(std::string itemName, tItemList *items);
+        void collectNpcsForRoom(std::string npcName, tNpcList *npcs);
 };
 
 #endif // MAP_H

@@ -4,9 +4,9 @@
 <Room>
 <Id>0</Id>
 <Name>Starting Path</Name>
-<Description>It's dark. 
+<Description>It's dark.
 
-You're standing on a grey gravel path. 
+You're standing on a grey gravel path.
 
 There's a signpost in front of you, it reads:
 'N: Manor of Spook | E: Hither | S: Thither'</Description>
@@ -18,12 +18,13 @@ There's a signpost in front of you, it reads:
 
 <U>-1</U>
 <D>-1</D>
+
 </Room>
 
 <Room>
 <Id>1</Id>
 <Name>Manor Gate</Name>
-<Description>There's a small boy and a black iron gate to the north. 
+<Description>There's a small boy and a black iron gate to the north.
 
 To your left and right there is a dense forest, into which you can't see very far.
 
@@ -39,9 +40,9 @@ There seems to be a name engraved into the gate but it's difficult to read.</Des
 <Room>
 <Id>2</Id>
 <Name>Manor Path</Name>
-<Description>You're inside the manor gate. 
+<Description>You're inside the manor gate.
 
-You're not sure if you should be here. 
+You're not sure if you should be here.
 
 A tree branch whips you as you walk near it, oof!
 
@@ -58,8 +59,8 @@ You feel as though somebody is watching you...</Description>
 <Room>
 <Id>3</Id>
 <Name>Manor Path v2</Name>
-<Description>There are a few standing candlelamps along the path, but you can 
-hardly see. 
+<Description>There are a few standing candlelamps along the path, but you can
+hardly see.
 
 Would it have killed this guy to get some solar path lamps from 'ye olde thyme
 hardware store'?
@@ -80,11 +81,11 @@ You hear something move to the east.</Description>
 <Name>Manor Entrance</Name>
 <Description>There are steps leading to the manor - it's big, two stories, 'bout yay high.
 
-The manor has two oaken doors and candlelamps on each side. 
+The manor has two oaken doors and candlelamps on each side.
 
 One of the doors isn't quite closed.
 
-There's a notice nailed to the door, it reads: 
+There's a notice nailed to the door, it reads:
 'This is a notice nailed to a door'
 
 A little existential, I suppose.
@@ -105,10 +106,10 @@ There's a window to the west.</Description>
 
 The noise you heard was a mouse.
 
-There's a an abandoned Radio Flyer Red Wagon full of decrepit Maiden Scout 
-cookie boxes. 
+There's a an abandoned Radio Flyer Red Wagon full of decrepit Maiden Scout
+cookie boxes.
 
-It looks like whoever owned this wagon left in a hurry. They left some of 
+It looks like whoever owned this wagon left in a hurry. They left some of
 their belongings on the ground.</Description>
 <Items>helmet</Items>
 <N>-1</N>
@@ -122,7 +123,7 @@ their belongings on the ground.</Description>
 <Room>
 <Id>6</Id>
 <Name>Outside Window</Name>
-<Description>There's a large window on the side of the house. 
+<Description>There's a large window on the side of the house.
 
 It's covered with a curtain, but you can see something moving inside.</Description>
 <N>-1</N>
@@ -136,13 +137,13 @@ It's covered with a curtain, but you can see something moving inside.</Descripti
 <Room>
 <Id>7</Id>
 <Name>Entryway</Name>
-<Description>The entryway is large - there's is a door the the west, an ascending grand 
+<Description>The entryway is large - there's is a door the the west, an ascending grand
 staircase, and a door to the east.
 
-Along the walls there are: 
-- Eight bookshelves 
+Along the walls there are:
+- Eight bookshelves
 - Four drawers
-- Two chairs  
+- Two chairs
 - One desk
 
 What kind of 3-bit operation is this place? You wonder. </Description>
@@ -161,16 +162,16 @@ What kind of 3-bit operation is this place? You wonder. </Description>
 <Id>50</Id>
 <Name>Mad Laboratory</Name>
 <Description>There are a myriad of whizzing, whirring machines and
-dirty alchemical equipment. 
+dirty alchemical equipment.
 
-The floor is scattered with papers and feathers, and the walls plastered with drawings 
+The floor is scattered with papers and feathers, and the walls plastered with drawings
 of what looks like Florence, Italy.
- 
-There is a man in a white robe hunched over a workbench. He's got wild, white hair, 
-and is wearing one of those telescopic monocles. 
- 
-There is a duck sitting in a chair reading a newspaper. 
- 
+
+There is a man in a white robe hunched over a workbench. He's got wild, white hair,
+and is wearing one of those telescopic monocles.
+
+There is a duck sitting in a chair reading a newspaper.
+
 Neither of them raise alarm at your presence.</Description>
 <N>-1</N>
 <E>-1</E>

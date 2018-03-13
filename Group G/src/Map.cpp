@@ -110,7 +110,7 @@ void Map::generateMapFromXml(string filepath) {
             if (elementName == "Name") name = elementValue;
             if (elementName == "Description") description = elementValue;
             if (elementName == "Items") collectItemsForRoom(elementValue, &items);
-            if (elementName == "Npcs") npcs.push_back(elementValue); // TODO: Change this when NPCs implemented
+            if (elementName == "Npcs") collectNpcsForRoom(elementValue, &npcs); // TODO: Change this when NPCs implemented
             if (elementName == "N" || elementName == "E" ||
                 elementName == "S" || elementName == "W" ||
                 elementName == "U" || elementName == "D") neighbours[elementName] = elementValue;
@@ -118,6 +118,12 @@ void Map::generateMapFromXml(string filepath) {
         m_listOfRooms.push_back(new Room(id, name, description, neighbours, npcs, items));
 	}
     m_currentRoom = m_listOfRooms[0];
+}
+void Map::collectNpcsForRoom(string npcName, tNpcList *npcs)
+{
+    if(npcName == "scientist") npcs->push_back(new Scientist());
+    if(npcName == "boy") npcs->push_back(new Boy());
+    if(npcName == "father") npcs->push_back(new Father());
 }
 
 /**

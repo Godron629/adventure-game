@@ -7,7 +7,7 @@
 #include "Map.h"
 #include "Item.h"
 
-enum ActionType {Dir, Inv, Sys};
+enum ActionType {Dir, Inv, Sys, Tlk};
 
 class Action
 {
@@ -24,6 +24,7 @@ class Action
         virtual void PerformAction(Inventory*, Map*, std::string);
         virtual void PerformAction(Inventory*, Map*);
         virtual void PerformAction(Direction*, Map*);
+        virtual void PerformAction(Inventory*, Map*, Npc*);
 
     protected:
         std::string description;
@@ -39,6 +40,15 @@ class Drop : public Action
     private:
         bool PerformAction();
         void PerformAction(Item*,Inventory*,Room*);
+};
+
+class Talk : public Action
+{
+    public:
+        Talk();
+    private:
+        bool PerformAction();
+        void PerformAction(Inventory*, Map*, Npc*);
 };
 
 class Type : public Action

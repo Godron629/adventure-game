@@ -5,10 +5,11 @@
 #include <map>
 #include <vector>
 #include "Item.h"
+#include "Npc.h"
 
 typedef std::map<std::string, std::string> tNeighbours;
 typedef std::vector<Item*> tItemList;
-typedef std::vector<std::string> tNpcList;
+typedef std::vector<Npc*> tNpcList;
 
 class Room {
     friend class Map;
