@@ -39,7 +39,7 @@ bool Drop::PerformAction()
 void Drop::PerformAction(Item* newItem, Inventory* currentInventory, Room* currentRoom)
 {
     currentInventory->Drop(newItem);
-    //drop item into room. AddItem() in room.
+    currentRoom->addItem(newItem);
     cout<<"Dropping: "<<newItem->GetObject()<<endl<<endl;
 }
 
@@ -184,6 +184,7 @@ void Grab::PerformAction(Item* newItem, Inventory* currentInventory, Room* curre
         if(i->GetDescription() == newItem->GetDescription())
         {
             currentInventory->Add(newItem);
+            currentRoom->removeItem(newItem);
             cout<<"Grabbing: "<<newItem->GetObject()<<endl<<endl;
             return;
         }

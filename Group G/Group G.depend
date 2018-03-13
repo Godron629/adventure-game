@@ -1185,3 +1185,128 @@
 	<iostream>
 	"Inventory.h"
 
+1520963120 source:a:\documents\dynamicitems\2720-g-project\group g\main.cpp
+	<iostream>
+	"include/Console.h"
+	"Map.h"
+	"Npc.h"
+
+1520963120 a:\documents\dynamicitems\2720-g-project\group g\include\console.h
+	<string>
+	<list>
+	<vector>
+	"Action.h"
+	"Option.h"
+	"Direction.h"
+	"Item.h"
+	"Inventory.h"
+
+1520963120 a:\documents\dynamicitems\2720-g-project\group g\include\action.h
+	<string>
+	"Inventory.h"
+	"Direction.h"
+	"Map.h"
+	"Item.h"
+
+1520963120 a:\documents\dynamicitems\2720-g-project\group g\include\inventory.h
+	"Item.h"
+	<string>
+	<vector>
+
+1520963120 a:\documents\dynamicitems\2720-g-project\group g\include\item.h
+	<Option.h>
+	<string>
+	<vector>
+
+1520963120 a:\documents\dynamicitems\2720-g-project\group g\include\option.h
+	<string>
+
+1520963120 a:\documents\dynamicitems\2720-g-project\group g\include\direction.h
+	<string>
+	<vector>
+	"Option.h"
+
+1520963120 a:\documents\dynamicitems\2720-g-project\group g\include\map.h
+	"Room.h"
+	<string>
+	<vector>
+
+1520964032 a:\documents\dynamicitems\2720-g-project\group g\include\room.h
+	<string>
+	<map>
+	<vector>
+	"Item.h"
+	"Npc.h"
+
+1520963120 a:\documents\dynamicitems\2720-g-project\group g\include\npc.h
+	<string>
+	<vector>
+	"Inventory.h"
+
+1520963120 source:a:\documents\dynamicitems\2720-g-project\group g\src\console.cpp
+	"../include/Console.h"
+	<iostream>
+	<string>
+	<cctype>
+	<vector>
+	<fstream>
+	<algorithm>
+	"Option.h"
+
+1520963120 source:a:\documents\dynamicitems\2720-g-project\group g\src\direction.cpp
+	"Direction.h"
+	<string>
+
+1520963120 source:a:\documents\dynamicitems\2720-g-project\group g\src\inventory.cpp
+	"Inventory.h"
+	<iostream>
+	<string>
+	<algorithm>
+	"Option.h"
+
+1520963120 source:a:\documents\dynamicitems\2720-g-project\group g\src\item.cpp
+	"Item.h"
+	<string>
+
+1520963120 source:a:\documents\dynamicitems\2720-g-project\group g\src\map.cpp
+	"Map.h"
+	<iostream>
+	<exception>
+	<cstring>
+	"Item.h"
+	"rapidxml_utils.hpp"
+
+1520963120 a:\documents\dynamicitems\2720-g-project\group g\rapidxml\rapidxml_utils.hpp
+	"rapidxml.hpp"
+	<vector>
+	<string>
+	<fstream>
+	<stdexcept>
+
+1520963120 a:\documents\dynamicitems\2720-g-project\group g\rapidxml\rapidxml.hpp
+	<cstdlib>
+	<cassert>
+	<new>
+	<exception>
+
+1520963120 source:a:\documents\dynamicitems\2720-g-project\group g\src\npc.cpp
+	"Npc.h"
+	<string>
+	<vector>
+	<iostream>
+	"Inventory.h"
+
+1520963120 source:a:\documents\dynamicitems\2720-g-project\group g\src\option.cpp
+	"Option.h"
+
+1520964114 source:a:\documents\dynamicitems\2720-g-project\group g\src\action.cpp
+	"Action.h"
+	"Inventory.h"
+	"Item.h"
+	<string>
+	<iostream>
+
+1520964172 source:a:\documents\dynamicitems\2720-g-project\group g\src\room.cpp
+	"Room.h"
+	<exception>
+
