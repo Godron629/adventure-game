@@ -15,17 +15,34 @@ Inventory::~Inventory()
     for(auto i: inventory)
         delete i;
 }
+/**
+ *\brief Adds item into player inventory.
+ *\param[out] Pointer to Item -> item the user wishes to add.
+ */
 void Inventory::Add(Item* addedItem)
 {
     inventory.push_back(addedItem);
 }
+/**
+ *\brief Drops item from user inventory.
+ *\param[out] Pointer to Item -> item the user wishes to drop.
+ *\throw Throws invalid argument exception if the inventory does not contain that item.
+ */
 void Inventory::Drop(Item* droppedItem)
 {
-    if(find(inventory.begin(),inventory.end(),droppedItem)!= inventory.end())
-        inventory.erase(remove(inventory.begin(),inventory.end(),droppedItem),inventory.end());
-    else
-        throw invalid_argument("Item not in your inventory!");
+    for(int i = 0; i < (int)inventory.size(); i++)
+    {
+        if(inventory[i]->GetDescription() == droppedItem->GetDescription())
+        {
+            inventory.erase(inventory.begin()+i);
+            return;
+        }
+    }
+    throw invalid_argument("Item not in your inventory!");
 }
+/**
+ *\brief Formats and writes the users inventory to the console.
+ */
 void Inventory::List()
 {
     int numOfItems = inventory.size();

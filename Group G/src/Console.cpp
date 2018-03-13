@@ -18,7 +18,10 @@ Console::Console(Inventory* inv, Map* gameMap)
     _gameMap = gameMap;
     Actions.insert(Actions.end(),new List(_inventory));
 }
-
+/**
+ *\brief Prints ASCII Art to console.
+ *\param[in] String filepath -> File path to file containing ASCIIART.
+ */
 void Console::PrintArt(string filepath)
 {
     string art;
@@ -42,17 +45,25 @@ void Console::PrintArt(string filepath)
         cerr<<e.what()<<endl;
     }
 }
+/**
+ *\brief Prompts user input.
+ */
 void Console::Prompt()
 {
     cout << "> ";
 }
+/**
+ *\brief Parses user input and handles it.
+ */
 void Console::ParseCommand()
 {
+    //gets user input
     getline(cin, _input);
     cout << endl << endl;
 
     string first, second;
 
+    //splits arguments
     first = GetFirst(_input);
     second = GetSecond(_input);
 
@@ -63,25 +74,30 @@ void Console::ParseCommand()
     Option* currentOption = nullptr;
     Npc* currentNpc = nullptr;
 
+    //finds action from first argument
     for(auto i: Actions)
         if(i->GetDescription() == first)
            currentAction = i;
 
+    //Checks for a second argument
     if(second != "")
     {
+        //If second argument is an option 'item, direction etc'
         for(auto i: Options)
             if(i->GetDescription() == second)
                 currentOption = i;
+        //If second argument is an NPC
         for(auto i: Npcs)
             if(i->getName() == second)
                 currentNpc = i;
     }
 
-
+    //Error Checking
     if(currentAction == 0 || (currentOption == 0 && currentAction->GetType() != Sys && currentAction->GetType() != Tlk))
         ErrorMessage();
     else
     {
+        //Switch on Type of action and perform corresponding task.
         switch (currentAction->GetType())
         {
             case Dir:
@@ -127,14 +143,19 @@ void Console::ParseCommand()
             default:
                 ErrorMessage();
         }
-
     }
-
 }
+/**
+ *\brief Prints error message.
+ */
 void Console::ErrorMessage()
 {
     cout<<"Type 'help' for help"<<endl <<endl;
 }
+/**
+ *\brief Returns a string that has been converter to lowercase.
+ *\param[in] String original -> string to convert.
+ */
 string Console::ConvertStringToLower(string original)
 {
     for(unsigned int i = 0; i < original.length(); i++)
@@ -145,6 +166,10 @@ string Console::ConvertStringToLower(string original)
     }
     return original;
 }
+/**
+ *\brief Returns the second argument entered by the user.
+ *\param[in] String input -> user input.
+ */
 string Console::GetSecond(string input)
 {
     char space = ' ';
@@ -157,6 +182,10 @@ string Console::GetSecond(string input)
 
     return second;
 }
+/**
+ *\brief Returns the first argument entered by the user.
+ *\param[in] String input -> user input.
+ */
 string Console::GetFirst(string input)
 {
     char space = ' ';
@@ -166,7 +195,9 @@ string Console::GetFirst(string input)
 
     return first;
 }
-
+/**
+ *\brief Game loop while the quit flag is false.
+ */
 void Console::Run()
 {
     while(!_flag)
@@ -185,4 +216,7 @@ Console::~Console()
     for (auto i: Actions) {
         delete i;
     }
+
+    for (auto i: Npcs)
+        delete i;
 }
