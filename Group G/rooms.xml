@@ -35,6 +35,7 @@ There seems to be a name engraved into the gate but it's difficult to read.</Des
 <W>-1</W>
 <U>-1</U>
 <D>-1</D>
+<Npcs>boy</Npcs>
 </Room>
 
 <Room>
@@ -207,9 +208,9 @@ Neither of them raise alarm at your presence.</Description>
 <S>-1</S>
 <W>-1</W>
 <U>-1</U>
-<D>7</D>
-<Npcs>Father Duck</Npcs>
-<Npcs>Mad Scientist</Npcs>
+<D>6</D>
+<Npcs>father</Npcs>
+<Npcs>scientist</Npcs>
 </Room>
  <!-- Here be underneath rooms --> 
 <Room>
