@@ -134,6 +134,8 @@ void Console::ParseCommand()
                     currentAction->PerformAction(_inventory, _gameMap, second);
                 else if(dynamic_cast<Crank*>(currentAction) != nullptr)
                     currentAction->PerformAction(_inventory, _gameMap);
+                else if(dynamic_cast<Unlock*>(currentAction) != nullptr)
+                    currentAction->PerformAction(_inventory, _gameMap);
                 else
                 {
                     Actions.insert(Actions.end(),new List(_inventory));

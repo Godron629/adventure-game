@@ -53,6 +53,33 @@ void Drop::PerformAction(Item* newItem, Inventory* currentInventory, Room* curre
     cout<<"Dropping: "<<newItem->GetObject()<<endl<<endl;
 }
 
+Unlock::Unlock()
+{
+    description = "unlock";
+    action = "Unlock";
+    type = Sys;
+}
+
+bool Unlock::PerformAction()
+{
+    cout << action;
+    return false;
+}
+/**
+ *\brief Unlocks a room if the user has a key.
+ *\param[out] Pointer to Inventory -> the players inventory.
+ *\param[out] Pointer to Map -> the game map.
+ */
+void Unlock::PerformAction(Inventory* currentInventory, Map* gameMap)
+{
+    for(auto i: currentInventory->inventory){
+        if(i->GetDescription() == "key"){
+            gameMap->sendToRoom("0"); //ROOM ID HERE
+            return;
+        }
+    }
+    cout<<"You do not have a key..."<<endl<<endl;
+}
 Talk::Talk()
 {
     description = "talk";
@@ -233,7 +260,7 @@ void Grab::PerformAction(Item* newItem, Inventory* currentInventory, Room* curre
 Help::Help()
 {
     description = "help";
-    action = "Actions: Help | Quit | List | Look | Crank | Move | Grab | Drop | Type | Talk ";
+    action = "Actions: Help | Quit | List | Look | Crank | Move |\n\t | Grab | Drop | Type | Talk | Unlock";
     type = Sys;
 }
 /**
