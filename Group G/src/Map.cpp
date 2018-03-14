@@ -28,6 +28,7 @@ Room* Map::getCurrentRoom() {
 void Map::sendToRoom(string roomId)
 {
     m_currentRoom = Map::searchMapForRoom(roomId);
+    cout << "Moving to: " << m_currentRoom->getName() << "\n\n";
 }
 /**
 @brief If there is a room in direction relative to currentRoom, make that the current room.

@@ -28,7 +28,7 @@ class Console
         void ParseCommand();
         void Run();
         void ErrorMessage();
-        std::vector<Action*> Actions = {new Move(),new Drop(),new Grab(), new Look(), new Help(), new Quit(), new Type(), new Crank(), new Talk()};
+        std::vector<Action*> Actions = {new Move(),new Drop(),new Grab(), new Look(), new Help(), new Quit(), new Type(), new Crank(), new Talk(), new Unlock()};
 
         std::vector<Option*> Options = {new North(),new South(), new East(), new West(), new Up(), new Down(),
             new Key(), new Helmet(), new Stick(),new RubberTube(),new Gear(), new PileOfBolts(),

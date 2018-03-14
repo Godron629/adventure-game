@@ -41,7 +41,15 @@ class Drop : public Action
         bool PerformAction();
         void PerformAction(Item*,Inventory*,Room*);
 };
+class Unlock : public Action
+{
+    public:
+        Unlock();
+    private:
+        bool PerformAction();
+        void PerformAction(Inventory*, Map*);
 
+};
 class Talk : public Action
 {
     public:
