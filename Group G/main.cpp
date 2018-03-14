@@ -18,7 +18,7 @@ int main()
     gameMap->generateMapFromXml("rooms.xml");
 
     Inventory* inventory = new Inventory();
-    inventory->Add(new Key());
+
     Console shell = Console(inventory, gameMap);
 
     shell.PrintArt("start.txt");
