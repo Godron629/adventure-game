@@ -178,12 +178,14 @@ There's a painting of a priveledged white male on beside the fireplace...
 The eyes of the painting follow you as you move around. Hmm...
 
 There are doors to the north, east, and west.</Description>
-<N>-1</N> <!-- north needs a room --> 
+
+<N>11</N> <!-- north needs a room --> 
 <E>6</E> 
 <S>-1</S>
 <W>8</W>
 <U>-1</U>
 <D>-1</D>
+
 </Room>
 
 <Room>
@@ -200,12 +202,16 @@ You feel a cold draft.
 There is a ladder leading down into a dark hole. 
 
 There is a door to the east.</Description>
+
 <N>-1</N>
 <E>7</E>
 <S>-1</S>
 <W>-1</W>
 <U>-1</U>
 <D>75</D>
+
+<Items>key</Items>
+
 </Room>
 
 <Room>
@@ -258,6 +264,71 @@ There is a door to the east.</Description>
 <Items>heavy weight</Items>
 </Room>
 
+<Room>
+<Id>11</Id>
+<Name>Hallway</Name>
+<Description>A long hallway along the back of the house.
+
+There are no lights. 
+
+There are windows along the northern wall, you can see that it's raining outside. 
+
+You can just make out a door in the middle of the hallway, and doors at either end.</Description>
+
+<N>11</N>
+<E>9</E>
+<S>-1</S>
+<W>7</W>
+<U>-1</U>
+<D>-1</D>
+
+</Room>
+
+<Room>
+<Id>11</Id>
+<Name>Courtyard</Name>
+<Description>The rain stops as soon as you pass into the courtyard. 
+
+The house looks smaller from back here. 
+
+There's a drain pipe leading up towards an open window. The sounds and 
+smells drifting out indicate that it must be the laboratory. 
+
+The ground has been covered with dry cobblestones, they could use a good powerwashing. 
+
+A small groundskeeping shed stands to the west - it's locked.</Description>
+
+<N>-1</N>
+<E>-1</E>
+<S>11</S>
+<W>12</W> 
+<U>75</U>
+<D>-1</D>
+
+</Room>
+
+<Room>
+<Id>12</Id>
+<Name>Groundskeeping Shed</Name>
+<Description>The key opens the shed. 
+
+There are a lot of tools in here. 
+
+It smells like 'ye olde home depot' - cathartic.
+
+There's a hole in the roof, and debris on the floor.</Description>
+
+<N>-1</N>
+<E>11</E>
+<S>-1</S>
+<W>-1</W>
+<U>-1</U>
+<D>-1</D>
+
+<Items>rubber hose</Items>
+
+</Room>
+
 <!-- Here be second floor rooms -->
 <Room>
 <Id>50</Id>
@@ -266,7 +337,9 @@ There is a door to the east.</Description>
 
 The floor is scattered with papers and feathers, and the walls plastered with
 drawings of what looks like Florence, Italy.
- 
+
+An open window brings much needed fresh air. 
+
 There is a man in a white robe hunched over a workbench. 
 
 He's got wild, white hair, and is wearing one of those telescopic monocles. 
