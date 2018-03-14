@@ -11,7 +11,9 @@ using namespace std;
 string Action::GetDescription() {
     return description;
 }
-
+/**
+ *\brief returns an enum of the action Type: 'Sys, Tlk, Dir, Inv'
+ */
 ActionType Action::GetType() {
     return type;
 }
@@ -30,16 +32,24 @@ Drop::Drop()
     type = Inv;
 }
 
+/**
+ *\brief returns bool: true if game over, else false.
+ */
 bool Drop::PerformAction()
 {
     cout<<action;
     return false;
 }
-
+/**
+ *\brief Drops item from player inventory and adds item to current room.
+ *\param[out] Pointer to Item -> the item the player is trying to drop.
+ *\param[out] Pointer to Inventory -> the players inventory.
+ *\param[out] Pointer to Room -> the current room the player is in.
+ */
 void Drop::PerformAction(Item* newItem, Inventory* currentInventory, Room* currentRoom)
 {
     currentInventory->Drop(newItem);
-    //drop item into room. AddItem() in room.
+    currentRoom->addItem(newItem);
     cout<<"Dropping: "<<newItem->GetObject()<<endl<<endl;
 }
 
@@ -49,13 +59,20 @@ Talk::Talk()
     action = "Talking ";
     type = Tlk;
 }
-
+/**
+ *\brief returns bool: true if game over, else false.
+ */
 bool Talk::PerformAction()
 {
     cout << action;
     return false;
 }
-
+/**
+ *\brief Initiates conversation between player and NPC.
+ *\param[out] Pointer to Inventory -> the players inventory.
+ *\param[out] Pointer to Map -> the current game map.
+ *\param[out] Pointer to Npc -> the current NPC the player desires to speak to.
+ */
 void Talk::PerformAction(Inventory* currentInventory, Map* currentMap, Npc* requestedNpc)
 {
     string message = "";
@@ -81,13 +98,20 @@ Type::Type()
     action = "Typing ";
     type = Sys;
 }
-
+/**
+ *\brief returns bool: true if game over, else false.
+ */
 bool Type::PerformAction()
 {
     cout << action;
     return false;
 }
-
+/**
+ *\brief For entering a code into a safe.
+ *\param[out] Pointer to Inventory -> the players inventory.
+ *\param[out] Pointer to Map -> the current game map.
+ *\param[in] String 'code' -> the code the player wants to enter.
+ */
 void Type::PerformAction(Inventory* currentInventory, Map* currentMap, string code)
 {
     string message = "";
@@ -120,13 +144,19 @@ Crank::Crank()
     action = "Cranking ";
     type = Sys;
 }
-
+/**
+ *\brief returns bool: true if game over, else false.
+ */
 bool Crank::PerformAction()
 {
     cout<<action;
     return false;
 }
-
+/**
+ *\brief When the player is standing on the pressure plate and needs to turn the crank.
+ *\param[out] Pointer to Inventory -> the players inventory.
+ *\param[out] Pointer to Map -> the current game map.
+ */
 void Crank::PerformAction(Inventory* currentInventory, Map* currentMap)
 {
     bool hasWeight = false;
@@ -170,13 +200,20 @@ Grab::Grab()
     action = "Grabbing ";
     type = Inv;
 }
-
+/**
+ *\brief returns bool: true if game over, else false.
+ */
 bool Grab::PerformAction()
 {
     cout<<action;
     return false;
 }
-
+/**
+ *\brief Adds Item to players inventory and removes the item from the current room.
+ *\param[out] Pointer to Item -> current item the player wishes to add
+ *\param[out] Pointer to Inventory -> the players inventory.
+ *\param[out] Pointer to Room -> the current room.
+ */
 void Grab::PerformAction(Item* newItem, Inventory* currentInventory, Room* currentRoom)
 {
     for(auto i: currentRoom->getItems())
@@ -184,6 +221,7 @@ void Grab::PerformAction(Item* newItem, Inventory* currentInventory, Room* curre
         if(i->GetDescription() == newItem->GetDescription())
         {
             currentInventory->Add(newItem);
+            currentRoom->removeItem(newItem);
             cout<<"Grabbing: "<<newItem->GetObject()<<endl<<endl;
             return;
         }
@@ -195,10 +233,12 @@ void Grab::PerformAction(Item* newItem, Inventory* currentInventory, Room* curre
 Help::Help()
 {
     description = "help";
-    action = "Actions: Help | Quit | List | Move | Grab | Drop | Look | Type | Crank | Talk";
+    action = "Actions: Help | Quit | List | Look | Crank | Move | Grab | Drop | Type | Talk ";
     type = Sys;
 }
-
+/**
+ *\brief returns bool: true if game over, else false.
+ */
 bool Help::PerformAction()
 {
     cout<<action<<endl<<endl;
@@ -212,7 +252,9 @@ List::List(Inventory* inv)
     action = "Inventory: ";
     type = Sys;
 }
-
+/**
+ *\brief returns bool: true if game over, else false. Shows players inventory to Console.
+ */
 bool List::PerformAction()
 {
     cout<<action;
@@ -226,13 +268,18 @@ Look::Look()
     action = "Looking ";
     type = Sys;
 }
-
+/**
+ *\brief returns bool: true if game over, else false.
+ */
 bool Look::PerformAction()
 {
     cout<<action;
     return false;
 }
-
+/**
+ *\brief Looking around when entering a new room.
+ *\param[out] Pointer to Room -> current room.
+ */
 void Look::PerformAction(Room* currentRoom)
 {
     string toPrint = currentRoom->getDescription();
@@ -262,12 +309,18 @@ Move::Move()
     action = "Moving ";
     type = Dir;
 }
-
+/**
+ *\brief moving within the map.
+ *\param[out] Pointer to Direction -> direction the player wishes to move.
+ *\param[out] Pointer to Map -> the current game map.
+ */
 void Move::PerformAction(Direction* dir, Map* gameMap)
 {
     gameMap->changeCurrentRoom(dir->GetCardinal());
 }
-
+/**
+ *\brief returns bool: true if game over, else false.
+ */
 bool Move::PerformAction()
 {
     cout<<action;
@@ -280,7 +333,9 @@ Quit::Quit()
     action = "Quitting...";
     type = Sys;
 }
-
+/**
+ *\brief returns bool: true if game over, else false.
+ */
 bool Quit::PerformAction()
 {
     cout<<action<<endl;

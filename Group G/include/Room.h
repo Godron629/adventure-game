@@ -28,6 +28,8 @@ class Room {
         std::string getDescription();
         tNpcList getNpcs();
         tItemList getItems();
+        void addItem(Item*);
+        void removeItem(Item*);
 
     protected:
         std::string getNeighbourId(std::string direction);

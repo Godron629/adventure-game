@@ -11,12 +11,19 @@ string Npc::getName()
 {
     return name;
 }
-
+/**
+ *\brief Returns the line the NPC will say.
+ *\param[in] Int index -> which line the NPC should say.
+ */
 string Npc::getThingToSay(int index)
 {
     return thingsToSay[index];
 }
 
+/**
+ *\brief Returns a bool to check for game completion.
+ *\param[out] Pointer to Inventory -> the players inventory.
+ */
 bool Npc::checkForGameCompletion(Inventory* currentInventory)
 {
     bool hasGear = false;

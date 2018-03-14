@@ -72,4 +72,11 @@ tNpcList Room::getNpcs() {
 tItemList Room::getItems() {
     return m_items;
 }
-
+void Room::addItem(Item* item){
+    m_items.push_back(item);
+}
+void Room::removeItem(Item* item){
+    for(int i = 0; i < (int)m_items.size(); i++)
+        if(m_items[i]->GetDescription() == item->GetDescription())
+            m_items.erase(m_items.begin() + i);
+}
