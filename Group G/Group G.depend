@@ -1435,3 +1435,128 @@
 	<string>
 	<iostream>
 
+1521051570 source:/home/ricg2720/Desktop/2720-G-Project/Group G/main.cpp
+	<iostream>
+	"include/Console.h"
+	"Map.h"
+	"Npc.h"
+
+1521051570 /home/ricg2720/Desktop/2720-G-Project/Group G/include/Console.h
+	<string>
+	<list>
+	<vector>
+	"Action.h"
+	"Option.h"
+	"Direction.h"
+	"Item.h"
+	"Inventory.h"
+
+1521051570 /home/ricg2720/Desktop/2720-G-Project/Group G/include/Action.h
+	<string>
+	"Inventory.h"
+	"Direction.h"
+	"Map.h"
+	"Item.h"
+
+1521051570 /home/ricg2720/Desktop/2720-G-Project/Group G/include/Inventory.h
+	"Item.h"
+	<string>
+	<vector>
+
+1521051570 /home/ricg2720/Desktop/2720-G-Project/Group G/include/Item.h
+	<Option.h>
+	<string>
+	<vector>
+
+1521051570 /home/ricg2720/Desktop/2720-G-Project/Group G/include/Option.h
+	<string>
+
+1521051570 /home/ricg2720/Desktop/2720-G-Project/Group G/include/Direction.h
+	<string>
+	<vector>
+	"Option.h"
+
+1521051570 /home/ricg2720/Desktop/2720-G-Project/Group G/include/Map.h
+	"Room.h"
+	<string>
+	<vector>
+
+1521051570 /home/ricg2720/Desktop/2720-G-Project/Group G/include/Room.h
+	<string>
+	<map>
+	<vector>
+	"Item.h"
+	"Npc.h"
+
+1521051570 /home/ricg2720/Desktop/2720-G-Project/Group G/include/Npc.h
+	<string>
+	<vector>
+	"Inventory.h"
+
+1521052918 source:/home/ricg2720/Desktop/2720-G-Project/Group G/src/Action.cpp
+	"Action.h"
+	"Inventory.h"
+	"Item.h"
+	<string>
+	<iostream>
+
+1521051570 source:/home/ricg2720/Desktop/2720-G-Project/Group G/src/Console.cpp
+	"../include/Console.h"
+	<iostream>
+	<string>
+	<cctype>
+	<vector>
+	<fstream>
+	<algorithm>
+	"Option.h"
+
+1521051570 source:/home/ricg2720/Desktop/2720-G-Project/Group G/src/Direction.cpp
+	"Direction.h"
+	<string>
+
+1521051570 source:/home/ricg2720/Desktop/2720-G-Project/Group G/src/Inventory.cpp
+	"Inventory.h"
+	<iostream>
+	<string>
+	<algorithm>
+	"Option.h"
+
+1521051570 source:/home/ricg2720/Desktop/2720-G-Project/Group G/src/Item.cpp
+	"Item.h"
+	<string>
+
+1521051570 source:/home/ricg2720/Desktop/2720-G-Project/Group G/src/Map.cpp
+	"Map.h"
+	<iostream>
+	<exception>
+	<cstring>
+	"Item.h"
+	"rapidxml_utils.hpp"
+
+1521051570 /home/ricg2720/Desktop/2720-G-Project/Group G/rapidxml/rapidxml_utils.hpp
+	"rapidxml.hpp"
+	<vector>
+	<string>
+	<fstream>
+	<stdexcept>
+
+1521051570 /home/ricg2720/Desktop/2720-G-Project/Group G/rapidxml/rapidxml.hpp
+	<cstdlib>
+	<cassert>
+	<new>
+	<exception>
+
+1521051570 source:/home/ricg2720/Desktop/2720-G-Project/Group G/src/Npc.cpp
+	"Npc.h"
+	<string>
+	<vector>
+	<iostream>
+	"Inventory.h"
+
+1521051570 source:/home/ricg2720/Desktop/2720-G-Project/Group G/src/Option.cpp
+	"Option.h"
+
+1521051570 source:/home/ricg2720/Desktop/2720-G-Project/Group G/src/Room.cpp
+	"Room.h"
+	<exception>
+

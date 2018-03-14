@@ -74,7 +74,7 @@ void Unlock::PerformAction(Inventory* currentInventory, Map* gameMap)
 {
     for(auto i: currentInventory->inventory){
         if(i->GetDescription() == "key"){
-            gameMap->sendToRoom("0"); //ROOM ID HERE
+            gameMap->sendToRoom("13"); //ROOM ID HERE
             return;
         }
     }
