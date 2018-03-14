@@ -144,5 +144,6 @@ void Map::collectItemsForRoom(string itemName, tItemList *items) {
     if (itemName == "stick") items->push_back(new Stick());
     if (itemName == "quill") items->push_back(new Quill());
     if (itemName == "papyrus") items->push_back(new Papyrus());
+    if (itemName == "heavy weight") items->push_back(new Weight());
 }
 

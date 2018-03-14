@@ -163,7 +163,7 @@ void Crank::PerformAction(Inventory* currentInventory, Map* currentMap)
     bool hasHelmet = false;
 
     string message = "";
-    if(currentMap->getCurrentRoom()->getId() == "2" || currentMap->getCurrentRoom()->getName() == "room1")
+    if(currentMap->getCurrentRoom()->getId() == "51")
     {
         for(auto i: currentInventory->inventory)
             if(i->GetDescription() == "heavy weight")
@@ -174,20 +174,20 @@ void Crank::PerformAction(Inventory* currentInventory, Map* currentMap)
 
         if(hasWeight)
         {
-            message.append("The pressure plate gives a little and you turn the crank.\nA gear falls from the ceiling, watch out!");
+            message.append("The pressure plate gives a little and you turn the crank.\n\nA gear falls from the ceiling, watch out!");
             if(hasHelmet)
             {
-                message.append("\nOof! That hurt. Who throws a gear? Honestly. You pick it up in spite of your injury.");
+                message.append("\n\nOof! That hurt. Who throws a gear? Honestly. \n\nYou pick it up in spite of your injury.");
                 currentInventory->Add(new Gear());
             }
             else
             {
-                message.append("\nOof! You are hit in the head with something heavy!\nYou fall into the conspicuously placed 'Pit of Doom'...");
-                currentMap->sendToRoom("0");//NAME = PIT OF DOOM || ID = -3
+                message.append("\n\nOof! You are hit in the head with something heavy!\n\nYou fall unconsciously into the conspicuously placed Pit of Doom");
+                currentMap->sendToRoom("26");//NAME = PIT OF DOOM || ID = -3
             }
         }
         else
-            message.append("The pressure plate under your feet binds slightly, but the crank won't move !\nYou wonder if you could somehow make yourself heavier...");
+            message.append("The pressure plate under your feet binds slightly, but the crank won't move!\n\nYou wonder if you could somehow make yourself heavier...");
     }
     else
         message.append("There is nothing to crank here... ");

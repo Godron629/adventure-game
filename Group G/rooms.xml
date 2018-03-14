@@ -10,7 +10,10 @@
 You're standing on a grey gravel path. 
 
 There's a signpost to the north. It reads:
-'N: Manor of Spook | E: Hither | S: Thither'</Description>
+
+ --------------------------------------------
+| N: Manor of Spook | E: Hither | S: Thither | 
+ --------------------------------------------</Description>
 
 <N>1</N>
 <E>-1</E>
@@ -24,11 +27,13 @@ There's a signpost to the north. It reads:
 <Room>
 <Id>1</Id>
 <Name>Manor Gate</Name>
-<Description>There's a small boy and a black iron gate to the north. 
+<Description>There's a small boy and a black iron gate ahead.
 
 To east and west there is a dense forest, into which you can't see very far.
 
-There seems to be a name engraved into the gate but it's difficult to read.</Description>
+There seems to be a name engraved into the gate but it's difficult to read.
+
+The path continues to the north.</Description>
 <N>2</N>
 <E>-1</E>
 <S>0</S>
@@ -47,7 +52,7 @@ You feel like somebody is watching you - you're not sure if you should be here.
 
 A tree branch whips you as you walk near it, oof!
 
-There's a bunch of leaves and sticks to the north. 
+There is a bunch of leaves and sticks to the north. 
 
 You hear a noise to the west.</Description>
 <N>26</N>
@@ -64,17 +69,18 @@ You hear a noise to the west.</Description>
 <Name>Manor Path 2.0</Name>
 <Description>You're on the path again. 
 
-There are a few standing candlelamps along the path, but you can 
-hardly see. 
+There are a few standing candlelamps along the path, but you can hardly see. 
 
-Would it have killed this guy to get some solar path lamps from 'ye olde thyme
+Would it have killed this guy to get some solar lamps from 'ye olde thyme
 hardware store'?
 
 And another thing, why is it so dark? It's 2:23 PM according to your iSunDial.
 
-There's a bunch of leaves and sticks to the south. 
+There is a bunch of leaves and sticks to the south. 
 
-You hear something move to the west.</Description>
+You hear something move to the west.
+
+The path continues to the north.</Description>
 <N>4</N>
 <E>-1</E>
 <S>26</S>
@@ -90,14 +96,17 @@ You hear something move to the west.</Description>
 
 The manor has two oaken doors and candlelamps on each side. 
 
-One of the doors isn't quite closed.
-
 There's a notice nailed to the door, it reads: 
-'This is a notice nailed to a door'
+
+ -------------------------------------
+| 'This is a notice nailed to a door' |
+ -------------------------------------
 
 A little existential, I suppose.
 
-There's a window to the west.</Description>
+There is a window to the west
+
+One of the doors isn't quite closed.</Description>
 <N>6</N>
 <E>-1</E>
 <S>3</S>
@@ -109,9 +118,11 @@ There's a window to the west.</Description>
 <Room>
 <Id>5</Id>
 <Name>Outside Window</Name>
+
 <Description>There's a large window on the side of the house. 
 
 It's covered with a curtain, but you can see something moving inside.</Description>
+
 <N>-1</N>
 <E>4</E>
 <S>-1</S>
@@ -123,8 +134,7 @@ It's covered with a curtain, but you can see something moving inside.</Descripti
 <Room>
 <Id>6</Id>
 <Name>Entryway</Name>
-<Description>The entryway is large - there's is a door the the west, an ascending grand 
-staircase, and a door to the east.
+<Description>The entryway is large and bigly.
 
 Along the walls there are: 
 - Eight bookshelves 
@@ -132,9 +142,14 @@ Along the walls there are:
 - Two chairs  
 - One desk
 
-What kind of 3-bit operation is this place? You wonder. </Description>
+What kind of 3-bit operation is this place? You wonder. 
+
+There are doors to the east and west.
+
+A grand staircase lay ahead.</Description>
+
 <N>-1</N>
-<E>-1</E> <!-- East needs room -->
+<E>9</E> 
 <S>4</S>
 <W>7</W>
 <U>50</U>
@@ -147,17 +162,22 @@ What kind of 3-bit operation is this place? You wonder. </Description>
 <Room>
 <Id>7</Id>
 <Name>Dining Room</Name>
-<Description>There is a round wooden table in the middle of the room. There is a burning candle,
-a glass, an old book, and an old bottle of wine atop the table. 
+<Description>There is a round wooden table in the middle of the room. 
 
-There's a fireplace along the eastern wall. It's warm. 
+There is a burning candle, a glass, an old book, and an old bottle of wine atop
+the table. 
 
-Along the walls there is a grandfather clock, various tables...
+There's a fireplace along the eastern wall. 
 
-There's a painting of a priveledged white male on beside the fireplace...his eyes
-follow you as you move around. Hmm...
+It's warm. 
 
-There's a room to the north, east, and west.</Description>
+Along the walls there is a grandfather clock, and various tables.
+
+There's a painting of a priveledged white male on beside the fireplace...
+
+The eyes of the painting follow you as you move around. Hmm...
+
+There are doors to the north, east, and west.</Description>
 <N>-1</N> <!-- north needs a room --> 
 <E>6</E> 
 <S>-1</S>
@@ -178,6 +198,7 @@ The bed looks appropriately bed-like.
 You feel a cold draft.
 
 There is a ladder leading down into a dark hole. 
+
 There is a door to the east.</Description>
 <N>-1</N>
 <E>7</E>
@@ -187,18 +208,68 @@ There is a door to the east.</Description>
 <D>75</D>
 </Room>
 
+<Room>
+<Id>9</Id>
+<Name>Kitchen</Name>
+<Description>Knives and serving spoons hang from the far wall. 
+
+It doesn't look like anyone has used this place in a while. 
+
+There is an open box of frosted medeival-io's and a bag of kwik-e-barter donuts on the counter.
+
+Gross, you hate foreign food.
+
+There are doors to the north, east, and west.</Description>
+
+<N>0</N> <!-- needs a room --> 
+<E>10</E> 
+<S>-1</S> 
+<W>6</W>
+<U>-1</U>
+<D>-1</D>
+
+<Items>rat poison</Items>
+</Room>
+
+<Room>
+<Id>10</Id>
+<Name>Pantry</Name>
+<Description>You clamber through a small, spring loaded door into a pantry.
+
+It's chilly. 
+
+There are wooden shelves with various sacks and widgets.
+
+You eat a pretzal from an open bag. 
+
+These pretzals are making me thirsty!
+
+A spiralling stone staircase leads upwards.
+
+There is a door to the east.</Description>
+
+<N>-1</N>
+<E>-1</E>
+<S>-1</S>
+<W>9</W>
+<U>51</U>
+<D>-1</D>
+
+<Items>heavy weight</Items>
+</Room>
+
 <!-- Here be second floor rooms -->
 <Room>
 <Id>50</Id>
 <Name>Mad Laboratory</Name>
-<Description>There are a myriad of whizzing, whirring machines and
-dirty alchemical equipment. 
+<Description>There are a myriad of whizzing, whirring machines and dirty alchemical equipment. 
 
-The floor is scattered with papers and feathers, and the walls plastered with drawings 
-of what looks like Florence, Italy.
+The floor is scattered with papers and feathers, and the walls plastered with
+drawings of what looks like Florence, Italy.
  
-There is a man in a white robe hunched over a workbench. He's got wild, white hair, 
-and is wearing one of those telescopic monocles. 
+There is a man in a white robe hunched over a workbench. 
+
+He's got wild, white hair, and is wearing one of those telescopic monocles. 
  
 There is a duck sitting in a chair reading a newspaper. 
  
@@ -212,14 +283,36 @@ Neither of them raise alarm at your presence.</Description>
 <Npcs>father</Npcs>
 <Npcs>scientist</Npcs>
 </Room>
+
+<Room>
+<Id>51</Id>
+<Name>Kitchen Attic</Name>
+<Description>You're above the kitchen - it's a little claustrophobic up here. 
+
+A chimney brush rests beside a crank and access panel mounted in the
+wall, above where the stove would be in the kitchen.
+
+The floor in front of the crank looks a little higher than the rest of the floor.
+
+A spiralling stone staircase leads below.</Description>
+<N>-1</N>
+<E>-1</E>
+<S>-1</S>
+<W>-1</W>
+<U>-1</U>
+<D>10</D>
+</Room>
  <!-- Here be underneath rooms --> 
 <Room>
 <Id>75</Id>
 <Name>Cellar</Name>
 <Description>You're standing on dirt - it crunches beneath your feet. 
 
-It looks like you're in some sort of cellar. There are spiders scuddling along the 
-floor and barrels stacked in the corner. The air smells a little bit like your grandma. 
+It looks like you're in some sort of cellar.
+
+There are spiders scuddling along the floor and barrels stacked in the corner.
+
+The air smells a little bit like your grandma. 
 
 Why anyone would want access to a cellar from their bedroom is beyond you. 
 
@@ -236,14 +329,18 @@ There's a stone arch with an ethereal glow to the west and a ladder leading up.<
 <Room>
 <Id>76</Id>
 <Name>Subterranean Portal #1</Name>
-<Description>As you walk through the portal you enter what looks like the dank may-may-verse.
+<Description>The portal hums as you walk through it. 
 
 There's a sign on the wall, it reads: 
-Welcome to imgur. Climb up at any time to Restart ^_^
 
-You smell cheetos, and angst - gross. 
+ -------------------------------------
+|         Welcome to imgur. 	      |
+| Climb up at any time to Restart ^_^ |
+ -------------------------------------
+ 
+You smell cheetos. 
 
-There is a portal in each direction...they all look the same.</Description>
+There is a portal in each direction - they all look the same.</Description>
 <N>8</N>
 <E>76</E>
 <S>78</S>
@@ -255,12 +352,14 @@ There is a portal in each direction...they all look the same.</Description>
 <Room>
 <Id>77</Id>
 <Name>Subterranean Portal #2</Name>
-<Description>Not Copyrighted Morty - Aww jeez I don't know Rick, this seems kinda dangerous. 
-Not Copyrighted Rick - Wubba Lubba dub-dub!!
+<Description>The portal hums as you walk through it.
 
-You start craving szechuan sauce - it's time to leave!
+Not Copyrighted Morty: Aww jeez I don't know Rick, this seems kinda dangerous. 
+Not Copyrighted Rick: Wubba Lubba dub-dub!!
 
-There is a portal in each direction...they all look the same.</Description>
+You start craving szechuan sauce, it might be time to leave.
+
+There is a portal in each direction - they all look the same.</Description>
 <N>77</N>
 <E>76</E>
 <S>76</S>
@@ -272,13 +371,15 @@ There is a portal in each direction...they all look the same.</Description>
 <Room>
 <Id>78</Id>
 <Name>Subterranean Portal #3</Name>
-<Description>Alright honestly this portal stuff is starting to get old. 
+<Description>The portal hums as you walk through it. 
+
+Alright honestly this portal stuff is starting to get old. 
 
 You try to remember how you got here...west, west...no, north. East???
 
 You start going a little insane. 
 
-There is a door in each direction...they all look the same.</Description>
+There is a door in each direction - they all look the same.</Description>
 <N>50</N>
 <E>78</E>
 <S>77</S>
@@ -290,20 +391,28 @@ There is a door in each direction...they all look the same.</Description>
 <Room>
 <Id>79</Id>
 <Name>Subterranean Portal #4</Name>
-<Description>You're back in the cellar again...well at least some dank version of it. 
+<Description>The portal hums as you walk through it. 
+
+You're back in the cellar again, at least some reposted version of it.
 
 There's a sign on the wall, it reads: 
-Well done - You found the secret room where the bolts are!
 
-There's something on the ground, it looks like...bolts. How did they get here?
+ ------------------------------------------------
+|                 ~ Well done ~                  |
+| You found the secret room where the bolts are! |
+ ------------------------------------------------
+ 
+There's something on the ground, it looks like bolts. How did they get here?
 
-There is a portal in each direction...they all look the same.</Description>
+There is a portal in each direction - they all look the same.</Description>
+
 <N>77</N>
 <E>76</E>
 <S>8</S>
 <W>76</W>
 <U>75</U>
 <D>79</D>
+
 <Items>pile of bolts</Items>
 </Room>
 
@@ -321,14 +430,16 @@ cookie boxes.
 It looks like whoever owned this wagon left in a hurry. They left some of 
 their belongings on the ground.
 
-You can see the path to the east and to the north.</Description>
-<Items>helmet</Items>
+The path continues to the north and east.</Description>
+
 <N>3</N>
 <E>2</E>
 <S>-1</S>
 <W>-1</W>
 <U>-1</U>
 <D>-1</D>
+
+<Items>helmet</Items>
 </Room>
 
 <Room>
