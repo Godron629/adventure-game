@@ -95,6 +95,7 @@ class Help : public Action
         Help();
 
     private:
+        std::string GenerateHelpOutput();
         ActionType GetType();
         bool PerformAction();
 };

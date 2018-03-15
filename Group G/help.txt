@@ -1,0 +1,81 @@
+Commands:
+
+
+name: move
+
+   args: direction
+
+   desc: moves player to room in corresponding direction
+
+   example: move west
+
+
+name: drop
+
+   args: item
+
+   desc: drops item from inventory
+
+   example: drop pile of bolts
+
+
+name: grab
+
+   args: item
+
+   desc: adds item to inventory
+
+   example: grab stick
+
+
+name: type
+
+   args: number
+
+   desc: certain room(s) may require this action
+
+   example: 1234
+
+
+name: talk
+
+   args: npc name
+
+   desc: used to comunicate with npc's throughout the game
+
+   example: talk character1
+
+
+name: look
+
+   args: none
+
+   desc: look around current room
+
+
+name: help
+
+   args: none
+
+   desc: displays this help message
+
+
+name: quit
+
+   args: none
+
+   desc: prompts user to save or exit game
+
+
+name: crank
+
+   args: none
+
+   desc: certain room(s) may require this action
+
+
+name: unlock
+
+   args: none
+
+   desc: certain room(s) may require this action

@@ -23,9 +23,10 @@ Console::Console(Inventory* inv, Map* gameMap)
  */
 void Console::GameStart()
 {
-    string loadNewInput, loadName, filePath;
+
     while(!_flag)
     {
+        string loadNewInput, loadName, filePath;
         while(loadNewInput.size() != 1){
             cout<<"\t'L' to Load Game 'N' for New Game: ";
             getline(cin,loadNewInput);
@@ -56,6 +57,10 @@ void Console::PrintIntro()
 {
     cout<<"\nYou awake from a long sleep, your surroundings are...familiar.\n\n";
 }
+/**
+ *\brief Loads game context -> Player Inventory and Last location, also calls rungame.
+ *\param[in] String filePath -> accepts file path to load game from.
+ */
 void Console::LoadGame(string filePath)
 {
     vector<string> package;
