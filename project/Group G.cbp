@@ -45,10 +45,7 @@
 		<Unit filename="../include/Npc.h" />
 		<Unit filename="../include/Option.h" />
 		<Unit filename="../include/Room.h" />
-		<Unit filename="../rapidxml/rapidxml.hpp" />
-		<Unit filename="../rapidxml/rapidxml_iterators.hpp" />
-		<Unit filename="../rapidxml/rapidxml_print.hpp" />
-		<Unit filename="../rapidxml/rapidxml_utils.hpp" />
+		<Unit filename="../include/rapidxml/rapidxml_utils.hpp" />
 		<Unit filename="../src/Action.cpp" />
 		<Unit filename="../src/Console.cpp" />
 		<Unit filename="../src/Direction.cpp" />

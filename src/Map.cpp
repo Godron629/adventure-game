@@ -4,7 +4,7 @@
 #include <exception>
 #include <cstring>
 #include "..\include\Item.h"
-#include "..\rapidxml\rapidxml_utils.hpp"
+#include "..\include\rapidxml\rapidxml_utils.hpp"
 
 using std::cout;
 using std::string;
