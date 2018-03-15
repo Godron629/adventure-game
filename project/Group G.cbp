@@ -36,26 +36,34 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="include/Action.h" />
-		<Unit filename="include/Console.h" />
-		<Unit filename="include/Direction.h" />
-		<Unit filename="include/Inventory.h" />
-		<Unit filename="include/Item.h" />
-		<Unit filename="include/Map.h" />
-		<Unit filename="include/Npc.h" />
-		<Unit filename="include/Option.h" />
-		<Unit filename="include/Room.h" />
+		<Unit filename="../gamesaves/gideon.txt" />
+		<Unit filename="../gamesaves/jeff.txt" />
+		<Unit filename="../include/Action.h" />
+		<Unit filename="../include/Console.h" />
+		<Unit filename="../include/Direction.h" />
+		<Unit filename="../include/Inventory.h" />
+		<Unit filename="../include/Item.h" />
+		<Unit filename="../include/Map.h" />
+		<Unit filename="../include/Npc.h" />
+		<Unit filename="../include/Option.h" />
+		<Unit filename="../include/Room.h" />
+		<Unit filename="../rapidxml/rapidxml.hpp" />
+		<Unit filename="../rapidxml/rapidxml_iterators.hpp" />
+		<Unit filename="../rapidxml/rapidxml_print.hpp" />
+		<Unit filename="../rapidxml/rapidxml_utils.hpp" />
+		<Unit filename="../src/Action.cpp" />
+		<Unit filename="../src/Console.cpp" />
+		<Unit filename="../src/Direction.cpp" />
+		<Unit filename="../src/Inventory.cpp" />
+		<Unit filename="../src/Item.cpp" />
+		<Unit filename="../src/Map.cpp" />
+		<Unit filename="../src/Npc.cpp" />
+		<Unit filename="../src/Option.cpp" />
+		<Unit filename="../src/Room.cpp" />
+		<Unit filename="help.txt" />
 		<Unit filename="main.cpp" />
 		<Unit filename="rooms.xml" />
-		<Unit filename="src/Action.cpp" />
-		<Unit filename="src/Console.cpp" />
-		<Unit filename="src/Direction.cpp" />
-		<Unit filename="src/Inventory.cpp" />
-		<Unit filename="src/Item.cpp" />
-		<Unit filename="src/Map.cpp" />
-		<Unit filename="src/Npc.cpp" />
-		<Unit filename="src/Option.cpp" />
-		<Unit filename="src/Room.cpp" />
+		<Unit filename="start.txt" />
 		<Extensions>
 			<code_completion />
 			<envvars />

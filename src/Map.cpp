@@ -1,10 +1,10 @@
-#include "Map.h"
+#include "..\include\Map.h"
 
 #include <iostream>
 #include <exception>
 #include <cstring>
-#include "Item.h"
-#include "rapidxml_utils.hpp"
+#include "..\include\Item.h"
+#include "..\rapidxml\rapidxml_utils.hpp"
 
 using std::cout;
 using std::string;

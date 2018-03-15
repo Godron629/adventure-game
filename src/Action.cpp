@@ -1,7 +1,7 @@
-#include "Action.h"
+#include "..\include\Action.h"
 
-#include "Inventory.h"
-#include "Item.h"
+#include "..\include\Inventory.h"
+#include "..\include\Item.h"
 
 #include <string>
 #include <iostream>
@@ -419,7 +419,7 @@ void Quit::PerformAction(Inventory* currentInventory, Map* gameMap)
                 cout<<"\tPlease enter your name: ";
                 getline(cin, saveName);
                 cout<<endl;
-                saveFilePath = "gamesaves/" + saveName + ".txt";
+                saveFilePath = "../gamesaves/" + saveName + ".txt";
 
                 //Create File
                 saveFileStream.open(saveFilePath);

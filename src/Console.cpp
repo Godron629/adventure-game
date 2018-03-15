@@ -5,7 +5,7 @@
 #include <vector>
 #include <fstream>
 #include <algorithm>
-#include "Option.h"
+#include "..\include\Option.h"
 
 using namespace std;
 
@@ -40,7 +40,7 @@ void Console::GameStart()
                 cout<<"\tPlease enter your name: ";
                 getline(cin, loadName);
                 cout<<endl;
-                filePath = "gamesaves/" + loadName + ".txt";
+                filePath = "../gamesaves/" + loadName + ".txt";
                 LoadGame(filePath);
                 _flag = true;
                 break;
@@ -306,6 +306,7 @@ void Console::Run(bool condition)
         Prompt();
         ParseCommand();
     }
+    return;
 }
 Console::~Console()
 {
