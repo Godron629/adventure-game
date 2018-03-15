@@ -17,6 +17,99 @@ Console::Console(Inventory* inv, Map* gameMap)
     _inventory = inv;
     _gameMap = gameMap;
     Actions.insert(Actions.end(),new List(_inventory));
+    PrintArt("start.txt");
+
+}
+/**
+ *\brief Prompts load file or new game and starts based on input.
+ */
+void Console::GameStart()
+{
+
+    while(!_flag)
+    {
+        string loadNewInput, loadName, filePath;
+        while(loadNewInput.size() != 1){
+            cout<<"\t'L' to Load Game 'N' for New Game 'Q' to Quit: ";
+            getline(cin,loadNewInput);
+            cout<<endl;
+        }
+        switch (loadNewInput[0]){
+            case 'L':
+            case 'l':
+                cout<<"\tPlease enter your name: ";
+                getline(cin, loadName);
+                cout<<endl;
+                filePath = "gamesaves/" + loadName + ".txt";
+                LoadGame(filePath);
+                _flag = true;
+                break;
+            case 'N':
+            case 'n':
+                _flag = true;
+                PrintIntro();
+                Run(false);
+            case 'Q':
+            case 'q':
+                _flag = true;
+                Run(true);
+            default:
+            break;
+        }
+    }
+}
+void Console::PrintIntro()
+{
+    cout<<"\nYou awake from a long sleep, your surroundings are...familiar.\n\n";
+}
+/**
+ *\brief Loads game context -> Player Inventory and Last location, also calls rungame.
+ *\param[in] String filePath -> accepts file path to load game from.
+ */
+void Console::LoadGame(string filePath)
+{
+    vector<string> package;
+    ifstream infile;
+    try
+    {
+        infile.open(filePath);
+        if(!infile.is_open()){
+            cout<<"\tIt appears you don't have a saved game..."<<endl<<endl;
+            GameStart();
+            return;
+        }
+        while(!infile.eof())
+        {
+            string temp;
+            getline(infile, temp);
+            package.push_back(temp);
+        }
+        infile.close();
+    }
+    catch(invalid_argument &e)
+    {
+        cerr<<e.what()<<endl;
+    }
+
+    //sends player to last room visited
+    _gameMap->sendToRoom(package[0]);
+    package.erase(package.begin());
+
+    //Adds loaded items to player inventory
+    for(auto i: package)
+        for(auto j: Options)
+            if(j->GetDescription() == i)
+                _inventory->Add((Item*)j);
+
+    //Removes loaded items from map
+    for(auto i: _gameMap->getAllRooms())
+        for(auto j: i->getItems())
+            for(auto k: _inventory->inventory)
+                if(k->GetDescription() == j->GetDescription())
+                    i->removeItem(k);
+
+    PrintIntro();
+    Run(false);
 }
 /**
  *\brief Prints ASCII Art to console.
@@ -139,6 +232,7 @@ void Console::ParseCommand()
                 else
                 {
                     Actions.insert(Actions.end(),new List(_inventory));
+                    currentAction->PerformAction(_inventory, _gameMap);
                     _flag = currentAction->PerformAction();
                 }
                 break;
@@ -200,14 +294,18 @@ string Console::GetFirst(string input)
 /**
  *\brief Game loop while the quit flag is false.
  */
-void Console::Run()
+void Console::Run(bool condition)
 {
+    _flag = condition;
+
+    if(_flag)
+        Actions[5]->PerformAction();
+
     while(!_flag)
     {
         Prompt();
         ParseCommand();
     }
-
 }
 Console::~Console()
 {

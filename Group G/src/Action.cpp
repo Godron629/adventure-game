@@ -5,6 +5,7 @@
 
 #include <string>
 #include <iostream>
+#include <fstream>
 
 using namespace std;
 
@@ -260,8 +261,34 @@ void Grab::PerformAction(Item* newItem, Inventory* currentInventory, Room* curre
 Help::Help()
 {
     description = "help";
-    action = "Actions: Help | Quit | List | Look | Crank | Move |\n\t | Grab | Drop | Type | Talk | Unlock";
+    action = GenerateHelpOutput();
     type = Sys;
+}
+string Help::GenerateHelpOutput()
+{
+    string helpOutput;
+    ifstream infile;
+    try
+    {
+        infile.open("help.txt");
+        if(!infile.is_open())
+                throw invalid_argument("Invalid file path...");
+
+        while(!infile.eof())
+        {
+            string temp;
+            getline(infile, temp);
+            if(infile.peek() == '\n')
+                temp += '\n';
+            helpOutput += temp;
+        }
+        infile.close();
+    }
+    catch(invalid_argument &e)
+    {
+        cerr<<e.what()<<endl;
+    }
+    return helpOutput;
 }
 /**
  *\brief returns bool: true if game over, else false.
@@ -367,4 +394,63 @@ bool Quit::PerformAction()
 {
     cout<<action<<endl;
     return true;
+}
+/**
+ *\brief Save Game logic.
+ *\param[out] Pointer to Inventory -> Current Inventory
+ *\param[out] Pointer to Map -> Game Map
+ */
+void Quit::PerformAction(Inventory* currentInventory, Map* gameMap)
+{
+    bool flag = false;
+     while(!flag)
+    {
+        ofstream saveFileStream;
+        string saveFilePath, saveInput, saveName;
+        vector<string>saveFileContents;
+        while(saveInput.size() != 1){
+            cout<<"\t'S' to Save Game 'Q' to Quit: ";
+            getline(cin, saveInput);
+            cout<<endl;
+        }
+        switch (saveInput[0]){
+            case 'S':
+            case 's':
+                cout<<"\tPlease enter your name: ";
+                getline(cin, saveName);
+                cout<<endl;
+                saveFilePath = "gamesaves/" + saveName + ".txt";
+
+                //Create File
+                saveFileStream.open(saveFilePath);
+
+                //Add room id to contents.
+                saveFileContents.push_back(gameMap->getCurrentRoom()->getId());
+
+                //Add inventory items to contents.
+                for(auto i: currentInventory->inventory)
+                    saveFileContents.push_back(i->GetDescription());
+
+                //Write contents to file
+                for(auto i: saveFileContents)
+                    saveFileStream<<i<<"\n";
+
+                //close stream
+                saveFileStream.close();
+
+                cout<<"File saved...\n\n";
+                flag = true;
+                break;
+            case 'Q':
+            case 'q':
+                flag = true;
+            default:
+            break;
+        }
+    }
+
+
+
+
+
 }

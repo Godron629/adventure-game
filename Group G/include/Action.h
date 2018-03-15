@@ -95,6 +95,7 @@ class Help : public Action
         Help();
 
     private:
+        std::string GenerateHelpOutput();
         ActionType GetType();
         bool PerformAction();
 };
@@ -137,6 +138,7 @@ class Quit : public Action
 
     private:
         bool PerformAction();
+        void PerformAction(Inventory*, Map*);
 };
 
 #endif // ACTION_H

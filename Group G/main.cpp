@@ -21,9 +21,8 @@ int main()
 
     Console shell = Console(inventory, gameMap);
 
-    shell.PrintArt("start.txt");
-
-    shell.Run();
+    //Move These
+    shell.GameStart();
 
     return 0;
 }

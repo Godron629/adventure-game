@@ -23,10 +23,13 @@ class Console
         std::string ConvertStringToLower(std::string original);
 
         bool _flag;
+        void GameStart();
+        void PrintIntro();
+        void LoadGame(std::string);
         void PrintArt(std::string);
         void Prompt();
         void ParseCommand();
-        void Run();
+        void Run(bool);
         void ErrorMessage();
         std::vector<Action*> Actions = {new Move(),new Drop(),new Grab(), new Look(), new Help(), new Quit(), new Type(), new Crank(), new Talk(), new Unlock()};
 

@@ -18,7 +18,7 @@ class Map
         void sendToRoom(std::string roomId);
         void changeCurrentRoom(std::string direction);
         void generateMapFromXml(std::string filepath);
-
+        std::vector<Room*> getAllRooms();
     protected:
 
     private:
