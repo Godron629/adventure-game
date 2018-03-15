@@ -1,0 +1,4 @@
+2
+stick
+helmet
+key

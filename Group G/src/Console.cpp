@@ -19,6 +19,91 @@ Console::Console(Inventory* inv, Map* gameMap)
     Actions.insert(Actions.end(),new List(_inventory));
 }
 /**
+ *\brief Prompts load file or new game and starts based on input.
+ */
+void Console::GameStart()
+{
+    string loadNewInput, loadName, filePath;
+    while(!_flag)
+    {
+        while(loadNewInput.size() != 1){
+            cout<<"\t'L' to Load Game 'N' for New Game: ";
+            getline(cin,loadNewInput);
+            cout<<endl;
+        }
+        switch (loadNewInput[0]){
+            case 'L':
+            case 'l':
+                cout<<"\tPlease enter your name: ";
+                getline(cin, loadName);
+                cout<<endl;
+                filePath = "gamesaves/" + loadName + ".txt";
+                LoadGame(filePath);
+                _flag = true;
+                break;
+            case 'N':
+            case 'n':
+                _flag = true;
+                PrintArt("start.txt");
+                PrintIntro();
+                Run();
+            default:
+            break;
+        }
+    }
+}
+void Console::PrintIntro()
+{
+    cout<<"\nYou awake from a long sleep, your surroundings are...familiar.\n\n";
+}
+void Console::LoadGame(string filePath)
+{
+    vector<string> package;
+    ifstream infile;
+    try
+    {
+        infile.open(filePath);
+        if(!infile.is_open()){
+            cout<<"\tIt appears you don't have a saved game..."<<endl;
+            GameStart();
+            return;
+        }
+        while(!infile.eof())
+        {
+            string temp;
+            getline(infile, temp);
+            package.push_back(temp);
+        }
+        infile.close();
+    }
+    catch(invalid_argument &e)
+    {
+        cerr<<e.what()<<endl;
+    }
+
+    PrintArt("start.txt");
+
+    //sends player to last room visited
+    _gameMap->sendToRoom(package[0]);
+    package.erase(package.begin());
+
+    //Adds loaded items to player inventory
+    for(auto i: package)
+        for(auto j: Options)
+            if(j->GetDescription() == i)
+                _inventory->Add((Item*)j);
+
+    //Removes loaded items from map
+    for(auto i: _gameMap->getAllRooms())
+        for(auto j: i->getItems())
+            for(auto k: _inventory->inventory)
+                if(k->GetDescription() == j->GetDescription())
+                    i->removeItem(k);
+
+    PrintIntro();
+    Run();
+}
+/**
  *\brief Prints ASCII Art to console.
  *\param[in] String filepath -> File path to file containing ASCIIART.
  */
@@ -139,6 +224,7 @@ void Console::ParseCommand()
                 else
                 {
                     Actions.insert(Actions.end(),new List(_inventory));
+                    currentAction->PerformAction(_inventory, _gameMap);
                     _flag = currentAction->PerformAction();
                 }
                 break;
@@ -202,12 +288,13 @@ string Console::GetFirst(string input)
  */
 void Console::Run()
 {
+    _flag = false;
+
     while(!_flag)
     {
         Prompt();
         ParseCommand();
     }
-
 }
 Console::~Console()
 {

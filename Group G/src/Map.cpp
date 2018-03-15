@@ -127,6 +127,10 @@ void Map::collectNpcsForRoom(string npcName, tNpcList *npcs)
     if(npcName == "father") npcs->push_back(new Father());
 }
 
+vector<Room*> Map::getAllRooms()
+{
+    return m_listOfRooms;
+}
 /**
 @brief Make an Item and add it to a list of Items based on parameter itemName
 @param[in] itemName Lowercase name of the item (item must be implemented)

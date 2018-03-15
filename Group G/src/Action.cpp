@@ -5,6 +5,7 @@
 
 #include <string>
 #include <iostream>
+#include <fstream>
 
 using namespace std;
 
@@ -367,4 +368,58 @@ bool Quit::PerformAction()
 {
     cout<<action<<endl;
     return true;
+}
+void Quit::PerformAction(Inventory* currentInventory, Map* gameMap)
+{
+    ofstream saveFileStream;
+    string saveFilePath, saveInput, saveName;
+    vector<string>saveFileContents;
+    bool flag = false;
+     while(!flag)
+    {
+        while(saveInput.size() != 1){
+            cout<<"\t'S' to Save Game 'Q' to Quit: ";
+            getline(cin, saveInput);
+            cout<<endl;
+        }
+        switch (saveInput[0]){
+            case 'S':
+            case 's':
+                cout<<"\tPlease enter your name: ";
+                getline(cin, saveName);
+                cout<<endl;
+                saveFilePath = "gamesaves/" + saveName + ".txt";
+
+                //Create File
+                saveFileStream.open(saveFilePath);
+
+                //Add room id to contents.
+                saveFileContents.push_back(gameMap->getCurrentRoom()->getId());
+
+                //Add inventory items to contents.
+                for(auto i: currentInventory->inventory)
+                    saveFileContents.push_back(i->GetDescription());
+
+                //Write contents to file
+                for(auto i: saveFileContents)
+                    saveFileStream<<i<<"\n";
+
+                //close stream
+                saveFileStream.close();
+
+                cout<<"File saved...\n\n";
+                flag = true;
+                break;
+            case 'Q':
+            case 'q':
+                flag = true;
+            default:
+            break;
+        }
+    }
+
+
+
+
+
 }

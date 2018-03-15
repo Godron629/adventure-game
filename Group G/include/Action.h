@@ -137,6 +137,7 @@ class Quit : public Action
 
     private:
         bool PerformAction();
+        void PerformAction(Inventory*, Map*);
 };
 
 #endif // ACTION_H
