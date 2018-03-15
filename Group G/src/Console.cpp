@@ -17,6 +17,8 @@ Console::Console(Inventory* inv, Map* gameMap)
     _inventory = inv;
     _gameMap = gameMap;
     Actions.insert(Actions.end(),new List(_inventory));
+    PrintArt("start.txt");
+
 }
 /**
  *\brief Prompts load file or new game and starts based on input.
@@ -45,7 +47,6 @@ void Console::GameStart()
             case 'N':
             case 'n':
                 _flag = true;
-                PrintArt("start.txt");
                 PrintIntro();
                 Run(false);
             case 'Q':
@@ -73,7 +74,7 @@ void Console::LoadGame(string filePath)
     {
         infile.open(filePath);
         if(!infile.is_open()){
-            cout<<"\tIt appears you don't have a saved game..."<<endl;
+            cout<<"\tIt appears you don't have a saved game..."<<endl<<endl;
             GameStart();
             return;
         }
@@ -89,8 +90,6 @@ void Console::LoadGame(string filePath)
     {
         cerr<<e.what()<<endl;
     }
-
-    PrintArt("start.txt");
 
     //sends player to last room visited
     _gameMap->sendToRoom(package[0]);
