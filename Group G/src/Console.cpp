@@ -28,7 +28,7 @@ void Console::GameStart()
     {
         string loadNewInput, loadName, filePath;
         while(loadNewInput.size() != 1){
-            cout<<"\t'L' to Load Game 'N' for New Game: ";
+            cout<<"\t'L' to Load Game 'N' for New Game 'Q' to Quit: ";
             getline(cin,loadNewInput);
             cout<<endl;
         }
@@ -47,7 +47,11 @@ void Console::GameStart()
                 _flag = true;
                 PrintArt("start.txt");
                 PrintIntro();
-                Run();
+                Run(false);
+            case 'Q':
+            case 'q':
+                _flag = true;
+                Run(true);
             default:
             break;
         }
@@ -106,7 +110,7 @@ void Console::LoadGame(string filePath)
                     i->removeItem(k);
 
     PrintIntro();
-    Run();
+    Run(false);
 }
 /**
  *\brief Prints ASCII Art to console.
@@ -291,9 +295,12 @@ string Console::GetFirst(string input)
 /**
  *\brief Game loop while the quit flag is false.
  */
-void Console::Run()
+void Console::Run(bool condition)
 {
-    _flag = false;
+    _flag = condition;
+
+    if(_flag)
+        Actions[5]->PerformAction();
 
     while(!_flag)
     {
