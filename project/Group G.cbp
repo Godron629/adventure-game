@@ -36,8 +36,6 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="../gamesaves/gideon.txt" />
-		<Unit filename="../gamesaves/jeff.txt" />
 		<Unit filename="../include/Action.h" />
 		<Unit filename="../include/Console.h" />
 		<Unit filename="../include/Direction.h" />

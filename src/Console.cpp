@@ -40,7 +40,7 @@ void Console::GameStart()
                 cout<<"\tPlease enter your name: ";
                 getline(cin, loadName);
                 cout<<endl;
-                filePath = "../gamesaves/" + loadName + ".txt";
+                filePath = "gamesaves/" + loadName + ".txt";
                 LoadGame(filePath);
                 _flag = true;
                 break;
