@@ -145,18 +145,18 @@ void Type::PerformAction(Inventory* currentInventory, Map* currentMap, string co
     string message = "";
 
     //USE ID OR NAME FOR WHICHEVER ROOM THE SAFE IS ACTUALLY IN.. THIS WAS FOR TESTING
-    if(currentMap->getCurrentRoom()->getId() == "2" || currentMap->getCurrentRoom()->getName() == "room1")
+    if(currentMap->getCurrentRoom()->getId() == "53")
     {
         //WHATEVER CODE YOU WANT
         if(code == "8421")
         {
-            message.append("Correct password - Welcome, Mr. Mad Scientist\nThere's a rubber tube inside... how curious, you take it.");
-            currentInventory->Add(new RubberTube());
+            message.append("Correct password - Welcome, Mr. Mad Scientist\n\nThere's lots of spare papyrus in here! Great, you take some.");
+            currentInventory->Add(new Papyrus());
         }
         else
         {
             message.append("Incorrect password - Activating alarm system");
-            currentMap->sendToRoom("0"); //ROOM ID -3 WILL BE "PIT OF AGONY"
+            currentMap->sendToRoom("26"); //ROOM ID -3 WILL BE "PIT OF AGONY"
         }
     }
     else
