@@ -137,10 +137,10 @@ It's covered with a curtain, but you can see something moving inside.</Descripti
 <Description>The entryway is large and bigly.
 
 Along the walls there are:
-- Eight bookshelves
-- Four drawers
-- Two chairs
-- One desk
+- 8 bookshelves
+- 4 drawers
+- 2 chairs
+- 1 desk
 
 What kind of 3-bit operation is this place? You wonder.
 
@@ -152,11 +152,10 @@ A grand staircase lay ahead.</Description>
 <E>9</E>
 <S>4</S>
 <W>7</W>
-<U>50</U>
+<U>52</U>
 <D>-1</D>
 
 <Items>quill</Items>
-<Items>papyrus</Items>
 </Room>
 
 <Room>
@@ -316,7 +315,9 @@ There are a lot of tools in here.
 
 It smells like 'ye olde home depot' - cathartic.
 
-There's a hole in the roof, and debris on the floor.</Description>
+There's a hole in the roof, and debris on the floor.
+
+The there is a door to the east.</Description>
 
 <N>-1</N>
 <E>12</E>
@@ -350,9 +351,9 @@ Neither of them raise alarm at your presence.</Description>
 <N>-1</N>
 <E>-1</E>
 <S>-1</S>
-<W>-1</W>
+<W>52</W>
 <U>-1</U>
-<D>6</D>
+<D>-1</D>
 <Npcs>father</Npcs>
 <Npcs>scientist</Npcs>
 </Room>
@@ -374,6 +375,62 @@ A spiralling stone staircase leads below.</Description>
 <W>-1</W>
 <U>-1</U>
 <D>10</D>
+</Room>
+
+<Room>
+<Id>52</Id>
+<Name>Upstairs Hallway</Name>
+<Description>The stairs went a long way up, now you are upstairs. 
+
+You're in a long cooridor lined with closed wooden doors. 
+
+The doors to the east and west at the end of the hall have signs on them, they read:
+
+ --------------------
+|   ! Secret Lab !   |
+| No parents allowed |
+ --------------------
+ 
+ and 
+ 
+  -------------------
+ | ! Normal Bedroom ! |
+ |  Parents allowed   |
+  --------------------
+  
+Hmm...good thing you're not a parent, these restrictions are ridiculous!
+
+The rest of the doors are jammed shut.</Description>
+<N>-1</N>
+<E>50</E>
+<S>-1</S>
+<W>53</W>
+<U>-1</U>
+<D>6</D>
+</Room>
+
+<Room>
+<Id>53</Id>
+<Name>Master Bedroom</Name>
+<Description>Wow, this guy lives a spartan lifestyle. 
+
+There is a bed roll laid out on the ground. 
+
+A small dresser holds sets of white robes, mismatched socks, and a book rests atop.
+
+A fern grows in the corner, it's the first live foliage you've seen since you began. 
+
+There is a small, cubic safe in the closet. 
+
+You type 'butts' into the safe keypad, it blinks red. Hmm...</Description>
+
+<N>-1</N>
+<E>52</E>
+<S>-1</S>
+<W>-1</W>
+<U>-1</U>
+<D>-1</D>
+
 </Room>
  <!-- Here be underneath rooms -->
 <Room>
@@ -428,6 +485,7 @@ There is a portal in each direction - they all look the same.</Description>
 <Description>The portal hums as you walk through it.
 
 Not Copyrighted Morty: Aww jeez I don't know Rick, this seems kinda dangerous.
+
 Not Copyrighted Rick: Wubba Lubba dub-dub!!
 
 You start craving szechuan sauce, it might be time to leave.
