@@ -55,8 +55,8 @@
 		<Unit filename="../src/Npc.cpp" />
 		<Unit filename="../src/Option.cpp" />
 		<Unit filename="../src/Room.cpp" />
+		<Unit filename="../src/main.cpp" />
 		<Unit filename="help.txt" />
-		<Unit filename="main.cpp" />
 		<Unit filename="rooms.xml" />
 		<Unit filename="start.txt" />
 		<Extensions>
