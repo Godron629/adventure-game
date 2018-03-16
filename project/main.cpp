@@ -1,7 +1,7 @@
 #include <iostream>
-#include "..\include\Console.h"
-#include "..\include\Map.h"
-#include "..\include\Npc.h"
+#include "../include/Console.h"
+#include "../include/Map.h"
+#include "../include/Npc.h"
 
 using namespace std;
 

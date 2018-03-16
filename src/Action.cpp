@@ -1,7 +1,7 @@
-#include "..\include\Action.h"
+#include "../include/Action.h"
 
-#include "..\include\Inventory.h"
-#include "..\include\Item.h"
+#include "../include/Inventory.h"
+#include "../include/Item.h"
 
 #include <string>
 #include <iostream>

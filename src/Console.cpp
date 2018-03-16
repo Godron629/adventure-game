@@ -5,7 +5,7 @@
 #include <vector>
 #include <fstream>
 #include <algorithm>
-#include "..\include\Option.h"
+#include "../include/Option.h"
 
 using namespace std;
 

@@ -1,9 +1,9 @@
-#include "..\include\Npc.h"
+#include "../include/Npc.h"
 #include <string>
 #include <vector>
 #include <iostream>
 
-#include "..\include\Inventory.h"
+#include "../include/Inventory.h"
 
 using namespace std;
 
