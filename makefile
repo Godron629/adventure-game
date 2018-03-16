@@ -19,6 +19,8 @@ LIBDIR =
 LIB = 
 LDFLAGS = 
 
+MEMCHECK_RESULTS = memcheck.out
+
 INC_DEBUG = $(INC) -Iinclude -Irapidxml
 CFLAGS_DEBUG = $(CFLAGS) -std=c++11 -g 
 RESINC_DEBUG = $(RESINC)
@@ -140,6 +142,11 @@ clean_release:
 	rm -f $(OBJ_RELEASE) $(OUT_RELEASE)
 	rm -rf bin/Release
 	rm -rf $(OBJDIR_RELEASE)/src
+	rm -rf $(MEMCHECK_RESULTS)
+
+memcheck: $(OUT_RELEASE)
+	valgrind --tool=memcheck --leak-check=yes --log-file=$(MEMCHECK_RESULTS) $(OUT_RELEASE)
+
 
 .PHONY: before_debug after_debug clean_debug before_release after_release clean_release
 
