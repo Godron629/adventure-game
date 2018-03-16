@@ -5,10 +5,11 @@
 
 using namespace std;
 
-int main()
+int main(int a, char* v[])
 {
     Map* gameMap = new Map();
-    gameMap->generateMapFromXml("rooms.xml");
+
+    gameMap->generateMapFromXml("project/rooms.xml");
 
     Inventory* inventory = new Inventory();
 

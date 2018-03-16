@@ -17,7 +17,7 @@ Console::Console(Inventory* inv, Map* gameMap)
     _inventory = inv;
     _gameMap = gameMap;
     Actions.insert(Actions.end(),new List(_inventory));
-    PrintArt("start.txt");
+    PrintArt("project/start.txt");
 
 }
 /**
@@ -40,7 +40,7 @@ void Console::GameStart()
                 cout<<"\tPlease enter your name: ";
                 getline(cin, loadName);
                 cout<<endl;
-                filePath = "gamesaves/" + loadName + ".txt";
+                filePath = "project/gamesaves/" + loadName + ".txt";
                 LoadGame(filePath);
                 _flag = true;
                 break;

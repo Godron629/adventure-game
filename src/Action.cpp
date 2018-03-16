@@ -270,7 +270,7 @@ string Help::GenerateHelpOutput()
     ifstream infile;
     try
     {
-        infile.open("help.txt");
+        infile.open("project/help.txt");
         if(!infile.is_open())
                 throw invalid_argument("Invalid file path...");
 
@@ -419,7 +419,7 @@ void Quit::PerformAction(Inventory* currentInventory, Map* gameMap)
                 cout<<"\tPlease enter your name: ";
                 getline(cin, saveName);
                 cout<<endl;
-                saveFilePath = "gamesaves/" + saveName + ".txt";
+                saveFilePath = "project/gamesaves/" + saveName + ".txt";
 
                 //Create File
                 saveFileStream.open(saveFilePath);

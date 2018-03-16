@@ -5,6 +5,7 @@
 
 WORKDIR = `pwd`
 
+
 CC = gcc
 CXX = g++
 AR = ar
@@ -12,14 +13,14 @@ LD = g++
 WINDRES = windres
 
 INC = 
-CFLAGS = -Wall -fexceptions
+CFLAGS = -Wall -fexceptions -std=c++11 
 RESINC = 
 LIBDIR = 
 LIB = 
 LDFLAGS = 
 
 INC_DEBUG = $(INC) -Iinclude -Irapidxml
-CFLAGS_DEBUG = $(CFLAGS) -std=c++11 -g
+CFLAGS_DEBUG = $(CFLAGS) -std=c++11 -g 
 RESINC_DEBUG = $(RESINC)
 RCFLAGS_DEBUG = $(RCFLAGS)
 LIBDIR_DEBUG = $(LIBDIR)
@@ -27,7 +28,7 @@ LIB_DEBUG = $(LIB)
 LDFLAGS_DEBUG = $(LDFLAGS)
 OBJDIR_DEBUG = obj/Debug
 DEP_DEBUG = 
-OUT_DEBUG = bin/Debug/Group\ G
+OUT_DEBUG = project/bbcAdventureDebug
 
 INC_RELEASE = $(INC) -Iinclude
 CFLAGS_RELEASE = $(CFLAGS) -O2
@@ -38,7 +39,7 @@ LIB_RELEASE = $(LIB)
 LDFLAGS_RELEASE = $(LDFLAGS) -s
 OBJDIR_RELEASE = obj/Release
 DEP_RELEASE = 
-OUT_RELEASE = bin/Release/Group\ G
+OUT_RELEASE = project/bbcAdventure
 
 OBJ_DEBUG = $(OBJDIR_DEBUG)/src/Console.o $(OBJDIR_DEBUG)/src/main.o $(OBJDIR_DEBUG)/src/Room.o $(OBJDIR_DEBUG)/src/Option.o $(OBJDIR_DEBUG)/src/Npc.o $(OBJDIR_DEBUG)/src/Map.o $(OBJDIR_DEBUG)/src/Item.o $(OBJDIR_DEBUG)/src/Inventory.o $(OBJDIR_DEBUG)/src/Direction.o $(OBJDIR_DEBUG)/src/Action.o
 
