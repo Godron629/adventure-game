@@ -49,10 +49,12 @@ void Console::GameStart()
                 _flag = true;
                 PrintIntro();
                 Run(false);
+                break;
             case 'Q':
             case 'q':
                 _flag = true;
                 Run(true);
+                break;
             default:
             break;
         }
