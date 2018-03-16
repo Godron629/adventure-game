@@ -1,8 +1,8 @@
-#include "Inventory.h"
+#include "..\include\Inventory.h"
 #include <iostream>
 #include <string>
 #include <algorithm>
-#include "Option.h"
+#include "..\include\Option.h"
 
 using namespace std;
 Inventory::Inventory()

@@ -5,7 +5,7 @@
 #include <vector>
 #include <fstream>
 #include <algorithm>
-#include "Option.h"
+#include "..\include\Option.h"
 
 using namespace std;
 
@@ -306,6 +306,7 @@ void Console::Run(bool condition)
         Prompt();
         ParseCommand();
     }
+    return;
 }
 Console::~Console()
 {
