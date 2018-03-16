@@ -1,0 +1,130 @@
+\hypertarget{include_2rapidxml_8hpp}{}\section{A\+:/\+Documents/\+Code Blocks Projects/\+C\+P\+S\+C2720\+Project\+Doxy/2720-\/\+G-\/\+Project/\+Group G/include/rapidxml.hpp File Reference}
+\label{include_2rapidxml_8hpp}\index{A\+:/\+Documents/\+Code Blocks Projects/\+C\+P\+S\+C2720\+Project\+Doxy/2720-\/\+G-\/\+Project/\+Group G/include/rapidxml.\+hpp@{A\+:/\+Documents/\+Code Blocks Projects/\+C\+P\+S\+C2720\+Project\+Doxy/2720-\/\+G-\/\+Project/\+Group G/include/rapidxml.\+hpp}}
+{\ttfamily \#include $<$cstdlib$>$}\newline
+{\ttfamily \#include $<$cassert$>$}\newline
+{\ttfamily \#include $<$new$>$}\newline
+{\ttfamily \#include $<$exception$>$}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classrapidxml_1_1parse__error}{rapidxml\+::parse\+\_\+error}}
+\item 
+class \mbox{\hyperlink{classrapidxml_1_1xml__node}{rapidxml\+::xml\+\_\+node$<$ Ch $>$}}
+\item 
+class \mbox{\hyperlink{classrapidxml_1_1xml__attribute}{rapidxml\+::xml\+\_\+attribute$<$ Ch $>$}}
+\item 
+class \mbox{\hyperlink{classrapidxml_1_1xml__document}{rapidxml\+::xml\+\_\+document$<$ Ch $>$}}
+\item 
+class \mbox{\hyperlink{classrapidxml_1_1memory__pool}{rapidxml\+::memory\+\_\+pool$<$ Ch $>$}}
+\item 
+class \mbox{\hyperlink{classrapidxml_1_1xml__base}{rapidxml\+::xml\+\_\+base$<$ Ch $>$}}
+\item 
+class \mbox{\hyperlink{classrapidxml_1_1xml__attribute}{rapidxml\+::xml\+\_\+attribute$<$ Ch $>$}}
+\item 
+class \mbox{\hyperlink{classrapidxml_1_1xml__node}{rapidxml\+::xml\+\_\+node$<$ Ch $>$}}
+\item 
+class \mbox{\hyperlink{classrapidxml_1_1xml__document}{rapidxml\+::xml\+\_\+document$<$ Ch $>$}}
+\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacerapidxml}{rapidxml}}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{include_2rapidxml_8hpp_a65f2be309896ffb841997d467c2f4fff}{R\+A\+P\+I\+D\+X\+M\+L\+\_\+\+P\+A\+R\+S\+E\+\_\+\+E\+R\+R\+OR}}(what,  where)~throw parse\+\_\+error(what, where)
+\item 
+\#define \mbox{\hyperlink{include_2rapidxml_8hpp_a001304844ab478e3b213749fc8d72ca2}{R\+A\+P\+I\+D\+X\+M\+L\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+P\+O\+O\+L\+\_\+\+S\+I\+ZE}}~(64 $\ast$ 1024)
+\item 
+\#define \mbox{\hyperlink{include_2rapidxml_8hpp_a68d5603b71691d9dd745e45159259aa3}{R\+A\+P\+I\+D\+X\+M\+L\+\_\+\+D\+Y\+N\+A\+M\+I\+C\+\_\+\+P\+O\+O\+L\+\_\+\+S\+I\+ZE}}~(64 $\ast$ 1024)
+\item 
+\#define \mbox{\hyperlink{include_2rapidxml_8hpp_ad3344fdba5167e17f48a8b2318731198}{R\+A\+P\+I\+D\+X\+M\+L\+\_\+\+A\+L\+I\+G\+N\+M\+E\+NT}}~sizeof(void $\ast$)
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespacerapidxml_abb456db38f7efb746c4330eed6072a7c}{rapidxml\+::node\+\_\+type}} \{ \newline
+\mbox{\hyperlink{namespacerapidxml_abb456db38f7efb746c4330eed6072a7ca163d276f8a5082d36b239f8a1a4d3303}{rapidxml\+::node\+\_\+document}}, 
+\mbox{\hyperlink{namespacerapidxml_abb456db38f7efb746c4330eed6072a7caac791376db3c17db9e6a1dfb75c1b42a}{rapidxml\+::node\+\_\+element}}, 
+\mbox{\hyperlink{namespacerapidxml_abb456db38f7efb746c4330eed6072a7cac44728b1c31c1137c72c57fe9d34fb1b}{rapidxml\+::node\+\_\+data}}, 
+\mbox{\hyperlink{namespacerapidxml_abb456db38f7efb746c4330eed6072a7ca6edfd960b4ae9d7add8f1d04724af4c8}{rapidxml\+::node\+\_\+cdata}}, 
+\newline
+\mbox{\hyperlink{namespacerapidxml_abb456db38f7efb746c4330eed6072a7ca1b33046a8f8d12777a77fbd1b6b70e01}{rapidxml\+::node\+\_\+comment}}, 
+\mbox{\hyperlink{namespacerapidxml_abb456db38f7efb746c4330eed6072a7ca6f268304702b164db0f9eb78bde9aab4}{rapidxml\+::node\+\_\+declaration}}, 
+\mbox{\hyperlink{namespacerapidxml_abb456db38f7efb746c4330eed6072a7ca4aaff4e052bd05fd6ad155c028d02de6}{rapidxml\+::node\+\_\+doctype}}, 
+\mbox{\hyperlink{namespacerapidxml_abb456db38f7efb746c4330eed6072a7cac1a92c8842a0b9ea1e47b02fe0627443}{rapidxml\+::node\+\_\+pi}}, 
+\newline
+\mbox{\hyperlink{namespacerapidxml_abb456db38f7efb746c4330eed6072a7ca163d276f8a5082d36b239f8a1a4d3303}{rapidxml\+::node\+\_\+document}}, 
+\mbox{\hyperlink{namespacerapidxml_abb456db38f7efb746c4330eed6072a7caac791376db3c17db9e6a1dfb75c1b42a}{rapidxml\+::node\+\_\+element}}, 
+\mbox{\hyperlink{namespacerapidxml_abb456db38f7efb746c4330eed6072a7cac44728b1c31c1137c72c57fe9d34fb1b}{rapidxml\+::node\+\_\+data}}, 
+\mbox{\hyperlink{namespacerapidxml_abb456db38f7efb746c4330eed6072a7ca6edfd960b4ae9d7add8f1d04724af4c8}{rapidxml\+::node\+\_\+cdata}}, 
+\newline
+\mbox{\hyperlink{namespacerapidxml_abb456db38f7efb746c4330eed6072a7ca1b33046a8f8d12777a77fbd1b6b70e01}{rapidxml\+::node\+\_\+comment}}, 
+\mbox{\hyperlink{namespacerapidxml_abb456db38f7efb746c4330eed6072a7ca6f268304702b164db0f9eb78bde9aab4}{rapidxml\+::node\+\_\+declaration}}, 
+\mbox{\hyperlink{namespacerapidxml_abb456db38f7efb746c4330eed6072a7ca4aaff4e052bd05fd6ad155c028d02de6}{rapidxml\+::node\+\_\+doctype}}, 
+\mbox{\hyperlink{namespacerapidxml_abb456db38f7efb746c4330eed6072a7cac1a92c8842a0b9ea1e47b02fe0627443}{rapidxml\+::node\+\_\+pi}}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const int \mbox{\hyperlink{namespacerapidxml_ac2d21ef14a4e8936b94aca5d38b1a74d}{rapidxml\+::parse\+\_\+no\+\_\+data\+\_\+nodes}} = 0x1
+\item 
+const int \mbox{\hyperlink{namespacerapidxml_a00e6fea134b786ea6efeed1c8bc4a668}{rapidxml\+::parse\+\_\+no\+\_\+element\+\_\+values}} = 0x2
+\item 
+const int \mbox{\hyperlink{namespacerapidxml_af3fc88ba6bee33482a2db81b1da36ea1}{rapidxml\+::parse\+\_\+no\+\_\+string\+\_\+terminators}} = 0x4
+\item 
+const int \mbox{\hyperlink{namespacerapidxml_a89113c103ffaf77615d1aa330c8dcca8}{rapidxml\+::parse\+\_\+no\+\_\+entity\+\_\+translation}} = 0x8
+\item 
+const int \mbox{\hyperlink{namespacerapidxml_a22d4aefaceb00d7afabfef7107b108da}{rapidxml\+::parse\+\_\+no\+\_\+utf8}} = 0x10
+\item 
+const int \mbox{\hyperlink{namespacerapidxml_a999d782659513f8015ea4236e3204c42}{rapidxml\+::parse\+\_\+declaration\+\_\+node}} = 0x20
+\item 
+const int \mbox{\hyperlink{namespacerapidxml_ae093dd49e2f59fa39eee95f1a6568e32}{rapidxml\+::parse\+\_\+comment\+\_\+nodes}} = 0x40
+\item 
+const int \mbox{\hyperlink{namespacerapidxml_a41002b49780a90a0bbcc28ce8b895fe4}{rapidxml\+::parse\+\_\+doctype\+\_\+node}} = 0x80
+\item 
+const int \mbox{\hyperlink{namespacerapidxml_a03fe68fcf5d28f38476e0fd31adecc4c}{rapidxml\+::parse\+\_\+pi\+\_\+nodes}} = 0x100
+\item 
+const int \mbox{\hyperlink{namespacerapidxml_a7ce8f40fda68338e20b56f41e48e49f3}{rapidxml\+::parse\+\_\+validate\+\_\+closing\+\_\+tags}} = 0x200
+\item 
+const int \mbox{\hyperlink{namespacerapidxml_a61912424b47db5038e726d4e1c22417f}{rapidxml\+::parse\+\_\+trim\+\_\+whitespace}} = 0x400
+\item 
+const int \mbox{\hyperlink{namespacerapidxml_a31f33885defb5176a7d99e524c35d386}{rapidxml\+::parse\+\_\+normalize\+\_\+whitespace}} = 0x800
+\item 
+const int \mbox{\hyperlink{namespacerapidxml_acf4edf952f59eb1b6124ea37ad7da3ab}{rapidxml\+::parse\+\_\+default}} = 0
+\item 
+const int \mbox{\hyperlink{namespacerapidxml_a45d4d8fef551beaaba23a83b847fd6a3}{rapidxml\+::parse\+\_\+non\+\_\+destructive}} = parse\+\_\+no\+\_\+string\+\_\+terminators $\vert$ parse\+\_\+no\+\_\+entity\+\_\+translation
+\item 
+const int \mbox{\hyperlink{namespacerapidxml_a64da06dfdab7c86ca954bda4fecb978f}{rapidxml\+::parse\+\_\+fastest}} = parse\+\_\+non\+\_\+destructive $\vert$ parse\+\_\+no\+\_\+data\+\_\+nodes
+\item 
+const int \mbox{\hyperlink{namespacerapidxml_abb48dc65db75d9e49734bc5bd2fabbfc}{rapidxml\+::parse\+\_\+full}} = parse\+\_\+declaration\+\_\+node $\vert$ parse\+\_\+comment\+\_\+nodes $\vert$ parse\+\_\+doctype\+\_\+node $\vert$ parse\+\_\+pi\+\_\+nodes $\vert$ parse\+\_\+validate\+\_\+closing\+\_\+tags
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{include_2rapidxml_8hpp_ad3344fdba5167e17f48a8b2318731198}\label{include_2rapidxml_8hpp_ad3344fdba5167e17f48a8b2318731198}} 
+\index{include/rapidxml.\+hpp@{include/rapidxml.\+hpp}!R\+A\+P\+I\+D\+X\+M\+L\+\_\+\+A\+L\+I\+G\+N\+M\+E\+NT@{R\+A\+P\+I\+D\+X\+M\+L\+\_\+\+A\+L\+I\+G\+N\+M\+E\+NT}}
+\index{R\+A\+P\+I\+D\+X\+M\+L\+\_\+\+A\+L\+I\+G\+N\+M\+E\+NT@{R\+A\+P\+I\+D\+X\+M\+L\+\_\+\+A\+L\+I\+G\+N\+M\+E\+NT}!include/rapidxml.\+hpp@{include/rapidxml.\+hpp}}
+\subsubsection{\texorpdfstring{R\+A\+P\+I\+D\+X\+M\+L\+\_\+\+A\+L\+I\+G\+N\+M\+E\+NT}{RAPIDXML\_ALIGNMENT}}
+{\footnotesize\ttfamily \#define R\+A\+P\+I\+D\+X\+M\+L\+\_\+\+A\+L\+I\+G\+N\+M\+E\+NT~sizeof(void $\ast$)}
+
+\mbox{\Hypertarget{include_2rapidxml_8hpp_a68d5603b71691d9dd745e45159259aa3}\label{include_2rapidxml_8hpp_a68d5603b71691d9dd745e45159259aa3}} 
+\index{include/rapidxml.\+hpp@{include/rapidxml.\+hpp}!R\+A\+P\+I\+D\+X\+M\+L\+\_\+\+D\+Y\+N\+A\+M\+I\+C\+\_\+\+P\+O\+O\+L\+\_\+\+S\+I\+ZE@{R\+A\+P\+I\+D\+X\+M\+L\+\_\+\+D\+Y\+N\+A\+M\+I\+C\+\_\+\+P\+O\+O\+L\+\_\+\+S\+I\+ZE}}
+\index{R\+A\+P\+I\+D\+X\+M\+L\+\_\+\+D\+Y\+N\+A\+M\+I\+C\+\_\+\+P\+O\+O\+L\+\_\+\+S\+I\+ZE@{R\+A\+P\+I\+D\+X\+M\+L\+\_\+\+D\+Y\+N\+A\+M\+I\+C\+\_\+\+P\+O\+O\+L\+\_\+\+S\+I\+ZE}!include/rapidxml.\+hpp@{include/rapidxml.\+hpp}}
+\subsubsection{\texorpdfstring{R\+A\+P\+I\+D\+X\+M\+L\+\_\+\+D\+Y\+N\+A\+M\+I\+C\+\_\+\+P\+O\+O\+L\+\_\+\+S\+I\+ZE}{RAPIDXML\_DYNAMIC\_POOL\_SIZE}}
+{\footnotesize\ttfamily \#define R\+A\+P\+I\+D\+X\+M\+L\+\_\+\+D\+Y\+N\+A\+M\+I\+C\+\_\+\+P\+O\+O\+L\+\_\+\+S\+I\+ZE~(64 $\ast$ 1024)}
+
+\mbox{\Hypertarget{include_2rapidxml_8hpp_a65f2be309896ffb841997d467c2f4fff}\label{include_2rapidxml_8hpp_a65f2be309896ffb841997d467c2f4fff}} 
+\index{include/rapidxml.\+hpp@{include/rapidxml.\+hpp}!R\+A\+P\+I\+D\+X\+M\+L\+\_\+\+P\+A\+R\+S\+E\+\_\+\+E\+R\+R\+OR@{R\+A\+P\+I\+D\+X\+M\+L\+\_\+\+P\+A\+R\+S\+E\+\_\+\+E\+R\+R\+OR}}
+\index{R\+A\+P\+I\+D\+X\+M\+L\+\_\+\+P\+A\+R\+S\+E\+\_\+\+E\+R\+R\+OR@{R\+A\+P\+I\+D\+X\+M\+L\+\_\+\+P\+A\+R\+S\+E\+\_\+\+E\+R\+R\+OR}!include/rapidxml.\+hpp@{include/rapidxml.\+hpp}}
+\subsubsection{\texorpdfstring{R\+A\+P\+I\+D\+X\+M\+L\+\_\+\+P\+A\+R\+S\+E\+\_\+\+E\+R\+R\+OR}{RAPIDXML\_PARSE\_ERROR}}
+{\footnotesize\ttfamily \#define R\+A\+P\+I\+D\+X\+M\+L\+\_\+\+P\+A\+R\+S\+E\+\_\+\+E\+R\+R\+OR(\begin{DoxyParamCaption}\item[{}]{what,  }\item[{}]{where }\end{DoxyParamCaption})~throw parse\+\_\+error(what, where)}
+
+\mbox{\Hypertarget{include_2rapidxml_8hpp_a001304844ab478e3b213749fc8d72ca2}\label{include_2rapidxml_8hpp_a001304844ab478e3b213749fc8d72ca2}} 
+\index{include/rapidxml.\+hpp@{include/rapidxml.\+hpp}!R\+A\+P\+I\+D\+X\+M\+L\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+P\+O\+O\+L\+\_\+\+S\+I\+ZE@{R\+A\+P\+I\+D\+X\+M\+L\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+P\+O\+O\+L\+\_\+\+S\+I\+ZE}}
+\index{R\+A\+P\+I\+D\+X\+M\+L\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+P\+O\+O\+L\+\_\+\+S\+I\+ZE@{R\+A\+P\+I\+D\+X\+M\+L\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+P\+O\+O\+L\+\_\+\+S\+I\+ZE}!include/rapidxml.\+hpp@{include/rapidxml.\+hpp}}
+\subsubsection{\texorpdfstring{R\+A\+P\+I\+D\+X\+M\+L\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+P\+O\+O\+L\+\_\+\+S\+I\+ZE}{RAPIDXML\_STATIC\_POOL\_SIZE}}
+{\footnotesize\ttfamily \#define R\+A\+P\+I\+D\+X\+M\+L\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+P\+O\+O\+L\+\_\+\+S\+I\+ZE~(64 $\ast$ 1024)}
+

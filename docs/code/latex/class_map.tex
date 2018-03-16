@@ -1,0 +1,118 @@
+\hypertarget{class_map}{}\section{Map Class Reference}
+\label{class_map}\index{Map@{Map}}
+
+
+{\ttfamily \#include $<$Map.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_map_a0f5ad0fd4563497b4214038cbca8b582}{Map}} ()
+\item 
+virtual \mbox{\hyperlink{class_map_aa403fbe09394ccf39747588f5168e3b2}{$\sim$\+Map}} ()
+\item 
+\mbox{\hyperlink{class_room}{Room}} $\ast$ \mbox{\hyperlink{class_map_a633d0645e512555cd955c1247d597640}{get\+Current\+Room}} ()
+\begin{DoxyCompactList}\small\item\em Returns a pointer to the current room of the player. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_map_a0c82625bc062af1b5e058978350811f0}{send\+To\+Room}} (std\+::string room\+Id)
+\item 
+void \mbox{\hyperlink{class_map_ab5777622a2e795cb5b36c7bd4843e5a8}{change\+Current\+Room}} (std\+::string direction)
+\begin{DoxyCompactList}\small\item\em If there is a room in direction relative to current\+Room, make that the current room. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_map_a74c4184090bdc9c3043d1a5df4521572}{generate\+Map\+From\+Xml}} (std\+::string filepath)
+\begin{DoxyCompactList}\small\item\em Parse a game rooms X\+ML file and create a list of pointers to each \mbox{\hyperlink{class_room}{Room}} object. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{class_room}{Room}} $\ast$ $>$ \mbox{\hyperlink{class_map_ac78c08609c86b0a3ab1e731c70a3aaf3}{get\+All\+Rooms}} ()
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_map_ad579dfb5bd3be0d05d8775896307d9b3}{Room}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_map_a0f5ad0fd4563497b4214038cbca8b582}\label{class_map_a0f5ad0fd4563497b4214038cbca8b582}} 
+\index{Map@{Map}!Map@{Map}}
+\index{Map@{Map}!Map@{Map}}
+\subsubsection{\texorpdfstring{Map()}{Map()}}
+{\footnotesize\ttfamily Map\+::\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_map_aa403fbe09394ccf39747588f5168e3b2}\label{class_map_aa403fbe09394ccf39747588f5168e3b2}} 
+\index{Map@{Map}!````~Map@{$\sim$\+Map}}
+\index{````~Map@{$\sim$\+Map}!Map@{Map}}
+\subsubsection{\texorpdfstring{$\sim$\+Map()}{~Map()}}
+{\footnotesize\ttfamily Map\+::$\sim$\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_map_ab5777622a2e795cb5b36c7bd4843e5a8}\label{class_map_ab5777622a2e795cb5b36c7bd4843e5a8}} 
+\index{Map@{Map}!change\+Current\+Room@{change\+Current\+Room}}
+\index{change\+Current\+Room@{change\+Current\+Room}!Map@{Map}}
+\subsubsection{\texorpdfstring{change\+Current\+Room()}{changeCurrentRoom()}}
+{\footnotesize\ttfamily void Map\+::change\+Current\+Room (\begin{DoxyParamCaption}\item[{std\+::string}]{direction }\end{DoxyParamCaption})}
+
+
+
+If there is a room in direction relative to current\+Room, make that the current room. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em direction} & Cardinal direction (N, E, S, W) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_map_a74c4184090bdc9c3043d1a5df4521572}\label{class_map_a74c4184090bdc9c3043d1a5df4521572}} 
+\index{Map@{Map}!generate\+Map\+From\+Xml@{generate\+Map\+From\+Xml}}
+\index{generate\+Map\+From\+Xml@{generate\+Map\+From\+Xml}!Map@{Map}}
+\subsubsection{\texorpdfstring{generate\+Map\+From\+Xml()}{generateMapFromXml()}}
+{\footnotesize\ttfamily void Map\+::generate\+Map\+From\+Xml (\begin{DoxyParamCaption}\item[{std\+::string}]{filepath }\end{DoxyParamCaption})}
+
+
+
+Parse a game rooms X\+ML file and create a list of pointers to each \mbox{\hyperlink{class_room}{Room}} object. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em filepath} & path of the X\+ML file \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em invalid\+\_\+argument} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_map_ac78c08609c86b0a3ab1e731c70a3aaf3}\label{class_map_ac78c08609c86b0a3ab1e731c70a3aaf3}} 
+\index{Map@{Map}!get\+All\+Rooms@{get\+All\+Rooms}}
+\index{get\+All\+Rooms@{get\+All\+Rooms}!Map@{Map}}
+\subsubsection{\texorpdfstring{get\+All\+Rooms()}{getAllRooms()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{class_room}{Room}} $\ast$ $>$ Map\+::get\+All\+Rooms (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_map_a633d0645e512555cd955c1247d597640}\label{class_map_a633d0645e512555cd955c1247d597640}} 
+\index{Map@{Map}!get\+Current\+Room@{get\+Current\+Room}}
+\index{get\+Current\+Room@{get\+Current\+Room}!Map@{Map}}
+\subsubsection{\texorpdfstring{get\+Current\+Room()}{getCurrentRoom()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_room}{Room}} $\ast$ Map\+::get\+Current\+Room (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns a pointer to the current room of the player. 
+
+\mbox{\Hypertarget{class_map_a0c82625bc062af1b5e058978350811f0}\label{class_map_a0c82625bc062af1b5e058978350811f0}} 
+\index{Map@{Map}!send\+To\+Room@{send\+To\+Room}}
+\index{send\+To\+Room@{send\+To\+Room}!Map@{Map}}
+\subsubsection{\texorpdfstring{send\+To\+Room()}{sendToRoom()}}
+{\footnotesize\ttfamily void Map\+::send\+To\+Room (\begin{DoxyParamCaption}\item[{std\+::string}]{room\+Id }\end{DoxyParamCaption})}
+
+
+
+\subsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_map_ad579dfb5bd3be0d05d8775896307d9b3}\label{class_map_ad579dfb5bd3be0d05d8775896307d9b3}} 
+\index{Map@{Map}!Room@{Room}}
+\index{Room@{Room}!Map@{Map}}
+\subsubsection{\texorpdfstring{Room}{Room}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_room}{Room}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+A\+:/\+Documents/\+Code Blocks Projects/\+C\+P\+S\+C2720\+Project\+Doxy/2720-\/\+G-\/\+Project/\+Group G/include/\mbox{\hyperlink{_map_8h}{Map.\+h}}\item 
+A\+:/\+Documents/\+Code Blocks Projects/\+C\+P\+S\+C2720\+Project\+Doxy/2720-\/\+G-\/\+Project/\+Group G/src/\mbox{\hyperlink{_map_8cpp}{Map.\+cpp}}\end{DoxyCompactItemize}

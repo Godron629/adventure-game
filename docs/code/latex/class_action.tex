@@ -1,0 +1,147 @@
+\hypertarget{class_action}{}\section{Action Class Reference}
+\label{class_action}\index{Action@{Action}}
+
+
+{\ttfamily \#include $<$Action.\+h$>$}
+
+
+
+Inherited by \mbox{\hyperlink{class_crank}{Crank}}, \mbox{\hyperlink{class_drop}{Drop}}, \mbox{\hyperlink{class_grab}{Grab}}, \mbox{\hyperlink{class_help}{Help}}, \mbox{\hyperlink{class_list}{List}}, \mbox{\hyperlink{class_look}{Look}}, \mbox{\hyperlink{class_move}{Move}}, \mbox{\hyperlink{class_quit}{Quit}}, \mbox{\hyperlink{class_talk}{Talk}}, \mbox{\hyperlink{class_type}{Type}}, and \mbox{\hyperlink{class_unlock}{Unlock}}.
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_action_a4f457ccfc8336b565cadca56b36e0271}{Action}} ()
+\item 
+virtual \mbox{\hyperlink{class_action_abcf4c6358f53a666631ace11b325a7cd}{$\sim$\+Action}} ()
+\item 
+std\+::string \mbox{\hyperlink{class_action_a98298a95b5f2cd9212f301cd855ed06d}{Get\+Description}} ()
+\item 
+\mbox{\hyperlink{_action_8h_a21d5e8f8cdaa838586b31007df0a950b}{Action\+Type}} \mbox{\hyperlink{class_action_ab80590fc9e96653a15f28f4aaff1a13c}{Get\+Type}} ()
+\begin{DoxyCompactList}\small\item\em returns an enum of the action \mbox{\hyperlink{class_type}{Type}}\+: \textquotesingle{}Sys, Tlk, Dir, Inv\textquotesingle{} \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_action_a4a775577f8bb8673d34f21bded80b55f}{Perform\+Action}} ()=0
+\item 
+virtual void \mbox{\hyperlink{class_action_a0e4daa8818c231a463cb728fb12f5424}{Perform\+Action}} (\mbox{\hyperlink{class_item}{Item}} $\ast$new\+Item, \mbox{\hyperlink{class_inventory}{Inventory}} $\ast$current\+Inventory, \mbox{\hyperlink{class_room}{Room}} $\ast$current\+Room)
+\item 
+virtual void \mbox{\hyperlink{class_action_a0da82536e6c7cec2088a3b1b9da2b16b}{Perform\+Action}} (\mbox{\hyperlink{class_room}{Room}} $\ast$current\+Room)
+\item 
+virtual void \mbox{\hyperlink{class_action_a1d808c406aea6161349fa9216a9be8cb}{Perform\+Action}} (\mbox{\hyperlink{class_inventory}{Inventory}} $\ast$, \mbox{\hyperlink{class_map}{Map}} $\ast$, std\+::string)
+\item 
+virtual void \mbox{\hyperlink{class_action_a82c8a777b8e70158c30da970b36dff65}{Perform\+Action}} (\mbox{\hyperlink{class_inventory}{Inventory}} $\ast$, \mbox{\hyperlink{class_map}{Map}} $\ast$)
+\item 
+virtual void \mbox{\hyperlink{class_action_a0dd798bc02051ef21e911b0ed7d04d00}{Perform\+Action}} (\mbox{\hyperlink{class_direction}{Direction}} $\ast$, \mbox{\hyperlink{class_map}{Map}} $\ast$)
+\item 
+virtual void \mbox{\hyperlink{class_action_a35d4aeec1e36a3889d9d7870a7ab868a}{Perform\+Action}} (\mbox{\hyperlink{class_inventory}{Inventory}} $\ast$, \mbox{\hyperlink{class_map}{Map}} $\ast$, \mbox{\hyperlink{class_npc}{Npc}} $\ast$)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{class_action_a279273192c7d6d5f13796919bc2a79e3}{description}}
+\item 
+std\+::string \mbox{\hyperlink{class_action_a9d08b02c278c2d1835b25f922143328d}{action}}
+\item 
+\mbox{\hyperlink{_action_8h_a21d5e8f8cdaa838586b31007df0a950b}{Action\+Type}} \mbox{\hyperlink{class_action_a9171771045247ad4471b371ced19e959}{type}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_action_a4f457ccfc8336b565cadca56b36e0271}\label{class_action_a4f457ccfc8336b565cadca56b36e0271}} 
+\index{Action@{Action}!Action@{Action}}
+\index{Action@{Action}!Action@{Action}}
+\subsubsection{\texorpdfstring{Action()}{Action()}}
+{\footnotesize\ttfamily Action\+::\+Action (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_action_abcf4c6358f53a666631ace11b325a7cd}\label{class_action_abcf4c6358f53a666631ace11b325a7cd}} 
+\index{Action@{Action}!````~Action@{$\sim$\+Action}}
+\index{````~Action@{$\sim$\+Action}!Action@{Action}}
+\subsubsection{\texorpdfstring{$\sim$\+Action()}{~Action()}}
+{\footnotesize\ttfamily virtual Action\+::$\sim$\+Action (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_action_a98298a95b5f2cd9212f301cd855ed06d}\label{class_action_a98298a95b5f2cd9212f301cd855ed06d}} 
+\index{Action@{Action}!Get\+Description@{Get\+Description}}
+\index{Get\+Description@{Get\+Description}!Action@{Action}}
+\subsubsection{\texorpdfstring{Get\+Description()}{GetDescription()}}
+{\footnotesize\ttfamily string Action\+::\+Get\+Description (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_action_ab80590fc9e96653a15f28f4aaff1a13c}\label{class_action_ab80590fc9e96653a15f28f4aaff1a13c}} 
+\index{Action@{Action}!Get\+Type@{Get\+Type}}
+\index{Get\+Type@{Get\+Type}!Action@{Action}}
+\subsubsection{\texorpdfstring{Get\+Type()}{GetType()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_action_8h_a21d5e8f8cdaa838586b31007df0a950b}{Action\+Type}} Action\+::\+Get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+returns an enum of the action \mbox{\hyperlink{class_type}{Type}}\+: \textquotesingle{}Sys, Tlk, Dir, Inv\textquotesingle{} 
+
+\mbox{\Hypertarget{class_action_a4a775577f8bb8673d34f21bded80b55f}\label{class_action_a4a775577f8bb8673d34f21bded80b55f}} 
+\index{Action@{Action}!Perform\+Action@{Perform\+Action}}
+\index{Perform\+Action@{Perform\+Action}!Action@{Action}}
+\subsubsection{\texorpdfstring{Perform\+Action()}{PerformAction()}\hspace{0.1cm}{\footnotesize\ttfamily [1/7]}}
+{\footnotesize\ttfamily virtual bool Action\+::\+Perform\+Action (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\mbox{\Hypertarget{class_action_a0e4daa8818c231a463cb728fb12f5424}\label{class_action_a0e4daa8818c231a463cb728fb12f5424}} 
+\index{Action@{Action}!Perform\+Action@{Perform\+Action}}
+\index{Perform\+Action@{Perform\+Action}!Action@{Action}}
+\subsubsection{\texorpdfstring{Perform\+Action()}{PerformAction()}\hspace{0.1cm}{\footnotesize\ttfamily [2/7]}}
+{\footnotesize\ttfamily void Action\+::\+Perform\+Action (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_item}{Item}} $\ast$}]{new\+Item,  }\item[{\mbox{\hyperlink{class_inventory}{Inventory}} $\ast$}]{current\+Inventory,  }\item[{\mbox{\hyperlink{class_room}{Room}} $\ast$}]{current\+Room }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{class_action_a0da82536e6c7cec2088a3b1b9da2b16b}\label{class_action_a0da82536e6c7cec2088a3b1b9da2b16b}} 
+\index{Action@{Action}!Perform\+Action@{Perform\+Action}}
+\index{Perform\+Action@{Perform\+Action}!Action@{Action}}
+\subsubsection{\texorpdfstring{Perform\+Action()}{PerformAction()}\hspace{0.1cm}{\footnotesize\ttfamily [3/7]}}
+{\footnotesize\ttfamily void Action\+::\+Perform\+Action (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_room}{Room}} $\ast$}]{current\+Room }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{class_action_a1d808c406aea6161349fa9216a9be8cb}\label{class_action_a1d808c406aea6161349fa9216a9be8cb}} 
+\index{Action@{Action}!Perform\+Action@{Perform\+Action}}
+\index{Perform\+Action@{Perform\+Action}!Action@{Action}}
+\subsubsection{\texorpdfstring{Perform\+Action()}{PerformAction()}\hspace{0.1cm}{\footnotesize\ttfamily [4/7]}}
+{\footnotesize\ttfamily virtual void Action\+::\+Perform\+Action (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_inventory}{Inventory}} $\ast$}]{,  }\item[{\mbox{\hyperlink{class_map}{Map}} $\ast$}]{,  }\item[{std\+::string}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{class_action_a82c8a777b8e70158c30da970b36dff65}\label{class_action_a82c8a777b8e70158c30da970b36dff65}} 
+\index{Action@{Action}!Perform\+Action@{Perform\+Action}}
+\index{Perform\+Action@{Perform\+Action}!Action@{Action}}
+\subsubsection{\texorpdfstring{Perform\+Action()}{PerformAction()}\hspace{0.1cm}{\footnotesize\ttfamily [5/7]}}
+{\footnotesize\ttfamily void Action\+::\+Perform\+Action (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_inventory}{Inventory}} $\ast$}]{,  }\item[{\mbox{\hyperlink{class_map}{Map}} $\ast$}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{class_action_a0dd798bc02051ef21e911b0ed7d04d00}\label{class_action_a0dd798bc02051ef21e911b0ed7d04d00}} 
+\index{Action@{Action}!Perform\+Action@{Perform\+Action}}
+\index{Perform\+Action@{Perform\+Action}!Action@{Action}}
+\subsubsection{\texorpdfstring{Perform\+Action()}{PerformAction()}\hspace{0.1cm}{\footnotesize\ttfamily [6/7]}}
+{\footnotesize\ttfamily void Action\+::\+Perform\+Action (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_direction}{Direction}} $\ast$}]{dir,  }\item[{\mbox{\hyperlink{class_map}{Map}} $\ast$}]{game\+Map }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{class_action_a35d4aeec1e36a3889d9d7870a7ab868a}\label{class_action_a35d4aeec1e36a3889d9d7870a7ab868a}} 
+\index{Action@{Action}!Perform\+Action@{Perform\+Action}}
+\index{Perform\+Action@{Perform\+Action}!Action@{Action}}
+\subsubsection{\texorpdfstring{Perform\+Action()}{PerformAction()}\hspace{0.1cm}{\footnotesize\ttfamily [7/7]}}
+{\footnotesize\ttfamily void Action\+::\+Perform\+Action (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_inventory}{Inventory}} $\ast$}]{current\+Inventory,  }\item[{\mbox{\hyperlink{class_map}{Map}} $\ast$}]{current\+Map,  }\item[{\mbox{\hyperlink{class_npc}{Npc}} $\ast$}]{requested\+Npc }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_action_a9d08b02c278c2d1835b25f922143328d}\label{class_action_a9d08b02c278c2d1835b25f922143328d}} 
+\index{Action@{Action}!action@{action}}
+\index{action@{action}!Action@{Action}}
+\subsubsection{\texorpdfstring{action}{action}}
+{\footnotesize\ttfamily std\+::string Action\+::action\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_action_a279273192c7d6d5f13796919bc2a79e3}\label{class_action_a279273192c7d6d5f13796919bc2a79e3}} 
+\index{Action@{Action}!description@{description}}
+\index{description@{description}!Action@{Action}}
+\subsubsection{\texorpdfstring{description}{description}}
+{\footnotesize\ttfamily std\+::string Action\+::description\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_action_a9171771045247ad4471b371ced19e959}\label{class_action_a9171771045247ad4471b371ced19e959}} 
+\index{Action@{Action}!type@{type}}
+\index{type@{type}!Action@{Action}}
+\subsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_action_8h_a21d5e8f8cdaa838586b31007df0a950b}{Action\+Type}} Action\+::type\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+A\+:/\+Documents/\+Code Blocks Projects/\+C\+P\+S\+C2720\+Project\+Doxy/2720-\/\+G-\/\+Project/\+Group G/include/\mbox{\hyperlink{_action_8h}{Action.\+h}}\item 
+A\+:/\+Documents/\+Code Blocks Projects/\+C\+P\+S\+C2720\+Project\+Doxy/2720-\/\+G-\/\+Project/\+Group G/src/\mbox{\hyperlink{_action_8cpp}{Action.\+cpp}}\end{DoxyCompactItemize}

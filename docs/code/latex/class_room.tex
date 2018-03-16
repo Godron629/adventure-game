@@ -1,0 +1,152 @@
+\hypertarget{class_room}{}\section{Room Class Reference}
+\label{class_room}\index{Room@{Room}}
+
+
+{\ttfamily \#include $<$Room.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_room_a08ec9bd6f436a8a99c499e930da7359c}{Room}} (std\+::string id, std\+::string name, std\+::string description, \mbox{\hyperlink{_room_8h_a55f50192b1292aaa3b0967ecd0b1fddd}{t\+Neighbours}} neighbours, \mbox{\hyperlink{_room_8h_af9e617d8fa018c922a1e9748f7e046f9}{t\+Npc\+List}} npcs, \mbox{\hyperlink{_room_8h_a2b991bc4061fac67565cc6be66a568ac}{t\+Item\+List}} items)
+\item 
+virtual \mbox{\hyperlink{class_room_a67d5da09983cc53097807fd43ba5481a}{$\sim$\+Room}} ()
+\item 
+std\+::string \mbox{\hyperlink{class_room_a188ae0c43f994ea4a5a1f86a308623a7}{get\+Id}} ()
+\begin{DoxyCompactList}\small\item\em Returns \mbox{\hyperlink{class_room}{Room}} Id. Each \mbox{\hyperlink{class_room}{Room}} has a unique Id described in X\+ML map file. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_room_a5701522ecf180c978eaa454d79f3e305}{get\+Name}} ()
+\begin{DoxyCompactList}\small\item\em Return \mbox{\hyperlink{class_room}{Room}} Name, such as Crumbling Signpost or Bathroom. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_room_a81fc1cb26425dfd00f45e7cb12fa5d88}{get\+Description}} ()
+\begin{DoxyCompactList}\small\item\em Return \mbox{\hyperlink{class_room}{Room}} Description, such as \textquotesingle{}It\textquotesingle{}s a dark \mbox{\hyperlink{class_room}{Room}}\textquotesingle{}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_room_8h_af9e617d8fa018c922a1e9748f7e046f9}{t\+Npc\+List}} \mbox{\hyperlink{class_room_a69f8d248898224ab463b686e37608155}{get\+Npcs}} ()
+\begin{DoxyCompactList}\small\item\em Return list of npcs within the room. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_room_8h_a2b991bc4061fac67565cc6be66a568ac}{t\+Item\+List}} \mbox{\hyperlink{class_room_a0a6d6e48cb9f69f250b5b59c3f2ddc54}{get\+Items}} ()
+\begin{DoxyCompactList}\small\item\em Return list of items in the room. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_room_a25c9e7d11f19d950e8dee493e2fa0a54}{add\+Item}} (\mbox{\hyperlink{class_item}{Item}} $\ast$)
+\item 
+void \mbox{\hyperlink{class_room_a1d24e0d3f909e101b6a884ccab081a52}{remove\+Item}} (\mbox{\hyperlink{class_item}{Item}} $\ast$)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{class_room_a9418b46d33d52d5eecba639ca59e66f0}{get\+Neighbour\+Id}} (std\+::string direction)
+\begin{DoxyCompactList}\small\item\em Return the Id of the \mbox{\hyperlink{class_room}{Room}} at direction -\/ If there is no room, return -\/1. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_room_ad2f32e921244459f7cc6d50355429cc6}{Map}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_room_a08ec9bd6f436a8a99c499e930da7359c}\label{class_room_a08ec9bd6f436a8a99c499e930da7359c}} 
+\index{Room@{Room}!Room@{Room}}
+\index{Room@{Room}!Room@{Room}}
+\subsubsection{\texorpdfstring{Room()}{Room()}}
+{\footnotesize\ttfamily Room\+::\+Room (\begin{DoxyParamCaption}\item[{std\+::string}]{id,  }\item[{std\+::string}]{name,  }\item[{std\+::string}]{description,  }\item[{\mbox{\hyperlink{_room_8h_a55f50192b1292aaa3b0967ecd0b1fddd}{t\+Neighbours}}}]{neighbours,  }\item[{\mbox{\hyperlink{_room_8h_af9e617d8fa018c922a1e9748f7e046f9}{t\+Npc\+List}}}]{npcs,  }\item[{\mbox{\hyperlink{_room_8h_a2b991bc4061fac67565cc6be66a568ac}{t\+Item\+List}}}]{items }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_room_a67d5da09983cc53097807fd43ba5481a}\label{class_room_a67d5da09983cc53097807fd43ba5481a}} 
+\index{Room@{Room}!````~Room@{$\sim$\+Room}}
+\index{````~Room@{$\sim$\+Room}!Room@{Room}}
+\subsubsection{\texorpdfstring{$\sim$\+Room()}{~Room()}}
+{\footnotesize\ttfamily Room\+::$\sim$\+Room (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_room_a25c9e7d11f19d950e8dee493e2fa0a54}\label{class_room_a25c9e7d11f19d950e8dee493e2fa0a54}} 
+\index{Room@{Room}!add\+Item@{add\+Item}}
+\index{add\+Item@{add\+Item}!Room@{Room}}
+\subsubsection{\texorpdfstring{add\+Item()}{addItem()}}
+{\footnotesize\ttfamily void Room\+::add\+Item (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_item}{Item}} $\ast$}]{item }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_room_a81fc1cb26425dfd00f45e7cb12fa5d88}\label{class_room_a81fc1cb26425dfd00f45e7cb12fa5d88}} 
+\index{Room@{Room}!get\+Description@{get\+Description}}
+\index{get\+Description@{get\+Description}!Room@{Room}}
+\subsubsection{\texorpdfstring{get\+Description()}{getDescription()}}
+{\footnotesize\ttfamily string Room\+::get\+Description (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Return \mbox{\hyperlink{class_room}{Room}} Description, such as \textquotesingle{}It\textquotesingle{}s a dark \mbox{\hyperlink{class_room}{Room}}\textquotesingle{}. 
+
+\mbox{\Hypertarget{class_room_a188ae0c43f994ea4a5a1f86a308623a7}\label{class_room_a188ae0c43f994ea4a5a1f86a308623a7}} 
+\index{Room@{Room}!get\+Id@{get\+Id}}
+\index{get\+Id@{get\+Id}!Room@{Room}}
+\subsubsection{\texorpdfstring{get\+Id()}{getId()}}
+{\footnotesize\ttfamily string Room\+::get\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns \mbox{\hyperlink{class_room}{Room}} Id. Each \mbox{\hyperlink{class_room}{Room}} has a unique Id described in X\+ML map file. 
+
+\mbox{\Hypertarget{class_room_a0a6d6e48cb9f69f250b5b59c3f2ddc54}\label{class_room_a0a6d6e48cb9f69f250b5b59c3f2ddc54}} 
+\index{Room@{Room}!get\+Items@{get\+Items}}
+\index{get\+Items@{get\+Items}!Room@{Room}}
+\subsubsection{\texorpdfstring{get\+Items()}{getItems()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_room_8h_a2b991bc4061fac67565cc6be66a568ac}{t\+Item\+List}} Room\+::get\+Items (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Return list of items in the room. 
+
+\mbox{\Hypertarget{class_room_a5701522ecf180c978eaa454d79f3e305}\label{class_room_a5701522ecf180c978eaa454d79f3e305}} 
+\index{Room@{Room}!get\+Name@{get\+Name}}
+\index{get\+Name@{get\+Name}!Room@{Room}}
+\subsubsection{\texorpdfstring{get\+Name()}{getName()}}
+{\footnotesize\ttfamily string Room\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Return \mbox{\hyperlink{class_room}{Room}} Name, such as Crumbling Signpost or Bathroom. 
+
+\mbox{\Hypertarget{class_room_a9418b46d33d52d5eecba639ca59e66f0}\label{class_room_a9418b46d33d52d5eecba639ca59e66f0}} 
+\index{Room@{Room}!get\+Neighbour\+Id@{get\+Neighbour\+Id}}
+\index{get\+Neighbour\+Id@{get\+Neighbour\+Id}!Room@{Room}}
+\subsubsection{\texorpdfstring{get\+Neighbour\+Id()}{getNeighbourId()}}
+{\footnotesize\ttfamily string Room\+::get\+Neighbour\+Id (\begin{DoxyParamCaption}\item[{std\+::string}]{direction }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Return the Id of the \mbox{\hyperlink{class_room}{Room}} at direction -\/ If there is no room, return -\/1. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em direction} & Uppercase cardinal direction (N, E, S, W, U, D) \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em invalid\+\_\+argument} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_room_a69f8d248898224ab463b686e37608155}\label{class_room_a69f8d248898224ab463b686e37608155}} 
+\index{Room@{Room}!get\+Npcs@{get\+Npcs}}
+\index{get\+Npcs@{get\+Npcs}!Room@{Room}}
+\subsubsection{\texorpdfstring{get\+Npcs()}{getNpcs()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_room_8h_af9e617d8fa018c922a1e9748f7e046f9}{t\+Npc\+List}} Room\+::get\+Npcs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Return list of npcs within the room. 
+
+\mbox{\Hypertarget{class_room_a1d24e0d3f909e101b6a884ccab081a52}\label{class_room_a1d24e0d3f909e101b6a884ccab081a52}} 
+\index{Room@{Room}!remove\+Item@{remove\+Item}}
+\index{remove\+Item@{remove\+Item}!Room@{Room}}
+\subsubsection{\texorpdfstring{remove\+Item()}{removeItem()}}
+{\footnotesize\ttfamily void Room\+::remove\+Item (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_item}{Item}} $\ast$}]{item }\end{DoxyParamCaption})}
+
+
+
+\subsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_room_ad2f32e921244459f7cc6d50355429cc6}\label{class_room_ad2f32e921244459f7cc6d50355429cc6}} 
+\index{Room@{Room}!Map@{Map}}
+\index{Map@{Map}!Room@{Room}}
+\subsubsection{\texorpdfstring{Map}{Map}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_map}{Map}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+A\+:/\+Documents/\+Code Blocks Projects/\+C\+P\+S\+C2720\+Project\+Doxy/2720-\/\+G-\/\+Project/\+Group G/include/\mbox{\hyperlink{_room_8h}{Room.\+h}}\item 
+A\+:/\+Documents/\+Code Blocks Projects/\+C\+P\+S\+C2720\+Project\+Doxy/2720-\/\+G-\/\+Project/\+Group G/src/\mbox{\hyperlink{_room_8cpp}{Room.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,269 @@
+\hypertarget{class_console}{}\section{Console Class Reference}
+\label{class_console}\index{Console@{Console}}
+
+
+{\ttfamily \#include $<$Console.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_console_ac9b6509da71c28ff64a4112b369c4143}{Console}} (\mbox{\hyperlink{class_inventory}{Inventory}} $\ast$, \mbox{\hyperlink{class_map}{Map}} $\ast$)
+\item 
+virtual \mbox{\hyperlink{class_console_a32e8c79c8579b1b076e53848c540d4e7}{$\sim$\+Console}} ()
+\item 
+std\+::string \mbox{\hyperlink{class_console_a851f8712372b31495dda2af8456d24aa}{Get\+First}} (std\+::string input)
+\begin{DoxyCompactList}\small\item\em Returns the first argument entered by the user. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_console_a6399615a1ca63091429ec486d2e0e1f9}{Get\+Second}} (std\+::string input)
+\begin{DoxyCompactList}\small\item\em Returns the second argument entered by the user. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_console_aee315491a0fcd06f3c27fdea7810191c}{Convert\+String\+To\+Lower}} (std\+::string original)
+\begin{DoxyCompactList}\small\item\em Returns a string that has been converter to lowercase. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_console_a2d9d321db0a9bf028c69e70f7aae68dd}{Game\+Start}} ()
+\begin{DoxyCompactList}\small\item\em Prompts load file or new game and starts based on input. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_console_a65bd0080776d774e0328fbcc0e2654aa}{Print\+Intro}} ()
+\item 
+void \mbox{\hyperlink{class_console_a447d63350e9305664733258b0c8b91af}{Load\+Game}} (std\+::string)
+\begin{DoxyCompactList}\small\item\em Loads game context -\/$>$ Player \mbox{\hyperlink{class_inventory}{Inventory}} and Last location, also calls rungame. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_console_abec5429ffd3b6f4b6b9e575617941534}{Print\+Art}} (std\+::string)
+\begin{DoxyCompactList}\small\item\em Prints A\+S\+C\+II Art to console. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_console_aaf180b385dbda3c9d0e7edc19b72df72}{Prompt}} ()
+\begin{DoxyCompactList}\small\item\em Prompts user input. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_console_a543814c39f275f3faf0f2f44141ccd21}{Parse\+Command}} ()
+\begin{DoxyCompactList}\small\item\em Parses user input and handles it. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_console_a82b5310199041c8cb8c1a8b56e8f8754}{Run}} (bool)
+\begin{DoxyCompactList}\small\item\em Game loop while the quit flag is false. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_console_a86dd44bc90f6f17270a54fb8859d63c4}{Error\+Message}} ()
+\begin{DoxyCompactList}\small\item\em Prints error message. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{class_console_a35910060c8108bde054402ddc3f1a368}{\+\_\+input}}
+\item 
+std\+::string \mbox{\hyperlink{class_console_aaef25555f0862019ff368aa355432299}{\+\_\+command}}
+\item 
+\mbox{\hyperlink{class_inventory}{Inventory}} $\ast$ \mbox{\hyperlink{class_console_af9944cd5894644b7b49579a100be5beb}{\+\_\+inventory}}
+\item 
+\mbox{\hyperlink{class_map}{Map}} $\ast$ \mbox{\hyperlink{class_console_a726e7819b5fed6c9cb636280854bd3b4}{\+\_\+game\+Map}}
+\item 
+bool \mbox{\hyperlink{class_console_afd8769b6be561615f0cd4bd48bbd8278}{\+\_\+flag}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{class_action}{Action}} $\ast$ $>$ \mbox{\hyperlink{class_console_adc7d72b09dbe902005377881fdee16e0}{Actions}} = \{new \mbox{\hyperlink{class_move}{Move}}(),new \mbox{\hyperlink{class_drop}{Drop}}(),new \mbox{\hyperlink{class_grab}{Grab}}(), new \mbox{\hyperlink{class_look}{Look}}(), new \mbox{\hyperlink{class_help}{Help}}(), new \mbox{\hyperlink{class_quit}{Quit}}(), new \mbox{\hyperlink{class_type}{Type}}(), new \mbox{\hyperlink{class_crank}{Crank}}(), new \mbox{\hyperlink{class_talk}{Talk}}(), new \mbox{\hyperlink{class_unlock}{Unlock}}()\}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{class_option}{Option}} $\ast$ $>$ \mbox{\hyperlink{class_console_a42e89a153b1782cc15d6b4cb50434802}{Options}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{class_npc}{Npc}} $\ast$ $>$ \mbox{\hyperlink{class_console_aaaf6dabe3be6d08c6d24df8a498b20a4}{Npcs}} = \{new \mbox{\hyperlink{class_father}{Father}}(), new \mbox{\hyperlink{class_boy}{Boy}}(), new \mbox{\hyperlink{class_scientist}{Scientist}}()\}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_console_ac9b6509da71c28ff64a4112b369c4143}\label{class_console_ac9b6509da71c28ff64a4112b369c4143}} 
+\index{Console@{Console}!Console@{Console}}
+\index{Console@{Console}!Console@{Console}}
+\subsubsection{\texorpdfstring{Console()}{Console()}}
+{\footnotesize\ttfamily Console\+::\+Console (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_inventory}{Inventory}} $\ast$}]{inv,  }\item[{\mbox{\hyperlink{class_map}{Map}} $\ast$}]{game\+Map }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_console_a32e8c79c8579b1b076e53848c540d4e7}\label{class_console_a32e8c79c8579b1b076e53848c540d4e7}} 
+\index{Console@{Console}!````~Console@{$\sim$\+Console}}
+\index{````~Console@{$\sim$\+Console}!Console@{Console}}
+\subsubsection{\texorpdfstring{$\sim$\+Console()}{~Console()}}
+{\footnotesize\ttfamily Console\+::$\sim$\+Console (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_console_aee315491a0fcd06f3c27fdea7810191c}\label{class_console_aee315491a0fcd06f3c27fdea7810191c}} 
+\index{Console@{Console}!Convert\+String\+To\+Lower@{Convert\+String\+To\+Lower}}
+\index{Convert\+String\+To\+Lower@{Convert\+String\+To\+Lower}!Console@{Console}}
+\subsubsection{\texorpdfstring{Convert\+String\+To\+Lower()}{ConvertStringToLower()}}
+{\footnotesize\ttfamily string Console\+::\+Convert\+String\+To\+Lower (\begin{DoxyParamCaption}\item[{std\+::string}]{original }\end{DoxyParamCaption})}
+
+
+
+Returns a string that has been converter to lowercase. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em String} & original -\/$>$ string to convert. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_console_a86dd44bc90f6f17270a54fb8859d63c4}\label{class_console_a86dd44bc90f6f17270a54fb8859d63c4}} 
+\index{Console@{Console}!Error\+Message@{Error\+Message}}
+\index{Error\+Message@{Error\+Message}!Console@{Console}}
+\subsubsection{\texorpdfstring{Error\+Message()}{ErrorMessage()}}
+{\footnotesize\ttfamily void Console\+::\+Error\+Message (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Prints error message. 
+
+\mbox{\Hypertarget{class_console_a2d9d321db0a9bf028c69e70f7aae68dd}\label{class_console_a2d9d321db0a9bf028c69e70f7aae68dd}} 
+\index{Console@{Console}!Game\+Start@{Game\+Start}}
+\index{Game\+Start@{Game\+Start}!Console@{Console}}
+\subsubsection{\texorpdfstring{Game\+Start()}{GameStart()}}
+{\footnotesize\ttfamily void Console\+::\+Game\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Prompts load file or new game and starts based on input. 
+
+\mbox{\Hypertarget{class_console_a851f8712372b31495dda2af8456d24aa}\label{class_console_a851f8712372b31495dda2af8456d24aa}} 
+\index{Console@{Console}!Get\+First@{Get\+First}}
+\index{Get\+First@{Get\+First}!Console@{Console}}
+\subsubsection{\texorpdfstring{Get\+First()}{GetFirst()}}
+{\footnotesize\ttfamily string Console\+::\+Get\+First (\begin{DoxyParamCaption}\item[{std\+::string}]{input }\end{DoxyParamCaption})}
+
+
+
+Returns the first argument entered by the user. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em String} & input -\/$>$ user input. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_console_a6399615a1ca63091429ec486d2e0e1f9}\label{class_console_a6399615a1ca63091429ec486d2e0e1f9}} 
+\index{Console@{Console}!Get\+Second@{Get\+Second}}
+\index{Get\+Second@{Get\+Second}!Console@{Console}}
+\subsubsection{\texorpdfstring{Get\+Second()}{GetSecond()}}
+{\footnotesize\ttfamily string Console\+::\+Get\+Second (\begin{DoxyParamCaption}\item[{std\+::string}]{input }\end{DoxyParamCaption})}
+
+
+
+Returns the second argument entered by the user. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em String} & input -\/$>$ user input. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_console_a447d63350e9305664733258b0c8b91af}\label{class_console_a447d63350e9305664733258b0c8b91af}} 
+\index{Console@{Console}!Load\+Game@{Load\+Game}}
+\index{Load\+Game@{Load\+Game}!Console@{Console}}
+\subsubsection{\texorpdfstring{Load\+Game()}{LoadGame()}}
+{\footnotesize\ttfamily void Console\+::\+Load\+Game (\begin{DoxyParamCaption}\item[{std\+::string}]{ }\end{DoxyParamCaption})}
+
+
+
+Loads game context -\/$>$ Player \mbox{\hyperlink{class_inventory}{Inventory}} and Last location, also calls rungame. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em String} & file\+Path -\/$>$ accepts file path to load game from. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_console_a543814c39f275f3faf0f2f44141ccd21}\label{class_console_a543814c39f275f3faf0f2f44141ccd21}} 
+\index{Console@{Console}!Parse\+Command@{Parse\+Command}}
+\index{Parse\+Command@{Parse\+Command}!Console@{Console}}
+\subsubsection{\texorpdfstring{Parse\+Command()}{ParseCommand()}}
+{\footnotesize\ttfamily void Console\+::\+Parse\+Command (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Parses user input and handles it. 
+
+\mbox{\Hypertarget{class_console_abec5429ffd3b6f4b6b9e575617941534}\label{class_console_abec5429ffd3b6f4b6b9e575617941534}} 
+\index{Console@{Console}!Print\+Art@{Print\+Art}}
+\index{Print\+Art@{Print\+Art}!Console@{Console}}
+\subsubsection{\texorpdfstring{Print\+Art()}{PrintArt()}}
+{\footnotesize\ttfamily void Console\+::\+Print\+Art (\begin{DoxyParamCaption}\item[{std\+::string}]{ }\end{DoxyParamCaption})}
+
+
+
+Prints A\+S\+C\+II Art to console. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em String} & filepath -\/$>$ File path to file containing A\+S\+C\+I\+I\+A\+RT. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_console_a65bd0080776d774e0328fbcc0e2654aa}\label{class_console_a65bd0080776d774e0328fbcc0e2654aa}} 
+\index{Console@{Console}!Print\+Intro@{Print\+Intro}}
+\index{Print\+Intro@{Print\+Intro}!Console@{Console}}
+\subsubsection{\texorpdfstring{Print\+Intro()}{PrintIntro()}}
+{\footnotesize\ttfamily void Console\+::\+Print\+Intro (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_console_aaf180b385dbda3c9d0e7edc19b72df72}\label{class_console_aaf180b385dbda3c9d0e7edc19b72df72}} 
+\index{Console@{Console}!Prompt@{Prompt}}
+\index{Prompt@{Prompt}!Console@{Console}}
+\subsubsection{\texorpdfstring{Prompt()}{Prompt()}}
+{\footnotesize\ttfamily void Console\+::\+Prompt (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Prompts user input. 
+
+\mbox{\Hypertarget{class_console_a82b5310199041c8cb8c1a8b56e8f8754}\label{class_console_a82b5310199041c8cb8c1a8b56e8f8754}} 
+\index{Console@{Console}!Run@{Run}}
+\index{Run@{Run}!Console@{Console}}
+\subsubsection{\texorpdfstring{Run()}{Run()}}
+{\footnotesize\ttfamily void Console\+::\+Run (\begin{DoxyParamCaption}\item[{bool}]{condition }\end{DoxyParamCaption})}
+
+
+
+Game loop while the quit flag is false. 
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_console_aaef25555f0862019ff368aa355432299}\label{class_console_aaef25555f0862019ff368aa355432299}} 
+\index{Console@{Console}!\+\_\+command@{\+\_\+command}}
+\index{\+\_\+command@{\+\_\+command}!Console@{Console}}
+\subsubsection{\texorpdfstring{\+\_\+command}{\_command}}
+{\footnotesize\ttfamily std\+::string Console\+::\+\_\+command}
+
+\mbox{\Hypertarget{class_console_afd8769b6be561615f0cd4bd48bbd8278}\label{class_console_afd8769b6be561615f0cd4bd48bbd8278}} 
+\index{Console@{Console}!\+\_\+flag@{\+\_\+flag}}
+\index{\+\_\+flag@{\+\_\+flag}!Console@{Console}}
+\subsubsection{\texorpdfstring{\+\_\+flag}{\_flag}}
+{\footnotesize\ttfamily bool Console\+::\+\_\+flag}
+
+\mbox{\Hypertarget{class_console_a726e7819b5fed6c9cb636280854bd3b4}\label{class_console_a726e7819b5fed6c9cb636280854bd3b4}} 
+\index{Console@{Console}!\+\_\+game\+Map@{\+\_\+game\+Map}}
+\index{\+\_\+game\+Map@{\+\_\+game\+Map}!Console@{Console}}
+\subsubsection{\texorpdfstring{\+\_\+game\+Map}{\_gameMap}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_map}{Map}}$\ast$ Console\+::\+\_\+game\+Map}
+
+\mbox{\Hypertarget{class_console_a35910060c8108bde054402ddc3f1a368}\label{class_console_a35910060c8108bde054402ddc3f1a368}} 
+\index{Console@{Console}!\+\_\+input@{\+\_\+input}}
+\index{\+\_\+input@{\+\_\+input}!Console@{Console}}
+\subsubsection{\texorpdfstring{\+\_\+input}{\_input}}
+{\footnotesize\ttfamily std\+::string Console\+::\+\_\+input}
+
+\mbox{\Hypertarget{class_console_af9944cd5894644b7b49579a100be5beb}\label{class_console_af9944cd5894644b7b49579a100be5beb}} 
+\index{Console@{Console}!\+\_\+inventory@{\+\_\+inventory}}
+\index{\+\_\+inventory@{\+\_\+inventory}!Console@{Console}}
+\subsubsection{\texorpdfstring{\+\_\+inventory}{\_inventory}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_inventory}{Inventory}}$\ast$ Console\+::\+\_\+inventory}
+
+\mbox{\Hypertarget{class_console_adc7d72b09dbe902005377881fdee16e0}\label{class_console_adc7d72b09dbe902005377881fdee16e0}} 
+\index{Console@{Console}!Actions@{Actions}}
+\index{Actions@{Actions}!Console@{Console}}
+\subsubsection{\texorpdfstring{Actions}{Actions}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{class_action}{Action}}$\ast$$>$ Console\+::\+Actions = \{new \mbox{\hyperlink{class_move}{Move}}(),new \mbox{\hyperlink{class_drop}{Drop}}(),new \mbox{\hyperlink{class_grab}{Grab}}(), new \mbox{\hyperlink{class_look}{Look}}(), new \mbox{\hyperlink{class_help}{Help}}(), new \mbox{\hyperlink{class_quit}{Quit}}(), new \mbox{\hyperlink{class_type}{Type}}(), new \mbox{\hyperlink{class_crank}{Crank}}(), new \mbox{\hyperlink{class_talk}{Talk}}(), new \mbox{\hyperlink{class_unlock}{Unlock}}()\}}
+
+\mbox{\Hypertarget{class_console_aaaf6dabe3be6d08c6d24df8a498b20a4}\label{class_console_aaaf6dabe3be6d08c6d24df8a498b20a4}} 
+\index{Console@{Console}!Npcs@{Npcs}}
+\index{Npcs@{Npcs}!Console@{Console}}
+\subsubsection{\texorpdfstring{Npcs}{Npcs}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{class_npc}{Npc}}$\ast$$>$ Console\+::\+Npcs = \{new \mbox{\hyperlink{class_father}{Father}}(), new \mbox{\hyperlink{class_boy}{Boy}}(), new \mbox{\hyperlink{class_scientist}{Scientist}}()\}}
+
+\mbox{\Hypertarget{class_console_a42e89a153b1782cc15d6b4cb50434802}\label{class_console_a42e89a153b1782cc15d6b4cb50434802}} 
+\index{Console@{Console}!Options@{Options}}
+\index{Options@{Options}!Console@{Console}}
+\subsubsection{\texorpdfstring{Options}{Options}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{class_option}{Option}}$\ast$$>$ Console\+::\+Options}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \{\textcolor{keyword}{new} \mbox{\hyperlink{class_north}{North}}(),\textcolor{keyword}{new} \mbox{\hyperlink{class_south}{South}}(), \textcolor{keyword}{new} \mbox{\hyperlink{class_east}{East}}(), \textcolor{keyword}{new} \mbox{\hyperlink{class_west}{West}}(), \textcolor{keyword}{new} \mbox{\hyperlink{class_up}{Up}}(), \textcolor{keyword}{new} 
+      \mbox{\hyperlink{class_down}{Down}}(),
+            \textcolor{keyword}{new} \mbox{\hyperlink{class_key}{Key}}(), \textcolor{keyword}{new} \mbox{\hyperlink{class_helmet}{Helmet}}(), \textcolor{keyword}{new} \mbox{\hyperlink{class_stick}{Stick}}(),\textcolor{keyword}{new} \mbox{\hyperlink{class_rubber_tube}{RubberTube}}(),\textcolor{keyword}{new} 
+      \mbox{\hyperlink{class_gear}{Gear}}(), \textcolor{keyword}{new} \mbox{\hyperlink{class_pile_of_bolts}{PileOfBolts}}(),
+            \textcolor{keyword}{new} \mbox{\hyperlink{class_fish_food}{FishFood}}(), \textcolor{keyword}{new} \mbox{\hyperlink{class_rat_poison}{RatPoison}}(), \textcolor{keyword}{new} \mbox{\hyperlink{class_quill}{Quill}}(), \textcolor{keyword}{new} 
+      \mbox{\hyperlink{class_papyrus}{Papyrus}}(), \textcolor{keyword}{new} \mbox{\hyperlink{class_weight}{Weight}}()\}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+A\+:/\+Documents/\+Code Blocks Projects/\+C\+P\+S\+C2720\+Project\+Doxy/2720-\/\+G-\/\+Project/\+Group G/include/\mbox{\hyperlink{_console_8h}{Console.\+h}}\item 
+A\+:/\+Documents/\+Code Blocks Projects/\+C\+P\+S\+C2720\+Project\+Doxy/2720-\/\+G-\/\+Project/\+Group G/src/\mbox{\hyperlink{_console_8cpp}{Console.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,105 @@
+\hypertarget{class_npc}{}\section{Npc Class Reference}
+\label{class_npc}\index{Npc@{Npc}}
+
+
+{\ttfamily \#include $<$Npc.\+h$>$}
+
+
+
+Inherited by \mbox{\hyperlink{class_boy}{Boy}}, \mbox{\hyperlink{class_father}{Father}}, and \mbox{\hyperlink{class_scientist}{Scientist}}.
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_npc_a748bee1d096f0dc38a80f2db64186644}{Npc}} ()
+\item 
+virtual \mbox{\hyperlink{class_npc_aed228b9aadbc7e1fddfc10395713a932}{$\sim$\+Npc}} ()
+\item 
+virtual std\+::string \mbox{\hyperlink{class_npc_a93f51feaa226543914f1cc0bc4cef1f6}{get\+Name}} ()
+\item 
+virtual std\+::string \mbox{\hyperlink{class_npc_a4dcac5b79963771805597411e819cd11}{get\+Thing\+To\+Say}} (int)
+\begin{DoxyCompactList}\small\item\em Returns the line the N\+PC will say. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_npc_aa1f04e3560c27e1770696fd3e7eb0c95}{check\+For\+Game\+Completion}} (\mbox{\hyperlink{class_inventory}{Inventory}} $\ast$)
+\begin{DoxyCompactList}\small\item\em Returns a bool to check for game completion. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{class_npc_a4136960f515b8318c602e8eb75b6163a}{name}}
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{class_npc_a96b8dbc019c68d7fe8eb377dcb8f9b9f}{things\+To\+Say}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_npc_a748bee1d096f0dc38a80f2db64186644}\label{class_npc_a748bee1d096f0dc38a80f2db64186644}} 
+\index{Npc@{Npc}!Npc@{Npc}}
+\index{Npc@{Npc}!Npc@{Npc}}
+\subsubsection{\texorpdfstring{Npc()}{Npc()}}
+{\footnotesize\ttfamily Npc\+::\+Npc (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_npc_aed228b9aadbc7e1fddfc10395713a932}\label{class_npc_aed228b9aadbc7e1fddfc10395713a932}} 
+\index{Npc@{Npc}!````~Npc@{$\sim$\+Npc}}
+\index{````~Npc@{$\sim$\+Npc}!Npc@{Npc}}
+\subsubsection{\texorpdfstring{$\sim$\+Npc()}{~Npc()}}
+{\footnotesize\ttfamily virtual Npc\+::$\sim$\+Npc (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_npc_aa1f04e3560c27e1770696fd3e7eb0c95}\label{class_npc_aa1f04e3560c27e1770696fd3e7eb0c95}} 
+\index{Npc@{Npc}!check\+For\+Game\+Completion@{check\+For\+Game\+Completion}}
+\index{check\+For\+Game\+Completion@{check\+For\+Game\+Completion}!Npc@{Npc}}
+\subsubsection{\texorpdfstring{check\+For\+Game\+Completion()}{checkForGameCompletion()}}
+{\footnotesize\ttfamily bool Npc\+::check\+For\+Game\+Completion (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_inventory}{Inventory}} $\ast$}]{current\+Inventory }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Returns a bool to check for game completion. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em Pointer} & to \mbox{\hyperlink{class_inventory}{Inventory}} -\/$>$ the players inventory. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_npc_a93f51feaa226543914f1cc0bc4cef1f6}\label{class_npc_a93f51feaa226543914f1cc0bc4cef1f6}} 
+\index{Npc@{Npc}!get\+Name@{get\+Name}}
+\index{get\+Name@{get\+Name}!Npc@{Npc}}
+\subsubsection{\texorpdfstring{get\+Name()}{getName()}}
+{\footnotesize\ttfamily string Npc\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{class_npc_a4dcac5b79963771805597411e819cd11}\label{class_npc_a4dcac5b79963771805597411e819cd11}} 
+\index{Npc@{Npc}!get\+Thing\+To\+Say@{get\+Thing\+To\+Say}}
+\index{get\+Thing\+To\+Say@{get\+Thing\+To\+Say}!Npc@{Npc}}
+\subsubsection{\texorpdfstring{get\+Thing\+To\+Say()}{getThingToSay()}}
+{\footnotesize\ttfamily string Npc\+::get\+Thing\+To\+Say (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Returns the line the N\+PC will say. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em Int} & index -\/$>$ which line the N\+PC should say. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_npc_a4136960f515b8318c602e8eb75b6163a}\label{class_npc_a4136960f515b8318c602e8eb75b6163a}} 
+\index{Npc@{Npc}!name@{name}}
+\index{name@{name}!Npc@{Npc}}
+\subsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily std\+::string Npc\+::name\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_npc_a96b8dbc019c68d7fe8eb377dcb8f9b9f}\label{class_npc_a96b8dbc019c68d7fe8eb377dcb8f9b9f}} 
+\index{Npc@{Npc}!things\+To\+Say@{things\+To\+Say}}
+\index{things\+To\+Say@{things\+To\+Say}!Npc@{Npc}}
+\subsubsection{\texorpdfstring{things\+To\+Say}{thingsToSay}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::string$>$ Npc\+::things\+To\+Say\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+A\+:/\+Documents/\+Code Blocks Projects/\+C\+P\+S\+C2720\+Project\+Doxy/2720-\/\+G-\/\+Project/\+Group G/include/\mbox{\hyperlink{_npc_8h}{Npc.\+h}}\item 
+A\+:/\+Documents/\+Code Blocks Projects/\+C\+P\+S\+C2720\+Project\+Doxy/2720-\/\+G-\/\+Project/\+Group G/src/\mbox{\hyperlink{_npc_8cpp}{Npc.\+cpp}}\end{DoxyCompactItemize}

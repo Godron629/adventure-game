@@ -1,0 +1,102 @@
+\hypertarget{class_inventory}{}\section{Inventory Class Reference}
+\label{class_inventory}\index{Inventory@{Inventory}}
+
+
+{\ttfamily \#include $<$Inventory.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_inventory_a10485613fc8bfb32ee564d9b5110f8fb}{Inventory}} ()
+\item 
+virtual \mbox{\hyperlink{class_inventory_a6c6dfcb6d977c74a7abf46809e892e3d}{$\sim$\+Inventory}} ()
+\item 
+void \mbox{\hyperlink{class_inventory_a095bdcb71efeae197032fc6aacd37ed9}{Add}} (\mbox{\hyperlink{class_item}{Item}} $\ast$)
+\begin{DoxyCompactList}\small\item\em Adds item into player inventory. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_inventory_a9599fe69c229390adc504255a8941f33}{Drop}} (\mbox{\hyperlink{class_item}{Item}} $\ast$)
+\begin{DoxyCompactList}\small\item\em Drops item from user inventory. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_inventory_a3fbedd6b6eae5ee18dcb1283cda8728a}{List}} ()
+\begin{DoxyCompactList}\small\item\em Formats and writes the users inventory to the console. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{class_item}{Item}} $\ast$ $>$ \mbox{\hyperlink{class_inventory_a34fed530d676159a14178b36ce9981ca}{inventory}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_inventory_a10485613fc8bfb32ee564d9b5110f8fb}\label{class_inventory_a10485613fc8bfb32ee564d9b5110f8fb}} 
+\index{Inventory@{Inventory}!Inventory@{Inventory}}
+\index{Inventory@{Inventory}!Inventory@{Inventory}}
+\subsubsection{\texorpdfstring{Inventory()}{Inventory()}}
+{\footnotesize\ttfamily Inventory\+::\+Inventory (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_inventory_a6c6dfcb6d977c74a7abf46809e892e3d}\label{class_inventory_a6c6dfcb6d977c74a7abf46809e892e3d}} 
+\index{Inventory@{Inventory}!````~Inventory@{$\sim$\+Inventory}}
+\index{````~Inventory@{$\sim$\+Inventory}!Inventory@{Inventory}}
+\subsubsection{\texorpdfstring{$\sim$\+Inventory()}{~Inventory()}}
+{\footnotesize\ttfamily Inventory\+::$\sim$\+Inventory (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_inventory_a095bdcb71efeae197032fc6aacd37ed9}\label{class_inventory_a095bdcb71efeae197032fc6aacd37ed9}} 
+\index{Inventory@{Inventory}!Add@{Add}}
+\index{Add@{Add}!Inventory@{Inventory}}
+\subsubsection{\texorpdfstring{Add()}{Add()}}
+{\footnotesize\ttfamily void Inventory\+::\+Add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_item}{Item}} $\ast$}]{added\+Item }\end{DoxyParamCaption})}
+
+
+
+Adds item into player inventory. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em Pointer} & to \mbox{\hyperlink{class_item}{Item}} -\/$>$ item the user wishes to add. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_inventory_a9599fe69c229390adc504255a8941f33}\label{class_inventory_a9599fe69c229390adc504255a8941f33}} 
+\index{Inventory@{Inventory}!Drop@{Drop}}
+\index{Drop@{Drop}!Inventory@{Inventory}}
+\subsubsection{\texorpdfstring{Drop()}{Drop()}}
+{\footnotesize\ttfamily void Inventory\+::\+Drop (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_item}{Item}} $\ast$}]{dropped\+Item }\end{DoxyParamCaption})}
+
+
+
+Drops item from user inventory. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em Pointer} & to \mbox{\hyperlink{class_item}{Item}} -\/$>$ item the user wishes to drop. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Throws} & invalid argument exception if the inventory does not contain that item. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_inventory_a3fbedd6b6eae5ee18dcb1283cda8728a}\label{class_inventory_a3fbedd6b6eae5ee18dcb1283cda8728a}} 
+\index{Inventory@{Inventory}!List@{List}}
+\index{List@{List}!Inventory@{Inventory}}
+\subsubsection{\texorpdfstring{List()}{List()}}
+{\footnotesize\ttfamily void Inventory\+::\+List (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Formats and writes the users inventory to the console. 
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_inventory_a34fed530d676159a14178b36ce9981ca}\label{class_inventory_a34fed530d676159a14178b36ce9981ca}} 
+\index{Inventory@{Inventory}!inventory@{inventory}}
+\index{inventory@{inventory}!Inventory@{Inventory}}
+\subsubsection{\texorpdfstring{inventory}{inventory}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{class_item}{Item}}$\ast$$>$ Inventory\+::inventory}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+A\+:/\+Documents/\+Code Blocks Projects/\+C\+P\+S\+C2720\+Project\+Doxy/2720-\/\+G-\/\+Project/\+Group G/include/\mbox{\hyperlink{_inventory_8h}{Inventory.\+h}}\item 
+A\+:/\+Documents/\+Code Blocks Projects/\+C\+P\+S\+C2720\+Project\+Doxy/2720-\/\+G-\/\+Project/\+Group G/src/\mbox{\hyperlink{_inventory_8cpp}{Inventory.\+cpp}}\end{DoxyCompactItemize}
