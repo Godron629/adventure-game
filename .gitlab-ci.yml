@@ -1,0 +1,32 @@
+buildTests:
+   stage: build
+   script:
+      - make testGame
+   artifacts:
+      paths:
+         - testGame
+
+test:
+   stage: test
+   script:
+      - testGame
+      #- make memcheck-test
+   artifacts:
+      paths:
+         #- memcheck.xml
+
+pages:
+   stage: deploy
+   dependencies:
+      - test
+   script:
+      - make coverage
+      - make docs
+   artifacts:
+      paths:
+         - coverage
+         - docs
+      expire_in: 14 days
+   only:
+      - master
+

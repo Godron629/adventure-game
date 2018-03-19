@@ -13,7 +13,7 @@ LD = g++
 WINDRES = windres
 
 INC = 
-CFLAGS = -Wall -fexceptions -std=c++11 
+CFLAGS = -Wall -fexceptions -std=c++11 --coverage
 LINKFLAGS = -lcppunit
 RESINC = 
 LIBDIR = 
@@ -50,7 +50,7 @@ OBJ_RELEASE = $(OBJDIR_RELEASE)/src/Console.o $(OBJDIR_RELEASE)/src/main.o $(OBJ
 
 all: debug release
 
-clean: clean_debug clean_release clean_test
+clean: clean_debug clean_release clean_test clean_coverage
 
 before_debug: 
 	test -d bin/Debug || mkdir -p bin/Debug
@@ -78,7 +78,16 @@ $(PROGRAM_TEST):
 
 clean_test: 
 	rm -f testGame
+
+clean_coverage: 
+	rm results.coverage
+	rm -rf coverage
 	
+coverage: $(PROGRAM_TEST)
+	$(LCOV) --capture --gcov-tool $(GCOV) --directory . --output-file $(COVERAGE_RESULTS)
+	$(LCOV) --extract $(COVERAGE_RESULTS) "*/src/*" -o $(COVERAGE_RESULTS)
+	genhtml $(COVERAGE_RESULTS) --output-directory $(COVERAGE_DIR)
+	rm -f *.gc*
 
 debug: before_debug out_debug after_debug
 
