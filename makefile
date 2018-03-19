@@ -63,7 +63,7 @@ TEST_DIR = test
 SRC_INCLUDE = include 
 TEST_INCLUDE = include/test 
 INCLUDE = -I ${SRC_INCLUDE} -I ${TEST_INCLUDE}
-TEST_CPP_FILES = src/Room.cpp src/Item.cpp src/Npc.cpp src/Inventory.cpp
+TEST_CPP_FILES = src/Room.cpp src/Item.cpp src/Npc.cpp src/Inventory.cpp src/Direction.cpp
 
 GCOV = gcov 
 LCOV = lcov 

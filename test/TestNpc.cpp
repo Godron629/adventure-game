@@ -1,15 +1,11 @@
 #include "TestNpc.h"
 
 #include <string>
-#include <map>
-#include <vector>
 
 #include <Inventory.h>
 #include <Item.h>
 
 using std::string;
-using std::map;
-using std::vector;
 
 CPPUNIT_TEST_SUITE_REGISTRATION(TestNpc);
 

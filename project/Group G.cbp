@@ -20,6 +20,7 @@
 					<Add option="-g" />
 					<Add directory="include" />
 					<Add directory="rapidxml" />
+					<Add directory="include/test" />
 				</Compiler>
 				<MakeCommands>
 					<Build command="$make " />
@@ -39,6 +40,7 @@
 				<Compiler>
 					<Add option="-O2" />
 					<Add directory="include" />
+					<Add directory="include/test" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -67,6 +69,11 @@
 		<Unit filename="../include/Option.h" />
 		<Unit filename="../include/Room.h" />
 		<Unit filename="../include/rapidxml/rapidxml_utils.hpp" />
+		<Unit filename="../include/test/TestDirection.h" />
+		<Unit filename="../include/test/TestInventory.h" />
+		<Unit filename="../include/test/TestItem.h" />
+		<Unit filename="../include/test/TestNpc.h" />
+		<Unit filename="../include/test/TestRoom.h" />
 		<Unit filename="../src/Action.cpp" />
 		<Unit filename="../src/Console.cpp" />
 		<Unit filename="../src/Direction.cpp" />
@@ -77,6 +84,12 @@
 		<Unit filename="../src/Option.cpp" />
 		<Unit filename="../src/Room.cpp" />
 		<Unit filename="../src/main.cpp" />
+		<Unit filename="../test/TestDirection.cpp" />
+		<Unit filename="../test/TestInventory.cpp" />
+		<Unit filename="../test/TestItem.cpp" />
+		<Unit filename="../test/TestNpc.cpp" />
+		<Unit filename="../test/TestRoom.cpp" />
+		<Unit filename="../test/main.cpp" />
 		<Unit filename="help.txt" />
 		<Unit filename="rooms.xml" />
 		<Unit filename="start.txt" />
