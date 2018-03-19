@@ -18,5 +18,8 @@ int main(int a, char* v[])
     //Move These
     shell.GameStart();
 
+    delete inventory;
+    delete gameMap;
+
     return 0;
 }

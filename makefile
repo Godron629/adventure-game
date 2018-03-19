@@ -13,7 +13,7 @@ LD = g++
 WINDRES = windres
 
 INC = 
-CFLAGS = -Wall -fexceptions -std=c++11 --coverage
+CFLAGS = -Wall -fexceptions -std=c++11
 LINKFLAGS = -lcppunit
 RESINC = 
 LIBDIR = 
@@ -73,7 +73,7 @@ COVERAGE_DIR = coverage
 PROGRAM_TEST = testGame
 
 $(PROGRAM_TEST): 
-	$(CXX) $(CFLAGS) $(TEST_DIR)/*.cpp $(TEST_CPP_FILES) -o $(PROGRAM_TEST) $(INCLUDE) $(LINKFLAGS) 
+	$(CXX) $(CFLAGS) --coverage $(TEST_DIR)/*.cpp $(TEST_CPP_FILES) -o $(PROGRAM_TEST) $(INCLUDE) $(LINKFLAGS) 
 	./$(PROGRAM_TEST)
 
 clean_test: 
@@ -177,7 +177,7 @@ clean_release:
 	rm -rf $(MEMCHECK_RESULTS)
 
 memcheck: $(OUT_RELEASE)
-	valgrind --tool=memcheck --leak-check=yes --log-file=$(MEMCHECK_RESULTS) $(OUT_RELEASE)
+	valgrind --tool=memcheck --leak-check=yes --log-file=$(MEMCHECK_RESULTS) $(OUT_DEBUG)
 
 
 .PHONY: before_debug after_debug clean_debug before_release after_release clean_release
