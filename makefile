@@ -14,6 +14,7 @@ WINDRES = windres
 
 INC = 
 CFLAGS = -Wall -fexceptions -std=c++11 
+LINKFLAGS = -lcppunit
 RESINC = 
 LIBDIR = 
 LIB = 
@@ -49,13 +50,35 @@ OBJ_RELEASE = $(OBJDIR_RELEASE)/src/Console.o $(OBJDIR_RELEASE)/src/main.o $(OBJ
 
 all: debug release
 
-clean: clean_debug clean_release
+clean: clean_debug clean_release clean_test
 
 before_debug: 
 	test -d bin/Debug || mkdir -p bin/Debug
 	test -d $(OBJDIR_DEBUG)/src || mkdir -p $(OBJDIR_DEBUG)/src
 
 after_debug: 
+
+SRC_DIR = src
+TEST_DIR = test
+SRC_INCLUDE = include 
+TEST_INCLUDE = include/test 
+INCLUDE = -I ${SRC_INCLUDE} -I ${TEST_INCLUDE}
+TEST_CPP_FILES = src/Room.cpp src/Item.cpp src/Npc.cpp
+
+GCOV = gcov 
+LCOV = lcov 
+COVERAGE_RESULTS = results.coverage 
+COVERAGE_DIR = coverage
+
+PROGRAM_TEST = testGame
+
+$(PROGRAM_TEST): 
+	$(CXX) $(CFLAGS) $(TEST_DIR)/*.cpp $(TEST_CPP_FILES) -o $(PROGRAM_TEST) $(INCLUDE) $(LINKFLAGS) 
+	./$(PROGRAM_TEST)
+
+clean_test: 
+	rm -f testGame
+	
 
 debug: before_debug out_debug after_debug
 
